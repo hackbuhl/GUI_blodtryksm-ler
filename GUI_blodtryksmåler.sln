@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI_blodtryksmåler", "GUI_blodtryksmåler\GUI_blodtryksmåler.csproj", "{E5EFA54A-428F-47D0-B163-DF70EAFA2966}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic_blodtryksmåler", "Logic_blodtryksmåler\Logic_blodtryksmåler.csproj", "{7397965F-D890-41ED-AC44-293092BE799D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dataaccess_blodtryksmåler", "Dataaccess_blodtryksmåler\Dataaccess_blodtryksmåler.csproj", "{059A841A-56AF-4683-9547-9454349E52A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTO_blodtryksmåler", "DTO_blodtryksmåler\DTO_blodtryksmåler.csproj", "{5C5DAFCD-E92A-4164-B9C4-9CE83E6798E4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E5EFA54A-428F-47D0-B163-DF70EAFA2966}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5EFA54A-428F-47D0-B163-DF70EAFA2966}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5EFA54A-428F-47D0-B163-DF70EAFA2966}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5EFA54A-428F-47D0-B163-DF70EAFA2966}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7397965F-D890-41ED-AC44-293092BE799D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7397965F-D890-41ED-AC44-293092BE799D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7397965F-D890-41ED-AC44-293092BE799D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7397965F-D890-41ED-AC44-293092BE799D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{059A841A-56AF-4683-9547-9454349E52A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{059A841A-56AF-4683-9547-9454349E52A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{059A841A-56AF-4683-9547-9454349E52A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{059A841A-56AF-4683-9547-9454349E52A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C5DAFCD-E92A-4164-B9C4-9CE83E6798E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C5DAFCD-E92A-4164-B9C4-9CE83E6798E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C5DAFCD-E92A-4164-B9C4-9CE83E6798E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C5DAFCD-E92A-4164-B9C4-9CE83E6798E4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
