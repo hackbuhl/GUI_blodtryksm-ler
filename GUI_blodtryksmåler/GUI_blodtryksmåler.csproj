@@ -82,6 +82,9 @@
     <EmbeddedResource Include="Alarm.resx">
       <DependentUpon>Alarm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Kalibrer.resx">
+      <DependentUpon>Kalibrer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Måling.resx">
       <DependentUpon>Måling.cs</DependentUpon>
     </EmbeddedResource>
