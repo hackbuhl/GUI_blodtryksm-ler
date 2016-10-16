@@ -11,16 +11,27 @@ namespace Dataaccess_blodtryksmåler
     {
         private SqlDataReader myReader;
         private SqlCommand myCommand;
-        private const string DB = "F16ST2PRJ2OffEKGDatabase";
-        private readonly Login _dataLogin = new Login();
+        private const string DB = "F16ST2ITS2201505227";
         private GetData _getData = new GetData();
+
+        private Login Login
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+
+            set
+            {
+            }
+        }
 
         public int SaveBT(DTO_data BTdata, DTO_login login)
         {
             int curId = 0;
 
-            string insertStringParam = @"INSERT INTO EKGDATA 
-            //(raa_data, ekgmaaleid, samplerate_hz, interval_sec, data_format, bin_eller_tekst, maaleformat_type, start_tid, kommentar)
+            string insertStringParam = @"INSERT INTO Data 
+            //(Dato, Blodtryk, PatientCPR, BrugerID, Noter)
             // OUTPUT INSERTED.ekgdataid
             // VALUES(@data, @id, @samplerate_hz, @interval_sec, @data_format, @bin_eller_tekst, @maaleformat_type, @start_tid, @kommentar)";
 

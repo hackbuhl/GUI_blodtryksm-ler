@@ -66,7 +66,7 @@ namespace DataLag
         public NI_DAQVoltage()
         {
             // Initialize local variables
-            sampleRateInHz = 250;
+            sampleRateInHz = 1000;
             rangeMinimumVolt = -1;
             rangeMaximumVolt = 1;
             samplesPerChannel = 3600;
