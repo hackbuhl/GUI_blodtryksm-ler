@@ -34,9 +34,9 @@
             this.nulpunktBt = new System.Windows.Forms.Button();
             this.MålingBt = new System.Windows.Forms.Button();
             this.AlarmBt = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.SaveBt = new System.Windows.Forms.Button();
+            this.nulBt = new System.Windows.Forms.Button();
+            this.LogoutBt = new System.Windows.Forms.Button();
             this.SysLb = new System.Windows.Forms.Label();
             this.DiaLb = new System.Windows.Forms.Label();
             this.PulsLb = new System.Windows.Forms.Label();
@@ -76,32 +76,32 @@
             this.AlarmBt.Text = "Opsæt Alarm";
             this.AlarmBt.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // SaveBt
             // 
-            this.button1.Location = new System.Drawing.Point(886, 388);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(93, 71);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Gem Måling";
-            this.button1.UseVisualStyleBackColor = true;
+            this.SaveBt.Location = new System.Drawing.Point(886, 388);
+            this.SaveBt.Name = "SaveBt";
+            this.SaveBt.Size = new System.Drawing.Size(93, 71);
+            this.SaveBt.TabIndex = 3;
+            this.SaveBt.Text = "Gem Måling";
+            this.SaveBt.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // nulBt
             // 
-            this.button2.Location = new System.Drawing.Point(760, 388);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(120, 71);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Nulstil";
-            this.button2.UseVisualStyleBackColor = true;
+            this.nulBt.Location = new System.Drawing.Point(760, 388);
+            this.nulBt.Name = "nulBt";
+            this.nulBt.Size = new System.Drawing.Size(120, 71);
+            this.nulBt.TabIndex = 4;
+            this.nulBt.Text = "Nulstil";
+            this.nulBt.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // LogoutBt
             // 
-            this.button3.Location = new System.Drawing.Point(914, 13);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 31);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Log af";
-            this.button3.UseVisualStyleBackColor = true;
+            this.LogoutBt.Location = new System.Drawing.Point(914, 13);
+            this.LogoutBt.Name = "LogoutBt";
+            this.LogoutBt.Size = new System.Drawing.Size(75, 31);
+            this.LogoutBt.TabIndex = 5;
+            this.LogoutBt.Text = "Log af";
+            this.LogoutBt.UseVisualStyleBackColor = true;
             // 
             // SysLb
             // 
@@ -205,9 +205,9 @@
             this.Controls.Add(this.PulsLb);
             this.Controls.Add(this.DiaLb);
             this.Controls.Add(this.SysLb);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.LogoutBt);
+            this.Controls.Add(this.nulBt);
+            this.Controls.Add(this.SaveBt);
             this.Controls.Add(this.AlarmBt);
             this.Controls.Add(this.MålingBt);
             this.Controls.Add(this.nulpunktBt);
@@ -224,9 +224,9 @@
         private System.Windows.Forms.Button nulpunktBt;
         private System.Windows.Forms.Button MålingBt;
         private System.Windows.Forms.Button AlarmBt;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button SaveBt;
+        private System.Windows.Forms.Button nulBt;
+        private System.Windows.Forms.Button LogoutBt;
         private System.Windows.Forms.Label SysLb;
         private System.Windows.Forms.Label DiaLb;
         private System.Windows.Forms.Label PulsLb;

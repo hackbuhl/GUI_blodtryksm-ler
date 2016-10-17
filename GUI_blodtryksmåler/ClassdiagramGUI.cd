@@ -3,53 +3,53 @@
   <Class Name="GUI_blodtryksmåler.Gem">
     <Position X="6" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAACAQABAAAACAAAACAAgAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Gem.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GUI_blodtryksmåler.Kalibrer">
     <Position X="4.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAACAAAAAAAACAAACCAAAAAAAAAABAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAACAAABAAAACAAACCAAAAEAADAABACAgAAAA=</HashCode>
       <FileName>Kalibrer.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GUI_blodtryksmåler.Login">
     <Position X="0.75" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAgAAAAAACAAABAAAACAAAACAAABAAEAEAAABAAQEAA=</HashCode>
+      <HashCode>AAgAAAAASCAAABAAAACAAAACAAAAAAEAQAAAAAAQEAA=</HashCode>
       <FileName>Login.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GUI_blodtryksmåler.Alarm">
     <Position X="2.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAACAAwBAAhACAAAACABAAAEAAAAAAAABAEAA=</HashCode>
+      <HashCode>AAAAAAAABCQAABAABACAAAACAAAAAEAAAAAAAAAgAQA=</HashCode>
       <FileName>Alarm.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GUI_blodtryksmåler.Måling">
     <Position X="8" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>gAAAAAAAACAABBAIAACBACBiAAA4AAAAAAQAAAAAAAA=</HashCode>
+      <HashCode>gAAAAAAAACAAxBAIgACBACBiABAAAAAAAIQAAAhAEAA=</HashCode>
       <FileName>Måling.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GUI_blodtryksmåler.Program">
-    <Position X="6" Y="3.75" Width="1.5" />
+    <Position X="0.75" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GUI_blodtryksmåler.Properties.Resources">
-    <Position X="4.25" Y="4.25" Width="1.5" />
+    <Position X="6" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
     </TypeIdentifier>
   </Class>
   <Class Name="GUI_blodtryksmåler.Properties.Settings">
-    <Position X="6" Y="5" Width="1.5" />
+    <Position X="4.25" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
     </TypeIdentifier>

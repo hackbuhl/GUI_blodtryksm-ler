@@ -35,6 +35,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.ØvSysTb = new System.Windows.Forms.TextBox();
+            this.NedSysTb = new System.Windows.Forms.TextBox();
+            this.ØvDiaTb = new System.Windows.Forms.TextBox();
+            this.NedDiaTb = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // grænseBt
@@ -49,7 +53,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 29);
+            this.label1.Location = new System.Drawing.Point(12, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(88, 13);
             this.label1.TabIndex = 1;
@@ -58,7 +62,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(21, 129);
+            this.label2.Location = new System.Drawing.Point(12, 110);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 13);
             this.label2.TabIndex = 2;
@@ -67,44 +71,76 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(25, 162);
+            this.label3.Location = new System.Drawing.Point(21, 137);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 13);
+            this.label3.Size = new System.Drawing.Size(72, 13);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Øvre grænse";
+            this.label3.Text = "Øvre grænse:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(21, 68);
+            this.label4.Location = new System.Drawing.Point(21, 43);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 13);
+            this.label4.Size = new System.Drawing.Size(72, 13);
             this.label4.TabIndex = 4;
-            this.label4.Text = "Øvre grænse";
+            this.label4.Text = "Øvre grænse:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(21, 185);
+            this.label5.Location = new System.Drawing.Point(21, 160);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 13);
+            this.label5.Size = new System.Drawing.Size(78, 13);
             this.label5.TabIndex = 5;
-            this.label5.Text = "Nedre grænse";
+            this.label5.Text = "Nedre grænse:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(21, 92);
+            this.label6.Location = new System.Drawing.Point(21, 67);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(78, 13);
             this.label6.TabIndex = 6;
             this.label6.Text = "Nedre grænse:";
+            // 
+            // ØvSysTb
+            // 
+            this.ØvSysTb.Location = new System.Drawing.Point(159, 40);
+            this.ØvSysTb.Name = "ØvSysTb";
+            this.ØvSysTb.Size = new System.Drawing.Size(100, 20);
+            this.ØvSysTb.TabIndex = 7;
+            // 
+            // NedSysTb
+            // 
+            this.NedSysTb.Location = new System.Drawing.Point(159, 64);
+            this.NedSysTb.Name = "NedSysTb";
+            this.NedSysTb.Size = new System.Drawing.Size(100, 20);
+            this.NedSysTb.TabIndex = 8;
+            // 
+            // ØvDiaTb
+            // 
+            this.ØvDiaTb.Location = new System.Drawing.Point(159, 134);
+            this.ØvDiaTb.Name = "ØvDiaTb";
+            this.ØvDiaTb.Size = new System.Drawing.Size(100, 20);
+            this.ØvDiaTb.TabIndex = 9;
+            // 
+            // NedDiaTb
+            // 
+            this.NedDiaTb.Location = new System.Drawing.Point(159, 157);
+            this.NedDiaTb.Name = "NedDiaTb";
+            this.NedDiaTb.Size = new System.Drawing.Size(100, 20);
+            this.NedDiaTb.TabIndex = 10;
             // 
             // Alarm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.NedDiaTb);
+            this.Controls.Add(this.ØvDiaTb);
+            this.Controls.Add(this.NedSysTb);
+            this.Controls.Add(this.ØvSysTb);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -128,6 +164,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox ØvSysTb;
+        private System.Windows.Forms.TextBox NedSysTb;
+        private System.Windows.Forms.TextBox ØvDiaTb;
+        private System.Windows.Forms.TextBox NedDiaTb;
     }
 }
 

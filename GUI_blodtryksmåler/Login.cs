@@ -27,8 +27,8 @@ namespace GUI_blodtryksmåler
 
         private void Logon_Click(object sender, EventArgs e)
         {
-            dtoLogin.id = Convert.ToInt32(IdBox.Text);
-            dtoLogin.pass = Convert.ToString(PassBox.Text);
+            dtoLogin.id = Convert.ToInt32(IdTb.Text);
+            dtoLogin.pass = Convert.ToString(PassTb.Text);
             GetType(dtoLogin);
             // luk login vindue og åben enten kalibrer eller måling
 
