@@ -12,6 +12,7 @@ namespace GUI_blodtryksmåler
 {
     public partial class Kalibrer : Form
     {
+        private Logic_blodtryksmåler.Login log;
         public Kalibrer()
         {
             InitializeComponent();

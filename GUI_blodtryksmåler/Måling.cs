@@ -13,7 +13,7 @@ namespace GUI_blodtryksmåler
     public partial class Måling : Form
     {
         private Logic_blodtryksmåler.Analyse dataanalyse;
-        private Logic_blodtryksmåler.Login login;
+        
         public Måling()
         {
             InitializeComponent();
