@@ -7,8 +7,9 @@ using DTO_blodtryksmåler;
 
 namespace Logic_blodtryksmåler
 {
-    public class Alarm : iDataObserver
+    public class Alarm
     {
+        private DTO_alarm dtoAlarm;
         public int Alarmvalues
         {
             get
@@ -21,7 +22,7 @@ namespace Logic_blodtryksmåler
             }
         }
 
-        public void SetAlarm()
+        public void SetAlarm(DTO_alarm dto)
         {
             throw new System.NotImplementedException();
         }

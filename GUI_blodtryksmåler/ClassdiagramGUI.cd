@@ -10,7 +10,7 @@
   <Class Name="GUI_blodtryksmåler.Kalibrer">
     <Position X="4.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAACAAABAAAACAAACCAAAAEAADAABACAgAAAA=</HashCode>
+      <HashCode>AAAAAAAAACAAABAAAACACACCAAAAEAADAABACAgAAAA=</HashCode>
       <FileName>Kalibrer.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -24,14 +24,14 @@
   <Class Name="GUI_blodtryksmåler.Alarm">
     <Position X="2.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAABCQAABAABACAAAACAAAAAEAAAAAAAAAgAQA=</HashCode>
+      <HashCode>AAAAgAAABCQAABAABACAAAACAAAAAEAAAAAAAAAgAQA=</HashCode>
       <FileName>Alarm.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GUI_blodtryksmåler.Måling">
     <Position X="8" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>gAAAAAAAACAAxBAIgACBACBiABAAAAAAAIQAAAhAEAA=</HashCode>
+      <HashCode>gAAAAAAAACAAxBAIgACBACBiABAAAAAAAIQAAAhAAAA=</HashCode>
       <FileName>Måling.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -46,12 +46,6 @@
     <Position X="6" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="GUI_blodtryksmåler.Properties.Settings">
-    <Position X="4.25" Y="5.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

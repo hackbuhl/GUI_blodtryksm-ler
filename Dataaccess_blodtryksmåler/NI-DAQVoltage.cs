@@ -62,6 +62,17 @@ namespace DataLag
         /// </summary>
         public string deviceName { get; set; }
 
+        public Dataaccess_blodtryksmåler.GetData GetData
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+
+            set
+            {
+            }
+        }
 
         public NI_DAQVoltage()
         {

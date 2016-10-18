@@ -49,6 +49,7 @@
             this.grænseBt.TabIndex = 0;
             this.grænseBt.Text = "Sæt grænseværdier";
             this.grænseBt.UseVisualStyleBackColor = true;
+            this.grænseBt.Click += new System.EventHandler(this.grænseBt_Click);
             // 
             // label1
             // 

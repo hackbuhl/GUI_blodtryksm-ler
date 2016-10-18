@@ -45,7 +45,6 @@
     <Compile Include="iDataObserver.cs" />
     <Compile Include="Filter.cs" />
     <Compile Include="Gem.cs" />
-    <Compile Include="iAlarmObserver.cs" />
     <Compile Include="Kalibrer.cs" />
     <Compile Include="SubLogic.cs" />
     <Compile Include="Login.cs" />

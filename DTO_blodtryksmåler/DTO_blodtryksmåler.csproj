@@ -40,7 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DTO_alarm.cs" />
     <Compile Include="DTO_data.cs" />
+    <Compile Include="DTO_kalibrer.cs" />
     <Compile Include="DTO_login.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

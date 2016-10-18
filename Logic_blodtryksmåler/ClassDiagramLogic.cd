@@ -3,10 +3,9 @@
   <Class Name="Logic_blodtryksmåler.Alarm" BaseTypeListCollapsed="true">
     <Position X="5.75" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAIAAAAAAAAgAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAIAAAAAAAAhAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
       <FileName>Alarm.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="Logic_blodtryksmåler.Analyse" BaseTypeListCollapsed="true">
     <Position X="7.5" Y="0.75" Width="1.5" />
@@ -25,7 +24,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="Logic_blodtryksmåler.Gem">
-    <Position X="5.75" Y="2.5" Width="1.5" />
+    <Position X="5.75" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAACA=</HashCode>
       <FileName>Gem.cs</FileName>
@@ -61,7 +60,7 @@
     </TypeIdentifier>
   </Class>
   <Interface Name="Logic_blodtryksmåler.iDataObserver">
-    <Position X="5.75" Y="4.5" Width="1.5" />
+    <Position X="9.25" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>iDataObserver.cs</FileName>
