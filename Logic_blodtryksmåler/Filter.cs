@@ -6,16 +6,26 @@ using DTO_blodtryksmåler;
 
 namespace Logic_blodtryksmåler
 {
-    public class Filter: iDataObserver
+    public class Filter: iStrategy
     {
         public DTO_data ActivateFilter()
         {
             throw new System.NotImplementedException();
         }
 
-        public void Update(int val)
+        public void Execute()
         {
             
+        }
+
+        public DTO_data formVtommHg()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool ZeroAdjust()
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -38,7 +38,7 @@ namespace Dataaccess_blodtryksmåler
 
             List<double> data = BTdata.datalist;
 
-            using (SqlCommand cmd = new SqlCommand(insertStringParam, _dataLogin.OpenConnectionST ))
+            using (SqlCommand cmd = new SqlCommand(insertStringParam, Login.OpenConnectionST ))
 
             {
 

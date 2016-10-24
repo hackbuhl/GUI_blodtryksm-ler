@@ -1,69 +1,83 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access" MembersFormat="FullSignature">
   <Class Name="Logic_blodtryksmåler.Alarm" BaseTypeListCollapsed="true">
-    <Position X="5.75" Y="0.75" Width="1.5" />
+    <Position X="8.5" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAIAAAAAAAAhAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
       <FileName>Alarm.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="Logic_blodtryksmåler.Analyse" BaseTypeListCollapsed="true">
-    <Position X="7.5" Y="0.75" Width="1.5" />
+    <Position X="4.25" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAhAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
       <FileName>Analyse.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="Logic_blodtryksmåler.Filter" BaseTypeListCollapsed="true">
-    <Position X="9.25" Y="0.75" Width="1.5" />
+    <Position X="6" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAEAQAAAIAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
       <FileName>Filter.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="Logic_blodtryksmåler.Gem">
-    <Position X="5.75" Y="3.25" Width="1.5" />
+    <Position X="10.75" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAACA=</HashCode>
       <FileName>Gem.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Logic_blodtryksmåler.Kalibrer" BaseTypeListCollapsed="true">
-    <Position X="7.5" Y="3" Width="1.5" />
+    <Position X="1.5" Y="5" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAAAAAAAAAAEAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAAAAAAAAAAAEAAAEAABAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Kalibrer.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
-  </Class>
-  <Class Name="Logic_blodtryksmåler.Logic">
-    <Position X="3.25" Y="0.75" Width="2" />
-    <TypeIdentifier>
-      <HashCode>AAAIAAAAAAAAAAIAAAAAAAAAAIABAABQAAgAAABAAAA=</HashCode>
-      <FileName>Logic.cs</FileName>
-    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Filter" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="Logic_blodtryksmåler.Login">
-    <Position X="9.25" Y="2.25" Width="1.5" />
+    <Position X="10.75" Y="4.75" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
       <FileName>Login.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Logic_blodtryksmåler.SubLogic">
-    <Position X="3.25" Y="3.75" Width="2" />
+  <Class Name="Logic_blodtryksmåler.Logic">
+    <Position X="1.5" Y="2.5" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAIAAAAAAAAAAAAAAAAAAAAACAAAAAgAAAAAAA=</HashCode>
-      <FileName>SubLogic.cs</FileName>
+      <HashCode>AAAAAAAIAAAAAAQAAAIAAAAAAAAAACAAAAAAAABAAAA=</HashCode>
+      <FileName>Logic.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
-  <Interface Name="Logic_blodtryksmåler.iDataObserver">
-    <Position X="9.25" Y="4" Width="1.5" />
+  <Class Name="Logic_blodtryksmåler.AbAnalyse">
+    <Position X="6.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAQAAIAAAAAAAAAAJAAAABQAAAAAAAAAAA=</HashCode>
+      <FileName>AbAnalyse.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Filter" />
+      <Property Name="iAnalyseObserver" />
+    </ShowAsAssociation>
+  </Class>
+  <Interface Name="Logic_blodtryksmåler.iAnalyseObserver">
+    <Position X="8" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>iDataObserver.cs</FileName>
+      <FileName>iAnalyseObserver.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Logic_blodtryksmåler.iStrategy">
+    <Position X="4" Y="2.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAIAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>iStrategy.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Segoe UI" Size="9" />

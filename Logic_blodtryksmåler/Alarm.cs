@@ -7,7 +7,7 @@ using DTO_blodtryksmåler;
 
 namespace Logic_blodtryksmåler
 {
-    public class Alarm
+    public class Alarm: iAnalyseObserver
     {
         private DTO_alarm dtoAlarm;
         public int Alarmvalues

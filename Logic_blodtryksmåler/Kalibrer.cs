@@ -5,9 +5,21 @@ using System.Text;
 
 namespace Logic_blodtryksmåler
 {
-    public class Kalibrer : iDataObserver
+    public class Kalibrer 
     {
         private int CalVarialbel;
+
+        public Filter Filter
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+
+            set
+            {
+            }
+        }
 
         public void Calibrate()
         {

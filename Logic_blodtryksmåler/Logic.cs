@@ -2,45 +2,30 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
+using DTO_blodtryksmåler;
 
 namespace Logic_blodtryksmåler
 {
-    public abstract class Logic
+    public class Logic :iStrategy
     {
-        private List<iDataObserver> observers = new List<iDataObserver>();
-        private int CalVariabel;
+        private int value;
+        private Dataaccess_blodtryksmåler.GetData DAL;
 
-        public void Attach(iDataObserver observer)
-        {
-            observers.Add(observer);
-        }
-
-        public void Detach(iDataObserver observer)
-        {
-            observers.Remove(observer);
-        }
-
-        public void Notify(int val)
-        {
-            foreach (var observer in observers)
-            {
-                observer.Update(val);
-            }
-        }
-
-        public DTO_blodtryksmåler.DTO_data fromVtommHg()
+        public void Execute()
         {
             throw new System.NotImplementedException();
         }
 
-        public void ChangeCalibration()
+        public DTO_data formVtommHg()
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public bool ZeroAdjust()
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
+
     }
 }

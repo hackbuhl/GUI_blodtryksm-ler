@@ -29,7 +29,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="GUI_blodtryksmåler.Måling">
-    <Position X="8" Y="1.5" Width="1.5" />
+    <Position X="8" Y="1.5" Width="2" />
     <TypeIdentifier>
       <HashCode>gAAAAAAAACAAxBAIgACBACBiABAAAAAAAIQAAAhAAAA=</HashCode>
       <FileName>Måling.cs</FileName>
@@ -40,12 +40,6 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="GUI_blodtryksmåler.Properties.Resources">
-    <Position X="6" Y="4.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

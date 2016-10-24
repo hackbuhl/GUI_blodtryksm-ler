@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Logic_blodtryksmåler
 {
-    public interface iDataObserver
+    public interface iAnalyseObserver
     {
         void Update(int val);
     }

@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Logic_blodtryksmåler
 {
-    public class Analyse : iDataObserver
+    public class Analyse : AbAnalyse
     {
         private int dataDTO;
 
@@ -20,9 +20,5 @@ namespace Logic_blodtryksmåler
             throw new System.NotImplementedException();
         }
 
-        public void Update(int val)
-        {
-            
-        }
     }
 }

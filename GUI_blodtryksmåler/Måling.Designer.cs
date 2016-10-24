@@ -106,7 +106,7 @@
             // SysLb
             // 
             this.SysLb.AutoSize = true;
-            this.SysLb.Location = new System.Drawing.Point(29, 13);
+            this.SysLb.Location = new System.Drawing.Point(51, 50);
             this.SysLb.Name = "SysLb";
             this.SysLb.Size = new System.Drawing.Size(36, 13);
             this.SysLb.TabIndex = 6;
@@ -115,7 +115,7 @@
             // DiaLb
             // 
             this.DiaLb.AutoSize = true;
-            this.DiaLb.Location = new System.Drawing.Point(13, 48);
+            this.DiaLb.Location = new System.Drawing.Point(100, 114);
             this.DiaLb.Name = "DiaLb";
             this.DiaLb.Size = new System.Drawing.Size(35, 13);
             this.DiaLb.TabIndex = 7;
@@ -124,7 +124,7 @@
             // PulsLb
             // 
             this.PulsLb.AutoSize = true;
-            this.PulsLb.Location = new System.Drawing.Point(16, 100);
+            this.PulsLb.Location = new System.Drawing.Point(96, 187);
             this.PulsLb.Name = "PulsLb";
             this.PulsLb.Size = new System.Drawing.Size(35, 13);
             this.PulsLb.TabIndex = 8;

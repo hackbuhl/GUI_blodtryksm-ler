@@ -40,16 +40,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbAnalyse.cs" />
     <Compile Include="Alarm.cs" />
     <Compile Include="Analyse.cs" />
-    <Compile Include="iDataObserver.cs" />
+    <Compile Include="iAnalyseObserver.cs" />
     <Compile Include="Filter.cs" />
     <Compile Include="Gem.cs" />
     <Compile Include="Kalibrer.cs" />
-    <Compile Include="SubLogic.cs" />
+    <Compile Include="iStrategy.cs" />
+    <Compile Include="Logic.cs" />
     <Compile Include="Login.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Logic.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagramLogic.cd" />
