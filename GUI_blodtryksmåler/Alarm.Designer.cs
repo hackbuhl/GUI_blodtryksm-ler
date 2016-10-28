@@ -43,7 +43,7 @@
             // 
             // grænseBt
             // 
-            this.grænseBt.Location = new System.Drawing.Point(138, 299);
+            this.grænseBt.Location = new System.Drawing.Point(22, 314);
             this.grænseBt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grænseBt.Name = "grænseBt";
             this.grænseBt.Size = new System.Drawing.Size(248, 54);
