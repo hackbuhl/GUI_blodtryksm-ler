@@ -25,10 +25,15 @@ namespace GUI_blodtryksmåler
 
         private void Tryk1Bt_Click(object sender, EventArgs e)
         {
+            logKalibrer.Update();
+            dtoKali.Måling1 = dtoData.datalist[0];
             try
             {
+
                 dtoKali.Read1 = Convert.ToDouble(Tryk1TB.Text);
-                dtoKali.Måling1 = dtoData.datalist[0];
+
+                Tryk1Bt.Enabled = false;
+                Tryk2Bt.Enabled = true;
 
             }
             catch (Exception)
@@ -44,6 +49,9 @@ namespace GUI_blodtryksmåler
             {
                 dtoKali.Read2 = Convert.ToDouble(Tryk2TB.Text);
                 dtoKali.Måling2 = dtoData.datalist[0];//korrekt plads skal sættes ind når filteret er specificeret.
+                Tryk2Bt.Enabled = false;
+                KaliBt.Enabled = true;
+
             }
             catch (Exception)
             {
@@ -59,12 +67,16 @@ namespace GUI_blodtryksmåler
 
         private void nulBt_Click(object sender, EventArgs e)
         {
-
+            Tryk1TB.Text = null;
+            Tryk2TB.Text = null;
+            KaliBt.Enabled = false;
+            Tryk2Bt.Enabled = false;
+            Tryk1Bt.Enabled = true;
         }
 
         private void LogafBt_Click(object sender, EventArgs e)
         {
-
+            throw new NotImplementedException();
         }
     }
 }

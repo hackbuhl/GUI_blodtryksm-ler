@@ -12,12 +12,20 @@ namespace Logic_blodtryksmåler
         private Filter filter;
         private DTO_data dtoData;
 
-        //skal denne have spændinger fra logic eller fra filter?? 
+        
 
 
         public void Calibrate(DTO_kalibrer kalibrer)
         {
-            CalVarialbel = ((kalibrer.Read2 - kalibrer.Read1) / (kalibrer.Måling2 - kalibrer.Måling1));
+            if (kalibrer.Read1 > kalibrer.Read2)
+            {
+                CalVarialbel = ((kalibrer.Read2 - kalibrer.Read1)/(kalibrer.Måling2 - kalibrer.Måling1));
+            }
+            else
+            {
+                CalVarialbel = ((kalibrer.Read1 - kalibrer.Read2)/kalibrer.Måling1 - kalibrer.Måling2);
+            }
+            // skal kalde en metode som sætter variablen i VtommHg metoden.
         }
 
         public void Update()
