@@ -61,6 +61,7 @@
             this.LogafBt.TabIndex = 2;
             this.LogafBt.Text = "Log af";
             this.LogafBt.UseVisualStyleBackColor = true;
+            this.LogafBt.Click += new System.EventHandler(this.LogafBt_Click);
             // 
             // Tryk1Bt
             // 
@@ -70,15 +71,18 @@
             this.Tryk1Bt.TabIndex = 3;
             this.Tryk1Bt.Text = "Indlæs tryk 1";
             this.Tryk1Bt.UseVisualStyleBackColor = true;
+            this.Tryk1Bt.Click += new System.EventHandler(this.Tryk1Bt_Click);
             // 
             // Tryk2Bt
             // 
+            this.Tryk2Bt.Enabled = false;
             this.Tryk2Bt.Location = new System.Drawing.Point(168, 114);
             this.Tryk2Bt.Name = "Tryk2Bt";
             this.Tryk2Bt.Size = new System.Drawing.Size(100, 23);
             this.Tryk2Bt.TabIndex = 4;
             this.Tryk2Bt.Text = "Indlæs tryk 2";
             this.Tryk2Bt.UseVisualStyleBackColor = true;
+            this.Tryk2Bt.Click += new System.EventHandler(this.Tryk2Bt_Click);
             // 
             // label1
             // 
@@ -87,7 +91,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 26);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Første tryk i \r\nvæskesøjlen:";
+            this.label1.Text = "mmHg i \r\nvæskesøjlen:";
             // 
             // label2
             // 
@@ -96,16 +100,18 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 26);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Andet tryk i \r\nvæskesøjlen:\r\n";
+            this.label2.Text = "mmHg i \r\nvæskesøjlen:\r\n";
             // 
             // KaliBt
             // 
+            this.KaliBt.Enabled = false;
             this.KaliBt.Location = new System.Drawing.Point(22, 154);
             this.KaliBt.Name = "KaliBt";
             this.KaliBt.Size = new System.Drawing.Size(246, 47);
             this.KaliBt.TabIndex = 7;
             this.KaliBt.Text = "Kalibrer";
             this.KaliBt.UseVisualStyleBackColor = true;
+            this.KaliBt.Click += new System.EventHandler(this.KaliBt_Click);
             // 
             // nulBt
             // 
@@ -115,6 +121,7 @@
             this.nulBt.TabIndex = 8;
             this.nulBt.Text = "Nulstil";
             this.nulBt.UseVisualStyleBackColor = true;
+            this.nulBt.Click += new System.EventHandler(this.nulBt_Click);
             // 
             // Kalibrer
             // 

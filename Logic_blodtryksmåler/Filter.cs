@@ -27,5 +27,11 @@ namespace Logic_blodtryksmåler
         {
             throw new NotImplementedException();
         }
+
+        public DTO_data CalData()
+        {
+            throw new NotImplementedException();
+            //Denne metode skal kunne hente spændinger direkte fra logic, sende disse spændinger igennem filteret gemme dem i en dto som kan hentes fra kalibrer klassen.
+        }
     }
 }
