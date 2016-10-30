@@ -22,7 +22,7 @@ namespace GUI_blodtryksmåler
 
         public DTO_login GetType(DTO_login log)
         {
-           return login.getLogin(log);
+            return login.getLogin(log);
         }
 
         private void Logon_Click(object sender, EventArgs e)
@@ -31,6 +31,8 @@ namespace GUI_blodtryksmåler
             dtoLogin.pass = Convert.ToString(PassTb.Text);
             GetType(dtoLogin);
             // luk login vindue og åben enten kalibrer eller måling
+
+
 
         }
     }

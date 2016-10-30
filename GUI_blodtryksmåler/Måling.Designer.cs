@@ -48,6 +48,27 @@
             this.DataChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.DataChart)).BeginInit();
             this.SuspendLayout();
+
+            // test 
+            // cpuChart
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.DataChart.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.DataChart.Legends.Add(legend1);
+            this.DataChart.Location = new System.Drawing.Point(12, 12);
+            this.DataChart.Name = "DataChart"; // cpuChart
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.DataChart.Series.Add(series1);
+            this.DataChart.Size = new System.Drawing.Size(882, 493);
+            this.DataChart.TabIndex = 0;
+            this.DataChart.Text = "chart1";
+            // 
+            //
+
             // 
             // nulpunktBt
             // 
@@ -175,21 +196,21 @@
             this.DigitalfilterChB.TabIndex = 13;
             this.DigitalfilterChB.UseVisualStyleBackColor = true;
             // 
-            // DataChart
+            // DataChart - oprindelige autogen chart
             // 
-            chartArea1.Name = "ChartArea1";
-            this.DataChart.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.DataChart.Legends.Add(legend1);
-            this.DataChart.Location = new System.Drawing.Point(209, 50);
-            this.DataChart.Name = "DataChart";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.DataChart.Series.Add(series1);
-            this.DataChart.Size = new System.Drawing.Size(770, 315);
-            this.DataChart.TabIndex = 14;
-            this.DataChart.Text = "chart1";
+            //chartArea1.Name = "ChartArea1";
+            //this.DataChart.ChartAreas.Add(chartArea1);
+            //legend1.Name = "Legend1";
+            //this.DataChart.Legends.Add(legend1);
+            //this.DataChart.Location = new System.Drawing.Point(209, 50);
+            //this.DataChart.Name = "DataChart";
+            //series1.ChartArea = "ChartArea1";
+            //series1.Legend = "Legend1";
+            //series1.Name = "Series1";
+            //this.DataChart.Series.Add(series1);
+            //this.DataChart.Size = new System.Drawing.Size(770, 315);
+            //this.DataChart.TabIndex = 14;
+            //this.DataChart.Text = "chart1";
             // 
             // Måling
             // 
