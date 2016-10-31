@@ -13,6 +13,8 @@ namespace Logic_blodtryksmåler
 
         public DTO_blodtryksmåler.DTO_login getLogin(DTO_login log)
         {
+            login.isUserinDB(log)
+            log.
            return login.isUserinDB(log);
         }
     }

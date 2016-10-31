@@ -17,13 +17,13 @@ namespace Dataaccess_blodtryksmåler
         private DTO_login login;
         private SqlCommand myCommand;
         private SqlDataReader myReader;
-        public DTO_login isUserinDB(DTO_login log)
+        public bool DTO_login isUserinDB(DTO_login log)
         {
-
+            //Ida Indtaster anden metode
 
             login = getType(log);
             
-            return login;
+            return true;
 
         }
         public SqlConnection OpenConnectionST
