@@ -13,7 +13,7 @@ namespace Dataaccess_blodtryksmåler
 {
     public class Login
     {
-        const string DB = "Lokaldatabasenavn";
+        const string DB = "F16ST2ITS2201505227";
         private DTO_login login;
         private SqlCommand myCommand;
         private SqlDataReader myReader;
@@ -47,7 +47,7 @@ namespace Dataaccess_blodtryksmåler
         {
             //Ida Indtaster anden metode
 
-            myCommand = new SqlCommand("select * from Ansatte where MedarbejderNR='" + log.id + "'and Kode='" + log.pass + "'", myConnection);
+            myCommand = new SqlCommand("select * from Logintabel where BrugerID='" + log.id + "'and Kode='" + log.pass + "''and BrugerType'", myConnection);
             myConnection.Open();
             myReader = myCommand.ExecuteReader();
 
@@ -63,19 +63,13 @@ namespace Dataaccess_blodtryksmåler
                 return false;
             }
 
-
-
-            login = getType(log);
-
-            return true;
-
         }
 
 
 
         public DTO_login getType(DTO_login log)
         {
-          myCommand = new SqlCommand("SELECT Type FROM BtData where id='"+log.id+"'AND pass='"+log.pass+"'",OpenConnectionST);
+          myCommand = new SqlCommand("SELECT Type FROM Logintabel where id='"+log.id+"'AND pass='"+log.pass+"'",OpenConnectionST);
             myReader = myCommand.ExecuteReader();
             while (myReader.Read())
             {
