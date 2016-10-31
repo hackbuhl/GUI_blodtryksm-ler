@@ -28,26 +28,11 @@ namespace Dataaccess_blodtryksmåler
                                             "connection timeout=5");
         }
 
-
-        //public SqlConnection OpenConnectionST
-        //{
-        //    get
-        //    {
-
-        //        var con = new SqlConnection("user id=" + DB +
-        //                                    ";password=" + DB + ";server=i4dab.ase.au.dk;" +
-        //                                    "Trusted_Connection=false;" +
-        //                                    "connection timeout=5");
-        //        con.Open();
-        //        return con;
-        //    }
-        //}
-
         public DTO_login isUserinDB(DTO_login log)
         {
-            //Ida Indtaster anden metode
+            //Ida indtaster anden metode
 
-            myCommand = new SqlCommand("select * from Logintabel where BrugerID='" + log.id + "'and Kode='" + log.pass + "''and BrugerType'", myConnection);
+            myCommand = new SqlCommand("select * from Logintabel where BrugerID='" + log.id + "'and Kode='" + log.pass + "'", myConnection);
             myConnection.Open();
             myReader = myCommand.ExecuteReader();
 
@@ -55,7 +40,7 @@ namespace Dataaccess_blodtryksmåler
             {
                 while (myReader.Read())
                 {
-                    log.type = Convert.ToInt32(myReader["Type"]);
+                    log.type = Convert.ToString(myReader["BrugerType"]);
                 }
                 myConnection.Close();
                 
@@ -67,20 +52,8 @@ namespace Dataaccess_blodtryksmåler
             }
             return log;
 
-        }
 
 
-
-        public DTO_login getType(DTO_login log)
-        {
-          myCommand = new SqlCommand("SELECT Type FROM Logintabel where id='"+log.id+"'AND pass='"+log.pass+"'",OpenConnectionST);
-            myReader = myCommand.ExecuteReader();
-            while (myReader.Read())
-            {
-                log.type = Convert.ToInt32(myReader["Type"]);
-            }
-            OpenConnectionST.Close();
-            return log;
         }
     }
 }

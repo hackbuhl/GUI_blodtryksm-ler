@@ -11,6 +11,6 @@ namespace DTO_blodtryksmåler
     {
         public int id { get; set; }
         public string pass { get; set; }
-        public int type { get; set; }
+        public string type { get; set; }
     }
 }
