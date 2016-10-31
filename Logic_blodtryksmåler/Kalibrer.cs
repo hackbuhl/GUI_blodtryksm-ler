@@ -3,19 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using DTO_blodtryksmåler;
+using Dataaccess_blodtryksmåler;
 
 namespace Logic_blodtryksmåler
 {
     public class Kalibrer 
     {
         private double CalVarialbel;
-        private Filter filter;
+
         private DTO_data dtoData;
+        private Dataaccess_blodtryksmåler.Kalibrer dataKalibrer = new Dataaccess_blodtryksmåler.Kalibrer();
 
         
 
 
-        public void Calibrate(DTO_kalibrer kalibrer)
+        public void Calibrate(DTO_kalibrer kalibrer, DTO_login login)
         {
             if (kalibrer.Read1 > kalibrer.Read2)
             {
@@ -25,12 +27,13 @@ namespace Logic_blodtryksmåler
             {
                 CalVarialbel = ((kalibrer.Read1 - kalibrer.Read2)/kalibrer.Måling1 - kalibrer.Måling2);
             }
-            // skal kalde en metode som sætter variablen i VtommHg metoden.
+            kalibrer.Factor = CalVarialbel;
+            dataKalibrer.saveFactor(kalibrer,login);
         }
 
         public void Update()
         {
-            filter.CalData();
+            //filter.CalData();
 
         }
     }

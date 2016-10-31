@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using NationalInstruments.DAQmx;
 
-namespace DataLag
+namespace Dataaccess_blodtryksmåler
 {
     public class NI_DAQVoltage
     {

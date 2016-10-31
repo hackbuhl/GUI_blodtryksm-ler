@@ -13,3 +13,16 @@ C:\Users\Ida Sofie Rasmusen\Documents\GitHub\GUI_blodtryksm-ler\Dataaccess_blodt
 C:\Users\Ida Sofie Rasmusen\Documents\GitHub\GUI_blodtryksm-ler\Dataaccess_blodtryksmåler\obj\Debug\Dataaccess_blodtryksmåler.csprojResolveAssemblyReference.cache
 C:\Users\Ida Sofie Rasmusen\Documents\GitHub\GUI_blodtryksm-ler\Dataaccess_blodtryksmåler\obj\Debug\Dataaccess_blodtryksmåler.dll
 C:\Users\Ida Sofie Rasmusen\Documents\GitHub\GUI_blodtryksm-ler\Dataaccess_blodtryksmåler\obj\Debug\Dataaccess_blodtryksmåler.pdb
+C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\Dataaccess_blodtryksmåler\obj\Debug\Dataaccess_blodtryksmåler.csprojResolveAssemblyReference.cache
+C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\Dataaccess_blodtryksmåler\obj\Debug\Dataaccess_blodtryksmåler.dll
+C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\Dataaccess_blodtryksmåler\obj\Debug\Dataaccess_blodtryksmåler.pdb
+C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\Dataaccess_blodtryksmåler\bin\Debug\Dataaccess_blodtryksmåler.dll
+C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\Dataaccess_blodtryksmåler\bin\Debug\Dataaccess_blodtryksmåler.pdb
+C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\Dataaccess_blodtryksmåler\bin\Debug\DTO_blodtryksmåler.dll
+C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\Dataaccess_blodtryksmåler\bin\Debug\NationalInstruments.Common.dll
+C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\Dataaccess_blodtryksmåler\bin\Debug\NationalInstruments.Common.Native.dll
+C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\Dataaccess_blodtryksmåler\bin\Debug\NationalInstruments.NiLmClientDLL.dll
+C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\Dataaccess_blodtryksmåler\bin\Debug\DTO_blodtryksmåler.pdb
+C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\Dataaccess_blodtryksmåler\bin\Debug\NationalInstruments.Common.xml
+C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\Dataaccess_blodtryksmåler\bin\Debug\NationalInstruments.DAQmx.xml
+C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\Dataaccess_blodtryksmåler\bin\Debug\ST2Prj2LibNI-DAQ.pdb
