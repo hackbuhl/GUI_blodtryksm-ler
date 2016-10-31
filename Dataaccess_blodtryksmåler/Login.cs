@@ -43,7 +43,7 @@ namespace Dataaccess_blodtryksmåler
         //    }
         //}
 
-        public bool DTO_login isUserinDB(DTO_login log)
+        public DTO_login isUserinDB(DTO_login log)
         {
             //Ida Indtaster anden metode
 
@@ -53,15 +53,19 @@ namespace Dataaccess_blodtryksmåler
 
             if (myReader.Read())
             {
+                while (myReader.Read())
+                {
+                    log.type = Convert.ToInt32(myReader["Type"]);
+                }
                 myConnection.Close();
-                return true;
+                
             }
 
             else
             {
-                myConnection.Close();
-                return false;
+                log.type = "FalseId";
             }
+            return log;
 
         }
 
