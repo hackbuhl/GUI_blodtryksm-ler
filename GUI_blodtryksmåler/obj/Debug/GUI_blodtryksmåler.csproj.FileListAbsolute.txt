@@ -32,3 +32,6 @@ C:\Users\Ida Sofie Rasmusen\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmå
 C:\Users\Ida Sofie Rasmusen\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\obj\Debug\GUI_blodtryksmåler.pdb
 C:\Users\Daniel\Desktop\GUI_blodtryksm-ler\GUI_blodtryksmåler\obj\Debug\GUI_blodtryksmåler.exe
 C:\Users\Daniel\Desktop\GUI_blodtryksm-ler\GUI_blodtryksmåler\obj\Debug\GUI_blodtryksmåler.pdb
+C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\GUI_blodtryksmåler.exe.config
+C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\obj\Debug\GUI_blodtryksmåler.exe
+C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\obj\Debug\GUI_blodtryksmåler.pdb
