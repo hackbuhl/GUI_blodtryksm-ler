@@ -13,7 +13,7 @@ namespace Dataaccess_blodtryksmåler
 {
     public class Login
     {
-        const string DB = "Lokaldatabasenavn";
+        const string DB = "F16ST2ITS2201505227";
         private DTO_login login;
         private SqlCommand myCommand;
         private SqlDataReader myReader;
@@ -28,61 +28,32 @@ namespace Dataaccess_blodtryksmåler
                                             "connection timeout=5");
         }
 
-
-        //public SqlConnection OpenConnectionST
-        //{
-        //    get
-        //    {
-
-        //        var con = new SqlConnection("user id=" + DB +
-        //                                    ";password=" + DB + ";server=i4dab.ase.au.dk;" +
-        //                                    "Trusted_Connection=false;" +
-        //                                    "connection timeout=5");
-        //        con.Open();
-        //        return con;
-        //    }
-        //}
-
-        public bool DTO_login isUserinDB(DTO_login log)
+        public DTO_login isUserinDB(DTO_login log)
         {
-            //Ida Indtaster anden metode
+            //Ida indtaster anden metode
 
-            myCommand = new SqlCommand("select * from Ansatte where MedarbejderNR='" + log.id + "'and Kode='" + log.pass + "'", myConnection);
+            myCommand = new SqlCommand("select * from Logintabel where BrugerID='" + log.id + "'and Kode='" + log.pass + "'", myConnection);
             myConnection.Open();
             myReader = myCommand.ExecuteReader();
 
             if (myReader.Read())
             {
+                while (myReader.Read())
+                {
+                    log.type = Convert.ToString(myReader["BrugerType"]);
+                }
                 myConnection.Close();
-                return true;
+                
             }
 
             else
             {
-                myConnection.Close();
-                return false;
+                log.type = "FalseId";
             }
-
-
-
-            login = getType(log);
-
-            return true;
-
-        }
-
-
-
-        public DTO_login getType(DTO_login log)
-        {
-          myCommand = new SqlCommand("SELECT Type FROM BtData where id='"+log.id+"'AND pass='"+log.pass+"'",OpenConnectionST);
-            myReader = myCommand.ExecuteReader();
-            while (myReader.Read())
-            {
-                log.type = Convert.ToInt32(myReader["Type"]);
-            }
-            OpenConnectionST.Close();
             return log;
+
+
+
         }
     }
 }

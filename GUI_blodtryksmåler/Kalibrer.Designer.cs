@@ -37,6 +37,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.KaliBt = new System.Windows.Forms.Button();
             this.nulBt = new System.Windows.Forms.Button();
+            this.ZeroAdjust = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Tryk1TB
@@ -48,6 +49,7 @@
             // 
             // Tryk2TB
             // 
+            this.Tryk2TB.Enabled = false;
             this.Tryk2TB.Location = new System.Drawing.Point(168, 76);
             this.Tryk2TB.Name = "Tryk2TB";
             this.Tryk2TB.Size = new System.Drawing.Size(100, 20);
@@ -105,7 +107,7 @@
             // KaliBt
             // 
             this.KaliBt.Enabled = false;
-            this.KaliBt.Location = new System.Drawing.Point(22, 154);
+            this.KaliBt.Location = new System.Drawing.Point(22, 181);
             this.KaliBt.Name = "KaliBt";
             this.KaliBt.Size = new System.Drawing.Size(246, 47);
             this.KaliBt.TabIndex = 7;
@@ -115,7 +117,7 @@
             // 
             // nulBt
             // 
-            this.nulBt.Location = new System.Drawing.Point(22, 222);
+            this.nulBt.Location = new System.Drawing.Point(22, 249);
             this.nulBt.Name = "nulBt";
             this.nulBt.Size = new System.Drawing.Size(246, 23);
             this.nulBt.TabIndex = 8;
@@ -123,11 +125,22 @@
             this.nulBt.UseVisualStyleBackColor = true;
             this.nulBt.Click += new System.EventHandler(this.nulBt_Click);
             // 
+            // ZeroAdjust
+            // 
+            this.ZeroAdjust.Location = new System.Drawing.Point(22, 152);
+            this.ZeroAdjust.Name = "ZeroAdjust";
+            this.ZeroAdjust.Size = new System.Drawing.Size(246, 23);
+            this.ZeroAdjust.TabIndex = 9;
+            this.ZeroAdjust.Text = "Nulpunktsjuster";
+            this.ZeroAdjust.UseVisualStyleBackColor = true;
+            this.ZeroAdjust.Click += new System.EventHandler(this.ZeroAdjust_Click);
+            // 
             // Kalibrer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(284, 286);
+            this.Controls.Add(this.ZeroAdjust);
             this.Controls.Add(this.nulBt);
             this.Controls.Add(this.KaliBt);
             this.Controls.Add(this.label2);
@@ -155,5 +168,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button KaliBt;
         private System.Windows.Forms.Button nulBt;
+        private System.Windows.Forms.Button ZeroAdjust;
     }
 }

@@ -11,9 +11,17 @@ namespace Dataaccess_blodtryksmåler
     {
         private SqlDataReader myReader;
         private SqlCommand myCommand;
+        private SqlConnection myConnection;
         private const string DB = "F16ST2ITS2201505227";
         private GetData _getData = new GetData();
 
+        public GemPatient()
+        {
+            myConnection = new SqlConnection("user id=" + DB +
+                                ";password=" + DB + ";server=i4dab.ase.au.dk;" +
+                                "Trusted_Connection=false;" +
+                                "connection timeout=5");
+        }
         private Login Login
         {
             get
@@ -38,7 +46,7 @@ namespace Dataaccess_blodtryksmåler
 
             List<double> data = BTdata.datalist;
 
-            using (SqlCommand cmd = new SqlCommand(insertStringParam, Login.OpenConnectionST ))
+            using (SqlCommand cmd = new SqlCommand(insertStringParam, myConnection ))
 
             {
 
