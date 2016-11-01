@@ -14,7 +14,7 @@ namespace Dataaccess_blodtryksmåler
     public class Login
     {
         const string DB = "F16ST2ITS2201505227";
-        private DTO_login login;
+        private DTO_login login = new DTO_login();
         private SqlCommand myCommand;
         private SqlDataReader myReader;
         private SqlConnection myConnection;
