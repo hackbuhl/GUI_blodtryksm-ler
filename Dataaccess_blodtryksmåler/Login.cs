@@ -25,10 +25,10 @@ namespace Dataaccess_blodtryksmåler
             myConnection = new SqlConnection("user id=" + DB +
                                             ";password=" + DB + ";server=i4dab.ase.au.dk;" +
                                             "Trusted_Connection=false;" +
-                                            "connection timeout=5");
+                                            "connection timeout=30");
         }
 
-        public DTO_login isUserinDB(DTO_login log)
+        public bool isUserinDB(DTO_login log)
         {
             //Ida indtaster anden metode
 
