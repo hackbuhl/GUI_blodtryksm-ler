@@ -26,5 +26,10 @@ namespace DTO_blodtryksmåler
             this.interval_sek = interval;
         }
 
+        public DTO_data()
+        {
+
+        }
+
 }
 }

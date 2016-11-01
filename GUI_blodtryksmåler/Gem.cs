@@ -12,9 +12,9 @@ namespace GUI_blodtryksmåler
 {
     public partial class Gem : Form
     {
-        DTO_blodtryksmåler.DTO_data DTO_data;
-        DTO_blodtryksmåler.DTO_login DTO_login;
-        Logic_blodtryksmåler.Gem Save;
+        DTO_blodtryksmåler.DTO_data DTO_data = new DTO_blodtryksmåler.DTO_data();
+        DTO_blodtryksmåler.DTO_login DTO_login = new DTO_blodtryksmåler.DTO_login();
+        Logic_blodtryksmåler.Gem Save = new Logic_blodtryksmåler.Gem(); 
 
         public Gem(DTO_blodtryksmåler.DTO_data DTO_da, DTO_blodtryksmåler.DTO_login DTO_log)
         {
