@@ -7,10 +7,11 @@ using DTO_blodtryksmåler;
 
 namespace Logic_blodtryksmåler
 {
-    public class Logic :iStrategy
+    public class Logic : iStrategy
     {
-        private int value;
+        private double ZeroA;
         private Dataaccess_blodtryksmåler.GetData DAL;
+        private DTO_data dtoData;
 
         public void Execute()
         {
@@ -24,8 +25,18 @@ namespace Logic_blodtryksmåler
 
         public bool ZeroAdjust()
         {
-            throw new NotImplementedException();
-        }
+            try
+            {
+                dtoData = DAL.OpsamlData();
+                ZeroA = dtoData.datalist.Average();
+                return true;
+            }
+            catch (Exception)
+            {
 
+                return false;
+            }
+
+        }
     }
 }

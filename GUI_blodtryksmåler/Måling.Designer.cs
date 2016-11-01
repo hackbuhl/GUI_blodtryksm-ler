@@ -88,6 +88,7 @@
             this.SaveBt.TabIndex = 3;
             this.SaveBt.Text = "Gem Måling";
             this.SaveBt.UseVisualStyleBackColor = true;
+            this.SaveBt.Click += new System.EventHandler(this.SaveBt_Click);
             // 
             // nulBt
             // 
@@ -195,7 +196,11 @@
             this.DataChart.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.DataChart.Legends.Add(legend1);
+<<<<<<< HEAD
             this.DataChart.Location = new System.Drawing.Point(307, 34);
+=======
+            this.DataChart.Location = new System.Drawing.Point(18, 18);
+>>>>>>> origin/master
             this.DataChart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DataChart.Name = "DataChart";
             series1.ChartArea = "ChartArea1";
@@ -203,7 +208,11 @@
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.DataChart.Series.Add(series1);
+<<<<<<< HEAD
             this.DataChart.Size = new System.Drawing.Size(811, 439);
+=======
+            this.DataChart.Size = new System.Drawing.Size(1302, 528);
+>>>>>>> origin/master
             this.DataChart.TabIndex = 0;
             this.DataChart.Text = "chart1";
             // 
@@ -211,7 +220,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(1534, 725);
+=======
+            this.ClientSize = new System.Drawing.Size(1558, 842);
+>>>>>>> origin/master
             this.Controls.Add(this.DataChart);
             this.Controls.Add(this.DigitalfilterChB);
             this.Controls.Add(this.label4);

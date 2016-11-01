@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="GemPatient.cs" />
     <Compile Include="GetData.cs" />
+    <Compile Include="Kalibrer.cs" />
     <Compile Include="Login.cs" />
     <Compile Include="NI-DAQVoltage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

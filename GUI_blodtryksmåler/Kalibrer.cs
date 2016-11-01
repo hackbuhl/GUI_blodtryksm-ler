@@ -8,25 +8,40 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO_blodtryksmåler;
+using Logic_blodtryksmåler;
+
 
 namespace GUI_blodtryksmåler
 {
     public partial class Kalibrer : Form
     {
-        private Logic_blodtryksmåler.Kalibrer logKalibrer;
+        private Logic_blodtryksmåler.Logic logic = new Logic();
+        private Logic_blodtryksmåler.Kalibrer logKalibrer = new Logic_blodtryksmåler.Kalibrer();
         private DTO_kalibrer dtoKali;
         private DTO_data dtoData;
+        private DTO_login dtoLogin;
 
         public Kalibrer()
         {
             InitializeComponent();
+            //logKalibrer.Update();
+
+            dtoKali=new DTO_kalibrer();
+            dtoKali.Måling1 = 4.5;
+            dtoKali.Måling2 = 2.3;
+        }
+
+        public Kalibrer(DTO_login login)
+        {
+            InitializeComponent();
             logKalibrer.Update();
+            dtoLogin = login;
         }
 
         private void Tryk1Bt_Click(object sender, EventArgs e)
         {
-            logKalibrer.Update();
-            dtoKali.Måling1 = dtoData.datalist[0];
+            //logKalibrer.Update();
+
             try
             {
 
@@ -34,6 +49,8 @@ namespace GUI_blodtryksmåler
 
                 Tryk1Bt.Enabled = false;
                 Tryk2Bt.Enabled = true;
+                Tryk1TB.Enabled = false;
+                Tryk2TB.Enabled = true;
 
             }
             catch (Exception)
@@ -48,8 +65,9 @@ namespace GUI_blodtryksmåler
             try
             {
                 dtoKali.Read2 = Convert.ToDouble(Tryk2TB.Text);
-                dtoKali.Måling2 = dtoData.datalist[0];//korrekt plads skal sættes ind når filteret er specificeret.
+                dtoKali.Måling2 = 5; //dtoData.datalist[0];//korrekt plads skal sættes ind når filteret er specificeret.
                 Tryk2Bt.Enabled = false;
+                Tryk2TB.Enabled = false;
                 KaliBt.Enabled = true;
 
             }
@@ -62,7 +80,7 @@ namespace GUI_blodtryksmåler
 
         private void KaliBt_Click(object sender, EventArgs e)
         {
-            logKalibrer.Calibrate(dtoKali);
+            logKalibrer.Calibrate(dtoKali,dtoLogin);
         }
 
         private void nulBt_Click(object sender, EventArgs e)
@@ -72,11 +90,19 @@ namespace GUI_blodtryksmåler
             KaliBt.Enabled = false;
             Tryk2Bt.Enabled = false;
             Tryk1Bt.Enabled = true;
+            Tryk1TB.Enabled = true;
+            Tryk2TB.Enabled = false;
         }
 
         private void LogafBt_Click(object sender, EventArgs e)
         {
             throw new NotImplementedException();
+        }
+
+        private void ZeroAdjust_Click(object sender, EventArgs e)
+        {
+            logic.ZeroAdjust();
+            ZeroAdjust.Enabled = false;
         }
     }
 }
