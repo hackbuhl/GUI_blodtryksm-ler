@@ -19,7 +19,7 @@ namespace Logic_blodtryksmåler
 
         public void Calibrate(DTO_kalibrer kalibrer, DTO_login login)
         {
-            if (kalibrer.Read1 > kalibrer.Read2)
+            if (kalibrer.Read1 < kalibrer.Read2)
             {
                 CalVarialbel = ((kalibrer.Read2 - kalibrer.Read1)/(kalibrer.Måling2 - kalibrer.Måling1));
             }
