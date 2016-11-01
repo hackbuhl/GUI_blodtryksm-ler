@@ -17,6 +17,8 @@ namespace GUI_blodtryksmåler
     public partial class Måling : Form
     {
         private Logic_blodtryksmåler.Analyse dataanalyse;
+        private DTO_blodtryksmåler.DTO_data DTO_Data;
+        private DTO_blodtryksmåler.DTO_login DTO_Login;  
 
         // test
         private Thread cpuThread;
@@ -90,6 +92,10 @@ namespace GUI_blodtryksmåler
             cpuThread.Start();
         } // test slut
 
-
+        private void SaveBt_Click(object sender, EventArgs e)
+        {
+            Gem gem = new Gem(DTO_Data, DTO_Login);
+            gem.ShowDialog(); 
+        }
     }
 }

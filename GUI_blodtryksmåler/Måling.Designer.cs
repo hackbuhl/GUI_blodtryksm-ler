@@ -48,78 +48,64 @@
             this.DataChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.DataChart)).BeginInit();
             this.SuspendLayout();
-
-            // test 
-            // cpuChart
-            // 
-            chartArea1.Name = "ChartArea1";
-            this.DataChart.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.DataChart.Legends.Add(legend1);
-            this.DataChart.Location = new System.Drawing.Point(12, 12);
-            this.DataChart.Name = "DataChart"; // cpuChart
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.DataChart.Series.Add(series1);
-            this.DataChart.Size = new System.Drawing.Size(882, 493);
-            this.DataChart.TabIndex = 0;
-            this.DataChart.Text = "chart1";
-            // 
-            //
-
             // 
             // nulpunktBt
             // 
-            this.nulpunktBt.Location = new System.Drawing.Point(19, 388);
+            this.nulpunktBt.Location = new System.Drawing.Point(28, 597);
+            this.nulpunktBt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.nulpunktBt.Name = "nulpunktBt";
-            this.nulpunktBt.Size = new System.Drawing.Size(110, 71);
+            this.nulpunktBt.Size = new System.Drawing.Size(165, 109);
             this.nulpunktBt.TabIndex = 0;
             this.nulpunktBt.Text = "Foretag nulpunktsjustering";
             this.nulpunktBt.UseVisualStyleBackColor = true;
             // 
             // MålingBt
             // 
-            this.MålingBt.Location = new System.Drawing.Point(135, 388);
+            this.MålingBt.Location = new System.Drawing.Point(202, 597);
+            this.MålingBt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MålingBt.Name = "MålingBt";
-            this.MålingBt.Size = new System.Drawing.Size(109, 71);
+            this.MålingBt.Size = new System.Drawing.Size(164, 109);
             this.MålingBt.TabIndex = 1;
             this.MålingBt.Text = "Start Måling";
             this.MålingBt.UseVisualStyleBackColor = true;
             // 
             // AlarmBt
             // 
-            this.AlarmBt.Location = new System.Drawing.Point(357, 388);
+            this.AlarmBt.Location = new System.Drawing.Point(536, 597);
+            this.AlarmBt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.AlarmBt.Name = "AlarmBt";
-            this.AlarmBt.Size = new System.Drawing.Size(153, 35);
+            this.AlarmBt.Size = new System.Drawing.Size(230, 54);
             this.AlarmBt.TabIndex = 2;
             this.AlarmBt.Text = "Opsæt Alarm";
             this.AlarmBt.UseVisualStyleBackColor = true;
             // 
             // SaveBt
             // 
-            this.SaveBt.Location = new System.Drawing.Point(886, 388);
+            this.SaveBt.Location = new System.Drawing.Point(1329, 597);
+            this.SaveBt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SaveBt.Name = "SaveBt";
-            this.SaveBt.Size = new System.Drawing.Size(93, 71);
+            this.SaveBt.Size = new System.Drawing.Size(140, 109);
             this.SaveBt.TabIndex = 3;
             this.SaveBt.Text = "Gem Måling";
             this.SaveBt.UseVisualStyleBackColor = true;
+            this.SaveBt.Click += new System.EventHandler(this.SaveBt_Click);
             // 
             // nulBt
             // 
-            this.nulBt.Location = new System.Drawing.Point(760, 388);
+            this.nulBt.Location = new System.Drawing.Point(1140, 597);
+            this.nulBt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.nulBt.Name = "nulBt";
-            this.nulBt.Size = new System.Drawing.Size(120, 71);
+            this.nulBt.Size = new System.Drawing.Size(180, 109);
             this.nulBt.TabIndex = 4;
             this.nulBt.Text = "Nulstil";
             this.nulBt.UseVisualStyleBackColor = true;
             // 
             // LogoutBt
             // 
-            this.LogoutBt.Location = new System.Drawing.Point(914, 13);
+            this.LogoutBt.Location = new System.Drawing.Point(1371, 20);
+            this.LogoutBt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.LogoutBt.Name = "LogoutBt";
-            this.LogoutBt.Size = new System.Drawing.Size(75, 31);
+            this.LogoutBt.Size = new System.Drawing.Size(112, 48);
             this.LogoutBt.TabIndex = 5;
             this.LogoutBt.Text = "Log af";
             this.LogoutBt.UseVisualStyleBackColor = true;
@@ -127,96 +113,106 @@
             // SysLb
             // 
             this.SysLb.AutoSize = true;
-            this.SysLb.Location = new System.Drawing.Point(51, 50);
+            this.SysLb.Location = new System.Drawing.Point(76, 77);
+            this.SysLb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SysLb.Name = "SysLb";
-            this.SysLb.Size = new System.Drawing.Size(36, 13);
+            this.SysLb.Size = new System.Drawing.Size(53, 20);
             this.SysLb.TabIndex = 6;
             this.SysLb.Text = "SysLb";
             // 
             // DiaLb
             // 
             this.DiaLb.AutoSize = true;
-            this.DiaLb.Location = new System.Drawing.Point(100, 114);
+            this.DiaLb.Location = new System.Drawing.Point(150, 175);
+            this.DiaLb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.DiaLb.Name = "DiaLb";
-            this.DiaLb.Size = new System.Drawing.Size(35, 13);
+            this.DiaLb.Size = new System.Drawing.Size(51, 20);
             this.DiaLb.TabIndex = 7;
             this.DiaLb.Text = "label2";
             // 
             // PulsLb
             // 
             this.PulsLb.AutoSize = true;
-            this.PulsLb.Location = new System.Drawing.Point(96, 187);
+            this.PulsLb.Location = new System.Drawing.Point(144, 288);
+            this.PulsLb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PulsLb.Name = "PulsLb";
-            this.PulsLb.Size = new System.Drawing.Size(35, 13);
+            this.PulsLb.Size = new System.Drawing.Size(51, 20);
             this.PulsLb.TabIndex = 8;
             this.PulsLb.Text = "label1";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(29, 148);
+            this.label1.Location = new System.Drawing.Point(44, 228);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(27, 13);
+            this.label1.Size = new System.Drawing.Size(39, 20);
             this.label1.TabIndex = 9;
             this.label1.Text = "Puls";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(96, 148);
+            this.label2.Location = new System.Drawing.Point(144, 228);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 13);
+            this.label2.Size = new System.Drawing.Size(77, 20);
             this.label2.TabIndex = 10;
             this.label2.Text = "Diastolisk";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(100, 81);
+            this.label3.Location = new System.Drawing.Point(150, 125);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 13);
+            this.label3.Size = new System.Drawing.Size(71, 20);
             this.label3.TabIndex = 11;
             this.label3.Text = "Systolisk";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(383, 438);
+            this.label4.Location = new System.Drawing.Point(574, 674);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 13);
+            this.label4.Size = new System.Drawing.Size(111, 20);
             this.label4.TabIndex = 12;
             this.label4.Text = "Digitalt filter til:";
             // 
             // DigitalfilterChB
             // 
             this.DigitalfilterChB.AutoSize = true;
-            this.DigitalfilterChB.Location = new System.Drawing.Point(463, 438);
+            this.DigitalfilterChB.Location = new System.Drawing.Point(694, 674);
+            this.DigitalfilterChB.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DigitalfilterChB.Name = "DigitalfilterChB";
-            this.DigitalfilterChB.Size = new System.Drawing.Size(15, 14);
+            this.DigitalfilterChB.Size = new System.Drawing.Size(22, 21);
             this.DigitalfilterChB.TabIndex = 13;
             this.DigitalfilterChB.UseVisualStyleBackColor = true;
             // 
-            // DataChart - oprindelige autogen chart
+            // DataChart
             // 
-            //chartArea1.Name = "ChartArea1";
-            //this.DataChart.ChartAreas.Add(chartArea1);
-            //legend1.Name = "Legend1";
-            //this.DataChart.Legends.Add(legend1);
-            //this.DataChart.Location = new System.Drawing.Point(209, 50);
-            //this.DataChart.Name = "DataChart";
-            //series1.ChartArea = "ChartArea1";
-            //series1.Legend = "Legend1";
-            //series1.Name = "Series1";
-            //this.DataChart.Series.Add(series1);
-            //this.DataChart.Size = new System.Drawing.Size(770, 315);
-            //this.DataChart.TabIndex = 14;
-            //this.DataChart.Text = "chart1";
+            chartArea1.Name = "ChartArea1";
+            this.DataChart.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.DataChart.Legends.Add(legend1);
+            this.DataChart.Location = new System.Drawing.Point(18, 18);
+            this.DataChart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.DataChart.Name = "DataChart";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.DataChart.Series.Add(series1);
+            this.DataChart.Size = new System.Drawing.Size(1302, 528);
+            this.DataChart.TabIndex = 0;
+            this.DataChart.Text = "chart1";
             // 
             // Måling
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1023, 471);
+            this.ClientSize = new System.Drawing.Size(1558, 842);
             this.Controls.Add(this.DataChart);
             this.Controls.Add(this.DigitalfilterChB);
             this.Controls.Add(this.label4);
@@ -232,6 +228,7 @@
             this.Controls.Add(this.AlarmBt);
             this.Controls.Add(this.MålingBt);
             this.Controls.Add(this.nulpunktBt);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Måling";
             this.Text = "Alarm";
             ((System.ComponentModel.ISupportInitialize)(this.DataChart)).EndInit();
