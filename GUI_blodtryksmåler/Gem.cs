@@ -12,9 +12,46 @@ namespace GUI_blodtryksmåler
 {
     public partial class Gem : Form
     {
-        public Gem()
+        DTO_blodtryksmåler.DTO_data DTO_data;
+        DTO_blodtryksmåler.DTO_login DTO_login;
+        Logic_blodtryksmåler.Gem Save;
+
+        public Gem(DTO_blodtryksmåler.DTO_data DTO_da, DTO_blodtryksmåler.DTO_login DTO_log)
         {
             InitializeComponent();
+            DTO_data = DTO_da;
+            DTO_login = DTO_log;
         }
-    }
-}
+
+        private void saveButton_Click(object sender, EventArgs e)
+        {
+            int saved;
+            DTO_data.CPR = CPRTb.Text;
+            DTO_data.kommentar = NoteTb.Text;
+            saved = Save.SaveBT(DTO_login, DTO_data);
+
+            switch (saved)
+            {
+                case 1:
+                    //gemt og valideret
+                    MessageBox.Show("Data er gemt i databasen.");
+                    Close();
+                    break;
+
+                case 2:
+                    //valideret men ikke gemt
+                    MessageBox.Show("Der er ikke forbindelse til databasen.");
+                    break;
+
+                case 3:
+                    // CPR ikke valideret
+                    MessageBox.Show("CPR er ugyldigt");
+                    break;
+              
+
+
+
+
+        }
+        }
+    } }

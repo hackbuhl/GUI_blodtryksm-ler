@@ -43,12 +43,12 @@ namespace Dataaccess_blodtryksmåler
                     log.type = Convert.ToString(myReader["BrugerType"]);
                 }
                 myConnection.Close();
-                
             }
 
             else
             {
                 log.type = "FalseId";
+                myConnection.Close();
             }
             return log;
 

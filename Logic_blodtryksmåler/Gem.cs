@@ -11,7 +11,7 @@ namespace Logic_blodtryksmåler
         private Dataaccess_blodtryksmåler.GemPatient GemPatient;
         private int[] weightCPR = { 4, 3, 2, 7, 6, 5, 4, 3, 2, 1 };
 
-        public bool ValidateCPR(String cpr)
+        private bool ValidateCPR(String cpr)
         {
             int sum = 0;
             if (cpr.Length == 10)
@@ -29,9 +29,16 @@ namespace Logic_blodtryksmåler
             return false;
         }
 
-        public void SaveBT(DTO_login login, DTO_data data)
+        public int SaveBT(DTO_login login, DTO_data data)
         {
-            throw new System.NotImplementedException();
+            if (ValidateCPR(data.CPR) == true)
+            {
+                return GemPatient.SaveBT(data, login);
+
+            }
+            else
+                return 3;
+            
         }
     }
 }

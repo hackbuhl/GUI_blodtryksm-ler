@@ -16,6 +16,7 @@ namespace DTO_blodtryksmåler
         public  int samplerate_hz { get; set; }
         public  int interval_sek { get; set; }
         public  string kommentar { get; set; }
+        public string CPR { get; set; }
 
 
         public DTO_data(List<double> currentVoltageSeq, int sampleFreq, int interval)

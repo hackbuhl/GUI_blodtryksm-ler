@@ -9,6 +9,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO_blodtryksmåler;
 using Logic_blodtryksmåler;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
 
 namespace GUI_blodtryksmåler
 {
