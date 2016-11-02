@@ -97,5 +97,18 @@ namespace GUI_blodtryksmåler
             Gem gem = new Gem(DTO_Data, DTO_Login);
             gem.ShowDialog(); 
         }
+
+        private void DigitalfilterChB_CheckedChanged(object sender, EventArgs e)
+        {
+            if (DigitalfilterChB.Checked)
+            {
+                Logic_blodtryksmåler.Filter on = new Logic_blodtryksmåler.Filter();
+                on.Execute();
+            }
+            else
+            {
+
+            }
+        }
     }
 }

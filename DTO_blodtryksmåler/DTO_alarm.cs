@@ -10,7 +10,7 @@ namespace DTO_blodtryksmåler
      public class DTO_alarm
     {
         public int ØvSys { get; set; }
-        public  int NedSys { get; set; }
+        public int NedSys { get; set; }
         public int ØvDia { get; set; }
         public int NedDia { get; set; }
         public bool State { get; set; }
