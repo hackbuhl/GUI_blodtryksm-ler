@@ -18,7 +18,7 @@ namespace Dataaccess_blodtryksmåler
         private SqlCommand myCommand;
         private SqlDataReader myReader;
         private SqlConnection myConnection;
-        
+        //ip
 
         public Login()
         {
