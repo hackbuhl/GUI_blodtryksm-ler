@@ -33,7 +33,6 @@ namespace GUI_blodtryksmåler
             }
             catch (Exception)
             {
-
                 MessageBox.Show("Udflyd alle felter med positive heltal.");
             }
             alarm.SetAlarm(dtoAlarm);
