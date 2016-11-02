@@ -32,7 +32,6 @@ namespace GUI_blodtryksmåler
 
         private void Logon_Click(object sender, EventArgs e)
         {
-            GetType(dtoLogin);
             dtoLogin.id = Convert.ToInt32(IdTb.Text);
             dtoLogin.pass = Convert.ToString(PassTb.Text);
             dtoLogin=login.getLogin(dtoLogin);
