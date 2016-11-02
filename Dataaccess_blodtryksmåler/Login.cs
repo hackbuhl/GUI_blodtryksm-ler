@@ -28,7 +28,7 @@ namespace Dataaccess_blodtryksmåler
                                             "connection timeout=30");
         }
 
-        public bool isUserinDB(DTO_login log)
+        public DTO_login isUserinDB(DTO_login log)
         {
             //Ida indtaster anden metode
 
