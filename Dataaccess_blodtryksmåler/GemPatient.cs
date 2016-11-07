@@ -22,17 +22,6 @@ namespace Dataaccess_blodtryksmåler
                                 "Trusted_Connection=false;" +
                                 "connection timeout=5");
         }
-        private Login Login
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-
-            set
-            {
-            }
-        }
 
         public int SaveBT(DTO_data BTdata, DTO_login login)
         {

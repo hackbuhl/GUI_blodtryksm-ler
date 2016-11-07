@@ -13,8 +13,10 @@ namespace GUI_blodtryksmåler
 {
     public partial class Login : Form
     {
-        private Logic_blodtryksmåler.Login login;
+        private Logic_blodtryksmåler.Login login = new Logic_blodtryksmåler.Login();
         private DTO_login dtoLogin = new DTO_login();
+
+
         public Login()
         {
             InitializeComponent();
@@ -32,8 +34,9 @@ namespace GUI_blodtryksmåler
         {
             dtoLogin.id = Convert.ToInt32(IdTb.Text);
             dtoLogin.pass = Convert.ToString(PassTb.Text);
-            login.getLogin(dtoLogin);
+            dtoLogin=login.getLogin(dtoLogin);
             // luk login vindue og åben enten kalibrer eller måling
+            CheckType(dtoLogin);
         }
 
         private void CheckType (DTO_login log)

@@ -14,18 +14,18 @@ namespace Dataaccess_blodtryksmåler
     public class Login
     {
         const string DB = "F16ST2ITS2201505227";
-        private DTO_login login;
+        private DTO_login login = new DTO_login();
         private SqlCommand myCommand;
         private SqlDataReader myReader;
         private SqlConnection myConnection;
-        
+        //ip
 
         public Login()
         {
             myConnection = new SqlConnection("user id=" + DB +
                                             ";password=" + DB + ";server=i4dab.ase.au.dk;" +
                                             "Trusted_Connection=false;" +
-                                            "connection timeout=5");
+                                            "connection timeout=30");
         }
 
         public DTO_login isUserinDB(DTO_login log)
