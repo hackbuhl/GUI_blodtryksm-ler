@@ -31,5 +31,10 @@ namespace DTO_blodtryksmåler
 
         }
 
+        public DTO_data(List<double> currentVoltageSeq)
+        {
+            this.datalist = currentVoltageSeq; 
+        }
+
 }
 }
