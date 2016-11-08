@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using DTO_blodtryksmåler;
+using System.Threading;
 
 namespace Logic_blodtryksmåler
 {
@@ -12,15 +14,30 @@ namespace Logic_blodtryksmåler
         private double ZeroA;
         private Dataaccess_blodtryksmåler.GetData DAL;
         private DTO_data dtoData;
+        private Thread lT;
+        private Dataaccess_blodtryksmåler.Kalibrer kalval;
+
+        public void start()
+        {
+
+        }
 
         public void Execute()
         {
-            throw new System.NotImplementedException();
+            lT = new Thread(() => formVtommHg());
+            lT.Start();
+
         }
 
         public DTO_data formVtommHg()
         {
-            throw new NotImplementedException();
+            DTO_data dat = new DTO_data();
+            dat = DAL.OpsamlData();
+            foreach (var VARIABLE in dat.datalist)
+            {
+                VARIABLE= VARIABLE*kalval.getFactor();              
+            }
+            return dat;
         }
 
         public bool ZeroAdjust()
