@@ -46,7 +46,7 @@ namespace GUI_blodtryksmåler
             {
 
                 dtoKali.Read1 = Convert.ToDouble(Tryk1TB.Text);
-
+                logKalibrer.data();
                 Tryk1Bt.Enabled = false;
                 Tryk2Bt.Enabled = true;
                 Tryk1TB.Enabled = false;

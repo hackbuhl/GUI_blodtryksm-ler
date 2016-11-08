@@ -13,10 +13,14 @@ namespace Logic_blodtryksmåler
         private double CalVarialbel;
 
         private DTO_data dtoData;
+        private Logic log;
         private Dataaccess_blodtryksmåler.Kalibrer dataKalibrer = new Dataaccess_blodtryksmåler.Kalibrer();
 
-        
 
+        public double data()
+        {
+            return log.dataToKalibrate().datalist.Average();
+        }
 
         public void Calibrate(DTO_kalibrer kalibrer, DTO_login login)
         {

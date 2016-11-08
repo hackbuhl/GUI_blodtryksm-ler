@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -15,6 +16,7 @@ namespace Logic_blodtryksmåler
         private Dataaccess_blodtryksmåler.GetData DAL;
         private DTO_data dtoData;
         private Thread lT;
+        private Thread kalT;
         private Dataaccess_blodtryksmåler.Kalibrer kalval;
 
         public void start()
@@ -22,21 +24,43 @@ namespace Logic_blodtryksmåler
 
         }
 
-        public void Execute()
+        public void Execute(bool cal)
         {
-            lT = new Thread(() => formVtommHg());
-            lT.Start();
-
+            if (cal == true)
+            {
+                lT = new Thread(() => formVtommHg());
+                lT.Start();
+            }
+            else
+            {
+                kalT = new Thread(()=> dataToKalibrate());
+                kalT.Start();
+            }
         }
 
         public DTO_data formVtommHg()
         {
             DTO_data dat = new DTO_data();
             dat = DAL.OpsamlData();
+            List<double> list = new List<double>();
             foreach (var VARIABLE in dat.datalist)
             {
-                VARIABLE= VARIABLE*kalval.getFactor();              
+                list.Add( (VARIABLE*kalval.getFactor())-ZeroA);              
             }
+            dat.datalist = list;
+            return dat;
+        }
+
+        public DTO_data dataToKalibrate()
+        {
+            DTO_data dat = new DTO_data();
+            dat = DAL.OpsamlData();
+            List<double> list = new List<double>();
+            foreach (var VARIABLE in dat.datalist)
+            {
+                list.Add(VARIABLE - ZeroA);
+            }
+            dat.datalist = list;
             return dat;
         }
 
