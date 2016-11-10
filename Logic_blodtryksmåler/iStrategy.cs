@@ -10,7 +10,7 @@ namespace Logic_blodtryksmåler
 {
     public interface iStrategy
     {
-        void Execute();
+        void Execute(bool cal);
         DTO_data formVtommHg();
         bool ZeroAdjust();
     }

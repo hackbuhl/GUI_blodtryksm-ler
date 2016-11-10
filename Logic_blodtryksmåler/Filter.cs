@@ -13,7 +13,7 @@ namespace Logic_blodtryksmåler
             throw new System.NotImplementedException();
         }
 
-        public void Execute()
+        public void Execute(bool cal)
         {
             
         }
