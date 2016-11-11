@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using DTO_blodtryksmåler;
-using System.Threading;
+
 
 namespace Logic_blodtryksmåler
 {
@@ -19,16 +19,21 @@ namespace Logic_blodtryksmåler
         private Thread kalT;
         private Dataaccess_blodtryksmåler.Kalibrer kalval;
 
+        public DTO_data DatatoPresentation(int i)
+        {
+            return dtoData;
+            //Denne metode skal sende dataen fra fromVtommHg op i præsentationslaget 
+        }
         public void start()
         {
-
+            
         }
 
         public void Execute(bool cal)
         {
             if (cal == true)
             {
-                lT = new Thread(() => formVtommHg());
+                lT = new Thread(() => fromVtommHg());
                 lT.Start();
             }
             else
@@ -38,17 +43,19 @@ namespace Logic_blodtryksmåler
             }
         }
 
-        public DTO_data formVtommHg()
+        public DTO_data fromVtommHg()
         {
             DTO_data dat = new DTO_data();
-            dat = DAL.OpsamlData();
+            dat = dataToKalibrate();
+            double kal = kalval.getFactor();
             List<double> list = new List<double>();
             foreach (var VARIABLE in dat.datalist)
             {
-                list.Add( (VARIABLE*kalval.getFactor())-ZeroA);              
+                list.Add(VARIABLE*kal);
             }
             dat.datalist = list;
             return dat;
+
         }
 
         public DTO_data dataToKalibrate()
@@ -58,10 +65,11 @@ namespace Logic_blodtryksmåler
             List<double> list = new List<double>();
             foreach (var VARIABLE in dat.datalist)
             {
-                list.Add(VARIABLE - ZeroA);
+                list.Add(VARIABLE -ZeroA);
             }
             dat.datalist = list;
             return dat;
+
         }
 
         public bool ZeroAdjust()

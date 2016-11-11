@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace Dataaccess_blodtryksmåler
 {
@@ -12,24 +13,31 @@ namespace Dataaccess_blodtryksmåler
 
         private List<double> dataliste;
         private NI_DAQVoltage datacollector;
+        private DAQmxAsyncRead daQmx;
 
         public GetData()
         {
             dataliste = new List<double>();
             datacollector = new NI_DAQVoltage();
-            datacollector.samplesPerChannel = 2500;
+            datacollector.samplesPerChannel = 500;
+            datacollector.sampleRateInHz = 1000;
+            //Thread t = new Thread(()=>OpsamlData());
+            //t.Start();
+
+            daQmx = new DAQmxAsyncRead(datacollector.readerTask);
         }
 
-        public List<double> getData()
-        {
-            return dataliste;
-        }
 
+
+//Opsaml data metroden skal vi ikke bruge data 
         public DTO_blodtryksmåler.DTO_data OpsamlData()
         {
-            datacollector.getVoltageSeqBlocking();
-            dataliste = datacollector.currentVoltageSeq;
-            return new DTO_blodtryksmåler.DTO_data(dataliste);
+            while (true)
+            {
+                datacollector.getVoltageSeqBlocking();
+                dataliste = datacollector.currentVoltageSeq;
+                
+            }
         }
 
         public NI_DAQVoltage getDataCollector()

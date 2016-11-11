@@ -34,7 +34,7 @@ namespace GUI_blodtryksmåler
         public Kalibrer(DTO_login login)
         {
             InitializeComponent();
-            logKalibrer.Update();
+            
             dtoLogin = login;
         }
 

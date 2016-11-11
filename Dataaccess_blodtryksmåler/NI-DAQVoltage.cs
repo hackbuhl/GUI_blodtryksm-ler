@@ -5,7 +5,7 @@ namespace Dataaccess_blodtryksmåler
 {
     public class NI_DAQVoltage
     {
-        private Task readerTask;                //Main Task variable which gets called in the Main Function
+        public Task readerTask;                //Main Task variable which gets called in the Main Function
         private AnalogMultiChannelReader reader; //NI DAQ reader
         //private int totalSamples = 2500;       //Global container for the number of samples to acquire
         private NationalInstruments.AnalogWaveform<double>[] data; //NI DAQ internal datamodel
