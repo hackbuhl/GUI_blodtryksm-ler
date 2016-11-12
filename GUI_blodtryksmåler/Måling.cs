@@ -97,5 +97,10 @@ namespace GUI_blodtryksmåler
             Gem gem = new Gem(DTO_Data, DTO_Login);
             gem.ShowDialog(); 
         }
+
+        private void MålingBt_Click(object sender, EventArgs e)
+        {
+            Logic_blodtryksmåler.Logic log = new Logic_blodtryksmåler.Logic();
+        }
     }
 }

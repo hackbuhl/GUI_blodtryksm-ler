@@ -10,7 +10,7 @@ namespace Dataaccess_blodtryksmåler
     class DAQmxAsyncRead : SubjectData
     {
         private AnalogSingleChannelReader reader = null;
-        private GetData get = new GetData();
+        
         private int samplelenght = 100;
 
         public DAQmxAsyncRead(NationalInstruments.DAQmx.Task t)

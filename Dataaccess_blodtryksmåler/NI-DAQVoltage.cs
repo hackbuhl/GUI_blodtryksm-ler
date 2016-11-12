@@ -152,5 +152,26 @@ namespace Dataaccess_blodtryksmåler
                 currentLineIndex++;
             }
         }
+
+        public Task getTask()
+        {
+            
+            // Create a new task
+            readerTask = new Task(); //The background task reading 
+
+            // Create a channel
+            readerTask.AIChannels.CreateVoltageChannel(deviceName, "",
+                (AITerminalConfiguration)(-1), rangeMinimumVolt, rangeMaximumVolt, AIVoltageUnits.Volts);
+
+            // Configure timing specs    
+            readerTask.Timing.ConfigureSampleClock("", sampleRateInHz, SampleClockActiveEdge.Rising,
+                SampleQuantityMode.FiniteSamples, samplesPerChannel);
+            readerTask.Stream.Timeout = seqTimeOut;
+
+            // Verify the task
+            readerTask.Control(TaskAction.Verify);
+
+            return readerTask;
+        }
     }
 }

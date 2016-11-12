@@ -19,14 +19,18 @@ namespace Logic_blodtryksmåler
         private Thread kalT;
         private Dataaccess_blodtryksmåler.Kalibrer kalval;
 
+        public Logic()
+        {
+            DAL = new Dataaccess_blodtryksmåler.GetData();
+        }
         public DTO_data DatatoPresentation(int i)
         {
             return dtoData;
             //Denne metode skal sende dataen fra fromVtommHg op i præsentationslaget 
         }
-        public void start()
+        public void start(DTO_data dat)
         {
-            
+            dtoData.datalist = dat.datalist;
         }
 
         public void Execute(bool cal)

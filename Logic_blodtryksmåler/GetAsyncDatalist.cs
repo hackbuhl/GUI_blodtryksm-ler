@@ -13,20 +13,21 @@ namespace Logic_blodtryksmåler
     {
         List<double> daDoubles=new List<double>();
         DTO_blodtryksmåler.DTO_data datadto = new DTO_data();
+        Logic log = new Logic();
         public void Update(double[] data)
         {
-            for (int i = 0; i < data.Length;i=i+10)
+            for (int i = 0; i < data.Length;i=i+20)
             {
                 List<double> av=new List<double>();
-                for (int j = i; j < i+10 ; j++)
+                for (int j = i; j < i+20 ; j++)
                 {
                     av.Add(data[j]);
 
                 }
                 datadto.datalist.Add(av.Average());
             }
-           
-
+            log.start(datadto);
         }
+
     }
 }
