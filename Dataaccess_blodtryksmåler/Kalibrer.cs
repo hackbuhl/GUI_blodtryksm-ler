@@ -12,7 +12,6 @@ namespace Dataaccess_blodtryksmåler
     public class Kalibrer
     {
         const string DB = "F16ST2ITS2201505227";
-        private DTO_kalibrer dtoKalibrer;
         private SqlCommand myCommand;
         private SqlDataReader myReader;
         private SqlConnection myConnection;

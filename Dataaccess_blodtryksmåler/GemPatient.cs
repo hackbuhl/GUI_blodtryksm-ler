@@ -9,8 +9,6 @@ namespace Dataaccess_blodtryksmåler
 {
     public class GemPatient
     {
-        private SqlDataReader myReader;
-        private SqlCommand myCommand;
         private SqlConnection myConnection;
         private const string DB = "F16ST2ITS2201505227";
         private GetData _getData = new GetData();

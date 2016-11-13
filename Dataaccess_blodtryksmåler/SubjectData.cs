@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Dataaccess_blodtryksmåler
 {
-    abstract class SubjectData
+    public abstract class SubjectData
     {
         private List<iDataobs> observers;
 

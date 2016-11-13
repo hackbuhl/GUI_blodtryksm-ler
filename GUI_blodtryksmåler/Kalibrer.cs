@@ -18,7 +18,7 @@ namespace GUI_blodtryksmåler
         private Logic_blodtryksmåler.Logic logic = new Logic();
         private Logic_blodtryksmåler.Kalibrer logKalibrer = new Logic_blodtryksmåler.Kalibrer();
         private DTO_kalibrer dtoKali;
-        private DTO_data dtoData;
+        private DTO_data dtoData=new DTO_data();
         private DTO_login dtoLogin;
 
         public Kalibrer()

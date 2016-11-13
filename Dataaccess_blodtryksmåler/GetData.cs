@@ -13,7 +13,7 @@ namespace Dataaccess_blodtryksmåler
 
         private List<double> dataliste;
         private NI_DAQVoltage datacollector;
-        private DAQmxAsyncRead daQmx;
+        public DAQmxAsyncRead daQmx;
 
         public GetData()
         {
@@ -26,20 +26,17 @@ namespace Dataaccess_blodtryksmåler
             //t.Start();
             //datacollector.getVoltageSeqBlocking();
 
-            daQmx = new DAQmxAsyncRead(datacollector.getTask());
+
         }
 
 
 
+
+
 //Opsaml data metroden skal vi ikke bruge data 
-        public DTO_blodtryksmåler.DTO_data OpsamlData()
+        public void OpsamlData()
         {
-            while (true)
-            {
-                datacollector.getVoltageSeqBlocking();
-                dataliste = datacollector.currentVoltageSeq;
-                
-            }
+            daQmx = new DAQmxAsyncRead(datacollector.getTask());
         }
 
         public NI_DAQVoltage getDataCollector()

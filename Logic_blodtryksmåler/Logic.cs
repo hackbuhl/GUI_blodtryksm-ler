@@ -14,14 +14,16 @@ namespace Logic_blodtryksmåler
     {
         private double ZeroA;
         private Dataaccess_blodtryksmåler.GetData DAL;
-        private DTO_data dtoData;
+        private DTO_data dtoData = new DTO_data();
         private Thread lT;
         private Thread kalT;
-        private Dataaccess_blodtryksmåler.Kalibrer kalval;
+        private Dataaccess_blodtryksmåler.Kalibrer kalval = new Dataaccess_blodtryksmåler.Kalibrer();
+        private GetAsyncDatalist raaDatalist;
 
         public Logic()
         {
             DAL = new Dataaccess_blodtryksmåler.GetData();
+            raaDatalist = new GetAsyncDatalist(DAL.daQmx);
         }
         public DTO_data DatatoPresentation(int i)
         {
@@ -65,7 +67,7 @@ namespace Logic_blodtryksmåler
         public DTO_data dataToKalibrate()
         {
             DTO_data dat = new DTO_data();
-            dat = DAL.OpsamlData();
+            
             List<double> list = new List<double>();
             foreach (var VARIABLE in dat.datalist)
             {
@@ -80,7 +82,7 @@ namespace Logic_blodtryksmåler
         {
             try
             {
-                dtoData = DAL.OpsamlData();
+                //dtoData = DAL.OpsamlData();
                 ZeroA = dtoData.datalist.Average();
                 return true;
             }

@@ -9,7 +9,7 @@ namespace Logic_blodtryksmåler
 {
     public class Alarm: iAnalyseObserver
     {
-        private DTO_alarm dtoAlarm;
+        private DTO_alarm dtoAlarm = new DTO_alarm();
         public int Alarmvalues
         {
             get

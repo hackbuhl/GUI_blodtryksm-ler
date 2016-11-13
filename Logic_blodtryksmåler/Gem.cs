@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Dataaccess_blodtryksmåler;
 using DTO_blodtryksmåler;
 
 namespace Logic_blodtryksmåler
 {
     public class Gem
     {
-        private Dataaccess_blodtryksmåler.GemPatient GemPatient;
+        private Dataaccess_blodtryksmåler.GemPatient GemPatient= new GemPatient();
         private int[] weightCPR = { 4, 3, 2, 7, 6, 5, 4, 3, 2, 1 };
 
         private bool ValidateCPR(String cpr)

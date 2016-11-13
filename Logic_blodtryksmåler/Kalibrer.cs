@@ -12,8 +12,8 @@ namespace Logic_blodtryksmåler
     {
         private double CalVarialbel;
 
-        private DTO_data dtoData;
-        private Filter filt;
+        private DTO_data dtoData= new DTO_data();
+        private Filter filt= new Filter();
         private Dataaccess_blodtryksmåler.Kalibrer dataKalibrer = new Dataaccess_blodtryksmåler.Kalibrer();
 
 

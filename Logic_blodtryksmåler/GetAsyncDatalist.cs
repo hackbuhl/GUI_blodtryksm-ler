@@ -9,11 +9,16 @@ using DTO_blodtryksmåler;
 
 namespace Logic_blodtryksmåler
 {
-    public class GetAsyncDatalist : iDataobs
+    public class GetAsyncDatalist : Dataaccess_blodtryksmåler.iDataobs
     {
         List<double> daDoubles=new List<double>();
         DTO_blodtryksmåler.DTO_data datadto = new DTO_data();
         Logic log = new Logic();
+
+        public GetAsyncDatalist(DAQmxAsyncRead daqRead)
+        {
+            daqRead.Attach(this);
+        }
         public void Update(double[] data)
         {
             for (int i = 0; i < data.Length;i=i+20)

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Dataaccess_blodtryksmåler
 {
-    class DAQmxAsyncRead : SubjectData
+    public class DAQmxAsyncRead : SubjectData
     {
         private AnalogSingleChannelReader reader = null;
         

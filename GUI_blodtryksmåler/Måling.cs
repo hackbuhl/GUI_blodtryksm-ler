@@ -9,16 +9,20 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using System.Threading; // 
-using System.Diagnostics; //
+using System.Diagnostics;
+using DTO_blodtryksmåler;
+using Logic_blodtryksmåler;
+
+//
 
 
 namespace GUI_blodtryksmåler
 {
     public partial class Måling : Form
     {
-        private Logic_blodtryksmåler.Analyse dataanalyse;
-        private DTO_blodtryksmåler.DTO_data DTO_Data;
-        private DTO_blodtryksmåler.DTO_login DTO_Login;  
+        private Logic_blodtryksmåler.Analyse dataanalyse=new Analyse();
+        private DTO_blodtryksmåler.DTO_data DTO_Data=new DTO_data();
+        private DTO_blodtryksmåler.DTO_login DTO_Login=new DTO_login();  
 
         // test
         private Thread cpuThread;
