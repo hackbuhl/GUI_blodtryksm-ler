@@ -23,12 +23,13 @@ namespace GUI_blodtryksmåler
 
         public Kalibrer()
         {
+            logic.ReadData();
+            dtoKali = new DTO_kalibrer();
             InitializeComponent();
             //logKalibrer.Update();
 
-            dtoKali=new DTO_kalibrer();
-            dtoKali.Måling1 = 4.5;
-            dtoKali.Måling2 = 2.3;
+
+           
         }
 
         public Kalibrer(DTO_login login)

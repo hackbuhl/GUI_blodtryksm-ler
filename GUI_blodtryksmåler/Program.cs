@@ -17,9 +17,7 @@ namespace GUI_blodtryksmåler
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Alarm());
-            Application.Run(new Måling());
-            Logic_blodtryksmåler.Logic log = new Logic_blodtryksmåler.Logic();
-            
+            Application.Run(new Kalibrer());
         }
     }
 }

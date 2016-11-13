@@ -85,77 +85,10 @@ namespace Dataaccess_blodtryksmåler
             seqTimeOut = -1; 
 
         }
-        /// <summary>
-        /// Calling this metod will start a blocking sequnce of voltage meassurement at the NI USB-6009 DAQ.
-        /// Before calling this metod you must have set the following properties 
-        ///     sampleRateInHz (Default 205 Hz)
-        ///     rangeMinimumVolt (Default -1.0 Volt)
-        ///     rangeMaximumVolt (Default 1.0 Volt)
-        ///     samplesPerChannel (Default 3600)
-        ///     deviceName (Default "Dev2/ai0")
-        ///     seqTimeOut (Default infine ms)
-        /// unless the default properties values goes.
-        /// To get the last measurements use either
-        ///     currentVoltageSeq that returns a copy List<double> 
-        ///     currentVoltageSeqArray that returns a copy in an double[]  array
-        /// </summary>
-        public void getVoltageSeqBlocking()
-        {
-            try
-            {
-                // Create a new task
-                readerTask = new Task(); //The background task reading 
-
-                // Create a channel
-                readerTask.AIChannels.CreateVoltageChannel(deviceName, "",
-                    (AITerminalConfiguration)(-1), rangeMinimumVolt, rangeMaximumVolt, AIVoltageUnits.Volts);
-
-                // Configure timing specs    
-                readerTask.Timing.ConfigureSampleClock("", sampleRateInHz, SampleClockActiveEdge.Rising,
-                    SampleQuantityMode.FiniteSamples, samplesPerChannel);
-                readerTask.Stream.Timeout = seqTimeOut;
-
-                // Verify the task
-                readerTask.Control(TaskAction.Verify);
-
-                //Preppare NI DAQ reader and a myTask to reader
-                reader = new AnalogMultiChannelReader(readerTask.Stream);
-
-                // Read the data 
-                data = reader.ReadWaveform(samplesPerChannel);//This call is a "Blocking call"
-
-                dataToDataTable(data);
-            }
-            catch (DaqException exception)
-            {
-                System.Diagnostics.Debug.WriteLine(exception);
-            }
-            finally
-            {
-                readerTask.Dispose();
-
-            }
-        }
-
-
-        private void dataToDataTable(NationalInstruments.AnalogWaveform<double>[] sourceArray)
-        {
-            // Iterate over channels in this case only one channel
-            int currentLineIndex = 0;
-            currentVoltageSeqPrivate = new List<double>(); //Previous version is deleted
-            foreach (NationalInstruments.AnalogWaveform<double> waveform in sourceArray)
-            {
-                for (int sample = 0; sample < waveform.Samples.Count; ++sample)
-                { 
-                    currentVoltageSeqPrivate.Add(waveform.Samples[sample].Value);
-                }
-                currentLineIndex++;
-            }
-        }
 
         public Task getTask()
         {
-            
+
             // Create a new task
             readerTask = new Task(); //The background task reading 
 
@@ -173,5 +106,74 @@ namespace Dataaccess_blodtryksmåler
 
             return readerTask;
         }
+        /// <summary>
+        /// Calling this metod will start a blocking sequnce of voltage meassurement at the NI USB-6009 DAQ.
+        /// Before calling this metod you must have set the following properties 
+        ///     sampleRateInHz (Default 205 Hz)
+        ///     rangeMinimumVolt (Default -1.0 Volt)
+        ///     rangeMaximumVolt (Default 1.0 Volt)
+        ///     samplesPerChannel (Default 3600)
+        ///     deviceName (Default "Dev2/ai0")
+        ///     seqTimeOut (Default infine ms)
+        /// unless the default properties values goes.
+        /// To get the last measurements use either
+        ///     currentVoltageSeq that returns a copy List<double> 
+        ///     currentVoltageSeqArray that returns a copy in an double[]  array
+        /// </summary>
+        /* public void getVoltageSeqBlocking()
+         {
+             try
+             {
+                 // Create a new task
+                 readerTask = new Task(); //The background task reading 
+
+                 // Create a channel
+                 readerTask.AIChannels.CreateVoltageChannel(deviceName, "",
+                     (AITerminalConfiguration)(-1), rangeMinimumVolt, rangeMaximumVolt, AIVoltageUnits.Volts);
+
+                 // Configure timing specs    
+                 readerTask.Timing.ConfigureSampleClock("", sampleRateInHz, SampleClockActiveEdge.Rising,
+                     SampleQuantityMode.FiniteSamples, samplesPerChannel);
+                 readerTask.Stream.Timeout = seqTimeOut;
+
+                 // Verify the task
+                 readerTask.Control(TaskAction.Verify);
+
+                 //Preppare NI DAQ reader and a myTask to reader
+                 reader = new AnalogMultiChannelReader(readerTask.Stream);
+
+                 // Read the data 
+                 data = reader.ReadWaveform(samplesPerChannel);//This call is a "Blocking call"
+
+                 dataToDataTable(data);
+             }
+             catch (DaqException exception)
+             {
+                 System.Diagnostics.Debug.WriteLine(exception);
+             }
+             finally
+             {
+                 readerTask.Dispose();
+
+             }
+         }
+
+
+         private void dataToDataTable(NationalInstruments.AnalogWaveform<double>[] sourceArray)
+         {
+             // Iterate over channels in this case only one channel
+             int currentLineIndex = 0;
+             currentVoltageSeqPrivate = new List<double>(); //Previous version is deleted
+             foreach (NationalInstruments.AnalogWaveform<double> waveform in sourceArray)
+             {
+                 for (int sample = 0; sample < waveform.Samples.Count; ++sample)
+                 { 
+                     currentVoltageSeqPrivate.Add(waveform.Samples[sample].Value);
+                 }
+                 currentLineIndex++;
+             }
+         }
+         */
+
     }
 }

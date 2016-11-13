@@ -22,7 +22,8 @@ namespace GUI_blodtryksmåler
     {
         private Logic_blodtryksmåler.Analyse dataanalyse=new Analyse();
         private DTO_blodtryksmåler.DTO_data DTO_Data=new DTO_data();
-        private DTO_blodtryksmåler.DTO_login DTO_Login=new DTO_login();  
+        private DTO_blodtryksmåler.DTO_login DTO_Login=new DTO_login();
+        private Logic_blodtryksmåler.Logic log = new Logic_blodtryksmåler.Logic();
 
         // test
         private Thread cpuThread;
@@ -104,7 +105,8 @@ namespace GUI_blodtryksmåler
 
         private void MålingBt_Click(object sender, EventArgs e)
         {
-            Logic_blodtryksmåler.Logic log = new Logic_blodtryksmåler.Logic();
+            
+            log.ReadData();
         }
     }
 }

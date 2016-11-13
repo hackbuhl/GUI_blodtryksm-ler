@@ -13,7 +13,7 @@ namespace Logic_blodtryksmåler
     {
         List<double> daDoubles=new List<double>();
         DTO_blodtryksmåler.DTO_data datadto = new DTO_data();
-        Logic log = new Logic();
+        private Logic log=new Logic();
 
         public GetAsyncDatalist(DAQmxAsyncRead daqRead)
         {
@@ -21,17 +21,25 @@ namespace Logic_blodtryksmåler
         }
         public void Update(double[] data)
         {
+            datadto.datalist=new List<double>();
             for (int i = 0; i < data.Length;i=i+20)
             {
+                
                 List<double> av=new List<double>();
                 for (int j = i; j < i+20 ; j++)
                 {
                     av.Add(data[j]);
 
                 }
+                
                 datadto.datalist.Add(av.Average());
             }
             log.start(datadto);
+        }
+
+        public Logic GetLogic()
+        {
+            return log;
         }
 
     }

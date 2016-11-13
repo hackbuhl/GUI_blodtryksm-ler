@@ -22,11 +22,7 @@ namespace Dataaccess_blodtryksmåler
             datacollector.samplesPerChannel = 500;
             datacollector.sampleRateInHz = 1000;
             datacollector.deviceName = "Dev1/ai0";
-            //Thread t = new Thread(()=>OpsamlData());
-            //t.Start();
-            //datacollector.getVoltageSeqBlocking();
-
-
+            daQmx = new DAQmxAsyncRead(datacollector.getTask());
         }
 
 

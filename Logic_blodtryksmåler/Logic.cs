@@ -17,24 +17,30 @@ namespace Logic_blodtryksmåler
         private DTO_data dtoData = new DTO_data();
         private Thread lT;
         private Thread kalT;
-        private Dataaccess_blodtryksmåler.Kalibrer kalval = new Dataaccess_blodtryksmåler.Kalibrer();
+        private Dataaccess_blodtryksmåler.Kalibrer kalval; 
         private GetAsyncDatalist raaDatalist;
 
         public Logic()
         {
+            
+        }
+        public void ReadData()
+        {
             DAL = new Dataaccess_blodtryksmåler.GetData();
             raaDatalist = new GetAsyncDatalist(DAL.daQmx);
+        }
+        public void start(DTO_data dat)
+        {
+            foreach (var VARIABLE in dat.datalist)
+            {
+                dtoData.datalist.Add(VARIABLE);
+            }
         }
         public DTO_data DatatoPresentation(int i)
         {
             return dtoData;
             //Denne metode skal sende dataen fra fromVtommHg op i præsentationslaget 
         }
-        public void start(DTO_data dat)
-        {
-            dtoData.datalist = dat.datalist;
-        }
-
         public void Execute(bool cal)
         {
             if (cal == true)
@@ -83,6 +89,8 @@ namespace Logic_blodtryksmåler
             try
             {
                 //dtoData = DAL.OpsamlData();
+                            DAL = new Dataaccess_blodtryksmåler.GetData();
+            raaDatalist = new GetAsyncDatalist(DAL.daQmx);
                 ZeroA = dtoData.datalist.Average();
                 return true;
             }
