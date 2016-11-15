@@ -114,25 +114,15 @@
             // SysLb
             // 
             this.SysLb.AutoSize = true;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
             this.SysLb.Location = new System.Drawing.Point(76, 77);
             this.SysLb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/master
             this.SysLb.Location = new System.Drawing.Point(44, 79);
             this.SysLb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 
             this.SysLb.Location = new System.Drawing.Point(51, 50);
-<<<<<<< HEAD
->>>>>>> origin/master
->>>>>>> origin/master
-=======
 
->>>>>>> origin/master
             this.SysLb.Name = "SysLb";
             this.SysLb.Size = new System.Drawing.Size(53, 20);
             this.SysLb.TabIndex = 6;
@@ -211,13 +201,7 @@
             // 
             // DataChart
             // 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/master
             chartArea2.Name = "ChartArea1";
             this.DataChart.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
@@ -249,7 +233,7 @@
 
             this.DataChart.Text = "chart1";
 
->>>>>>> origin/master
+
             chartArea1.AxisX.MajorGrid.Interval = 200D;
             chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.DimGray;
             chartArea1.AxisX.MinorGrid.Enabled = true;
