@@ -114,15 +114,11 @@
             // SysLb
             // 
             this.SysLb.AutoSize = true;
-
             this.SysLb.Location = new System.Drawing.Point(76, 77);
             this.SysLb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-
             this.SysLb.Location = new System.Drawing.Point(44, 79);
             this.SysLb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-
             this.SysLb.Location = new System.Drawing.Point(51, 50);
-
             this.SysLb.Name = "SysLb";
             this.SysLb.Size = new System.Drawing.Size(53, 20);
             this.SysLb.TabIndex = 6;
@@ -200,70 +196,40 @@
             this.DigitalfilterChB.CheckedChanged += new System.EventHandler(this.DigitalfilterChB_CheckedChanged);
             // 
             // DataChart
-            // 
-
+            //
             chartArea2.Name = "ChartArea1";
-            this.DataChart.ChartAreas.Add(chartArea2);
+            this.DataChart.ChartAreas.Add(chartArea2); //
             legend2.Name = "Legend1";
             this.DataChart.Legends.Add(legend2);
-            this.DataChart.Location = new System.Drawing.Point(307, 34);
-            this.DataChart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.DataChart.Location = new System.Drawing.Point(205, 22);
             this.DataChart.Name = "DataChart";
             series2.ChartArea = "ChartArea1";
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
             series2.Legend = "Legend1";
             series2.Name = "Series1";
             this.DataChart.Series.Add(series2);
-            this.DataChart.Size = new System.Drawing.Size(811, 439);
-            this.DataChart.TabIndex = 0;
-
-            chartArea1.Name = "ChartArea1";
-            this.DataChart.ChartAreas.Add(chartArea1); //
-            legend1.Name = "Legend1";
-            this.DataChart.Legends.Add(legend1);
-            this.DataChart.Location = new System.Drawing.Point(205, 22);
-            this.DataChart.Name = "DataChart";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.DataChart.Series.Add(series1);
             this.DataChart.Size = new System.Drawing.Size(1560, 653);
             this.DataChart.TabIndex = 0; //10?
-
             this.DataChart.Text = "chart1";
-
-
-            chartArea1.AxisX.MajorGrid.Interval = 200D;
-            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.DimGray;
-            chartArea1.AxisX.MinorGrid.Enabled = true;
-            chartArea1.AxisX.MinorGrid.Interval = 40D;
-            chartArea1.AxisX.MinorGrid.LineColor = System.Drawing.Color.LightGray;
-            chartArea1.AxisX.ScaleView.Size = 2000D;
-            chartArea1.AxisX.ScrollBar.LineColor = System.Drawing.Color.DarkRed;
-            chartArea1.AxisX.Title = "ms";
-            chartArea1.AxisY.MajorGrid.Interval = 0.5D;
-            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.DimGray;
-            chartArea1.AxisY.MinorGrid.Enabled = true;
-            chartArea1.AxisY.MinorGrid.Interval = 0.1D;
-            chartArea1.AxisY.MinorGrid.LineColor = System.Drawing.Color.LightGray;
-            chartArea1.AxisY.Title = "mV";
-            chartArea1.Name = "ChartArea1";
-            this.DataChart.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.DataChart.Legends.Add(legend1);
-            this.DataChart.Location = new System.Drawing.Point(266, 77);
+            chartArea2.AxisX.MajorGrid.Interval = 200D;
+            chartArea2.AxisX.MajorGrid.LineColor = System.Drawing.Color.DimGray;
+            chartArea2.AxisX.MinorGrid.Enabled = true;
+            chartArea2.AxisX.MinorGrid.Interval = 40D;
+            chartArea2.AxisX.MinorGrid.LineColor = System.Drawing.Color.LightGray;
+            chartArea2.AxisX.ScaleView.Size = 2000D;
+            chartArea2.AxisX.ScrollBar.LineColor = System.Drawing.Color.DarkRed;
+            chartArea2.AxisX.Title = "ms";
+            chartArea2.AxisY.MajorGrid.Interval = 0.5D;
+            chartArea2.AxisY.MajorGrid.LineColor = System.Drawing.Color.DimGray;
+            chartArea2.AxisY.MinorGrid.Enabled = true;
+            chartArea2.AxisY.MinorGrid.Interval = 0.1D;
+            chartArea2.AxisY.MinorGrid.LineColor = System.Drawing.Color.LightGray;
+            chartArea2.AxisY.Title = "mV";
             this.DataChart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DataChart.Name = "DataChart";
             this.DataChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.DataChart.Series.Add(series1);
-            this.DataChart.Size = new System.Drawing.Size(1624, 706);
-            this.DataChart.TabIndex = 0;
-            this.DataChart.Text = "chart1";
+           
+         
             // 
             // Måling
             // 
