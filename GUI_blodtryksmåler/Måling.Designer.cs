@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.nulpunktBt = new System.Windows.Forms.Button();
             this.MålingBt = new System.Windows.Forms.Button();
             this.AlarmBt = new System.Windows.Forms.Button();
@@ -114,8 +114,17 @@
             // SysLb
             // 
             this.SysLb.AutoSize = true;
+<<<<<<< HEAD
             this.SysLb.Location = new System.Drawing.Point(76, 77);
             this.SysLb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+=======
+<<<<<<< HEAD
+            this.SysLb.Location = new System.Drawing.Point(44, 79);
+            this.SysLb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+=======
+            this.SysLb.Location = new System.Drawing.Point(51, 50);
+>>>>>>> origin/master
+>>>>>>> origin/master
             this.SysLb.Name = "SysLb";
             this.SysLb.Size = new System.Drawing.Size(53, 20);
             this.SysLb.TabIndex = 6;
@@ -190,9 +199,45 @@
             this.DigitalfilterChB.Size = new System.Drawing.Size(22, 21);
             this.DigitalfilterChB.TabIndex = 13;
             this.DigitalfilterChB.UseVisualStyleBackColor = true;
+            this.DigitalfilterChB.CheckedChanged += new System.EventHandler(this.DigitalfilterChB_CheckedChanged);
             // 
             // DataChart
             // 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            chartArea2.Name = "ChartArea1";
+            this.DataChart.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.DataChart.Legends.Add(legend2);
+            this.DataChart.Location = new System.Drawing.Point(307, 34);
+            this.DataChart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.DataChart.Name = "DataChart";
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.DataChart.Series.Add(series2);
+            this.DataChart.Size = new System.Drawing.Size(811, 439);
+            this.DataChart.TabIndex = 0;
+=======
+            chartArea1.Name = "ChartArea1";
+            this.DataChart.ChartAreas.Add(chartArea1); //
+            legend1.Name = "Legend1";
+            this.DataChart.Legends.Add(legend1);
+            this.DataChart.Location = new System.Drawing.Point(205, 22);
+            this.DataChart.Name = "DataChart";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.DataChart.Series.Add(series1);
+            this.DataChart.Size = new System.Drawing.Size(1560, 653);
+            this.DataChart.TabIndex = 0; //10?
+>>>>>>> origin/master
+            this.DataChart.Text = "chart1";
+
+>>>>>>> origin/master
             chartArea1.AxisX.MajorGrid.Interval = 200D;
             chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.DimGray;
             chartArea1.AxisX.MinorGrid.Enabled = true;
