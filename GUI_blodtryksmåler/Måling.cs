@@ -83,7 +83,7 @@ namespace GUI_blodtryksmåler
                 Thread.Sleep(100);
             }
         }
-
+       
         private void UpdateCpuChart()
         {
             DataChart.Series["Series1"].Points.Clear();
@@ -93,15 +93,39 @@ namespace GUI_blodtryksmåler
                 DataChart.Series["Series1"].Points.AddY(cpuArray[i]);
             }
         }
-
+        bool bln = true; //Får knappen til at skifte mellem start og stop måling
         private void MålingBt_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
+            if (bln == true)
+            {
+             
+                cpuThread = new Thread(new ThreadStart(this.getPerformanceCounters));
+                cpuThread.IsBackground = true;
+                cpuThread.Start();
+
+                log.ReadData();
+                MålingBt.Text = "Stop måling";
+                bln = false;
+                nulBt.Enabled = false;
+                SaveBt.Enabled = false;
+                LogoutBt.Enabled = false;
+                nulpunktBt.Enabled = false;
+            }
+=======
             cpuThread = new Thread(new ThreadStart(this.Update));
             cpuThread.IsBackground = true;
             cpuThread.Start();
 
             log.ReadData();
+>>>>>>> origin/master
 
+            else
+            {
+                cpuThread.Abort();
+                MålingBt.Text = "Start måling";
+                bln = true;
+            }
         }
 
         private void SaveBt_Click(object sender, EventArgs e)
@@ -124,6 +148,31 @@ namespace GUI_blodtryksmåler
             }
         }
 
+<<<<<<< HEAD
+=======
+        private void DataChart_Click(object sender, EventArgs e)
+        {
+
+        }
+
+<<<<<<< HEAD
+        private void LogoutBt_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nulpunktBt_Click(object sender, EventArgs e)
+        {
+            nulBt.Enabled = true;
+            SaveBt.Enabled = true;
+            MålingBt.Enabled = true;
+            AlarmBt.Enabled = true; 
+           
+            
+        }
+=======
+>>>>>>> origin/master
+>>>>>>> origin/master
     }
 }
 
