@@ -13,10 +13,11 @@ namespace Logic_blodtryksmåler
     {
         List<double> daDoubles=new List<double>();
         DTO_blodtryksmåler.DTO_data datadto = new DTO_data();
-        private Logic log=new Logic();
+        private Logic log; // her skal findes det oprindelige logic objekt og putte det ind i?? 
 
-        public GetAsyncDatalist(DAQmxAsyncRead daqRead)
+        public GetAsyncDatalist(DAQmxAsyncRead daqRead, Logic logic)
         {
+            log = logic;
             daqRead.Attach(this);
         }
         public void Update(double[] data)

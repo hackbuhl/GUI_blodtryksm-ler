@@ -18,7 +18,7 @@ using Logic_blodtryksmåler;
 
 namespace GUI_blodtryksmåler
 {
-    public partial class Måling : Form
+    public partial class Måling : Form, Logic_blodtryksmåler.IObserverLogic
     {
         private Logic_blodtryksmåler.Analyse dataanalyse=new Analyse();
         private DTO_blodtryksmåler.DTO_data DTO_Data=new DTO_data();
@@ -34,6 +34,8 @@ namespace GUI_blodtryksmåler
         {
             InitializeComponent();
         }
+
+
         public void Filter(bool on)
         {
 
@@ -58,15 +60,16 @@ namespace GUI_blodtryksmåler
        
 
         // test
-        private void getPerformanceCounters()
+        public void Update(DTO_data dto)
         {
             var cpuPerfCounter = new PerformanceCounter("Processor Information", "% Processor Time", "_Total");
 
             while (true)
             {
-                cpuArray[cpuArray.Length - 1] = Math.Round(cpuPerfCounter.NextValue(), 0);
 
-                Array.Copy(cpuArray, 1, cpuArray, 0, cpuArray.Length - 1);
+                double[] dataArray = dto.datalist.ToArray();
+
+                Array.Copy(dataArray, 1, dataArray, 0, dataArray.Length - 1);
 
                 if (DataChart.IsHandleCreated)
                 {
@@ -93,6 +96,7 @@ namespace GUI_blodtryksmåler
         bool bln = true; //Får knappen til at skifte mellem start og stop måling
         private void MålingBt_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             if (bln == true)
             {
              
@@ -108,6 +112,13 @@ namespace GUI_blodtryksmåler
                 LogoutBt.Enabled = false;
                 nulpunktBt.Enabled = false;
             }
+=======
+            cpuThread = new Thread(new ThreadStart(this.Update));
+            cpuThread.IsBackground = true;
+            cpuThread.Start();
+
+            log.ReadData();
+>>>>>>> origin/master
 
             else
             {
@@ -142,6 +153,7 @@ namespace GUI_blodtryksmåler
 
         }
 
+<<<<<<< HEAD
         private void LogoutBt_Click(object sender, EventArgs e)
         {
 
@@ -156,6 +168,8 @@ namespace GUI_blodtryksmåler
            
             
         }
+=======
+>>>>>>> origin/master
     }
 }
 
