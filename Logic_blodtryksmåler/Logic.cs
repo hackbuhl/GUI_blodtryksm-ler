@@ -22,11 +22,9 @@ namespace Logic_blodtryksmåler
 
         public Logic()
         {
-<<<<<<< HEAD
             dtoData.datalist = new List<double>(1);
-=======
             //tråd = new Thread(fromVtommHg()); 
->>>>>>> origin/master
+
         }
 
         public void ReadData()
@@ -42,13 +40,7 @@ namespace Logic_blodtryksmåler
             }
             Notify(dtoData);
         }
-<<<<<<< HEAD
-
-
-        public DTO_data DatatoPresentation(int i)
-=======
         public void DatatoPresentation(DTO_data dto_data)
->>>>>>> origin/master
         {
             Notify(dto_data);
             //Denne metode skal sende dataen fra fromVtommHg op i præsentationslaget 
