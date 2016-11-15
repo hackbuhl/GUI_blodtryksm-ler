@@ -31,6 +31,7 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.nulpunktBt = new System.Windows.Forms.Button();
             this.MålingBt = new System.Windows.Forms.Button();
             this.AlarmBt = new System.Windows.Forms.Button();
@@ -194,25 +195,23 @@
             // 
             // DataChart
             // 
-            chartArea1.AxisX.MajorGrid.Interval = 200D;
+            this.DataChart.BorderlineWidth = 2;
+            this.DataChart.BorderSkin.BackColor = System.Drawing.Color.LightGray;
             chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.DimGray;
             chartArea1.AxisX.MinorGrid.Enabled = true;
-            chartArea1.AxisX.MinorGrid.Interval = 40D;
             chartArea1.AxisX.MinorGrid.LineColor = System.Drawing.Color.LightGray;
-            chartArea1.AxisX.ScaleView.Size = 2000D;
+            chartArea1.AxisX.ScaleView.Size = 100D;
             chartArea1.AxisX.ScrollBar.LineColor = System.Drawing.Color.DarkRed;
             chartArea1.AxisX.Title = "ms";
-            chartArea1.AxisY.MajorGrid.Interval = 0.5D;
             chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.DimGray;
             chartArea1.AxisY.MinorGrid.Enabled = true;
-            chartArea1.AxisY.MinorGrid.Interval = 0.1D;
             chartArea1.AxisY.MinorGrid.LineColor = System.Drawing.Color.LightGray;
-            chartArea1.AxisY.Title = "mV";
+            chartArea1.AxisY.Title = "mmHg";
             chartArea1.Name = "ChartArea1";
             this.DataChart.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.DataChart.Legends.Add(legend1);
-            this.DataChart.Location = new System.Drawing.Point(330, 101);
+            this.DataChart.Location = new System.Drawing.Point(273, 101);
             this.DataChart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DataChart.Name = "DataChart";
             this.DataChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
@@ -224,6 +223,9 @@
             this.DataChart.Size = new System.Drawing.Size(1560, 653);
             this.DataChart.TabIndex = 0;
             this.DataChart.Text = "chart1";
+            title1.Name = "Blodtryk";
+            this.DataChart.Titles.Add(title1);
+            this.DataChart.Click += new System.EventHandler(this.DataChart_Click);
             // 
             // Måling
             // 

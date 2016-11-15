@@ -28,7 +28,7 @@ namespace GUI_blodtryksmåler
         // test
 
         private Thread cpuThread;
-        private double[] cpuArray = new double[60];
+        private double[] cpuArray = new double[101];
 
         public Måling()
         {
@@ -77,7 +77,7 @@ namespace GUI_blodtryksmåler
                     //......
                 }
 
-                Thread.Sleep(1000);
+                Thread.Sleep(100);
             }
         }
 
@@ -121,6 +121,10 @@ namespace GUI_blodtryksmåler
             }
         }
 
+        private void DataChart_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
