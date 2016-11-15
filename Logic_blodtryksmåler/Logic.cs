@@ -10,19 +10,18 @@ using DTO_blodtryksmåler;
 
 namespace Logic_blodtryksmåler
 {
-    public class Logic : iStrategy
+    public class Logic : SubjectLogic
     {
         private double ZeroA;
         private Dataaccess_blodtryksmåler.GetData DAL;
         private DTO_data dtoData = new DTO_data();
-        private Thread lT;
-        private Thread kalT;
+        private Thread tråd; 
         private Dataaccess_blodtryksmåler.Kalibrer kalval; 
         private GetAsyncDatalist raaDatalist;
 
         public Logic()
         {
-            
+            //tråd = new Thread(fromVtommHg()); 
         }
         public void ReadData()
         {
@@ -35,24 +34,12 @@ namespace Logic_blodtryksmåler
             {
                 dtoData.datalist.Add(VARIABLE);
             }
+            Notify(dtoData);
         }
-        public DTO_data DatatoPresentation(int i)
+        public void DatatoPresentation(DTO_data dto_data)
         {
-            return dtoData;
+            Notify(dto_data);
             //Denne metode skal sende dataen fra fromVtommHg op i præsentationslaget 
-        }
-        public void Execute(bool cal)
-        {
-            if (cal == true)
-            {
-                lT = new Thread(() => fromVtommHg());
-                lT.Start();
-            }
-            else
-            {
-                kalT = new Thread(()=> dataToKalibrate());
-                kalT.Start();
-            }
         }
 
         public DTO_data fromVtommHg()

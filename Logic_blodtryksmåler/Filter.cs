@@ -6,7 +6,7 @@ using DTO_blodtryksmåler;
 
 namespace Logic_blodtryksmåler
 {
-    public class Filter: iStrategy
+    public class Filter
     {
         Logic log = new Logic();
         public DTO_data DatatoPresentation(int i)
