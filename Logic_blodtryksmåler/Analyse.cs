@@ -10,7 +10,7 @@ namespace Logic_blodtryksmåler
     public class Analyse : AbAnalyse
     {
         private DTO_blodtryksmåler.DTO_data dataDTO=new DTO_data();
-
+        /*
         public void FindDiaSys(DTO_data)
         {
             double beat = 0;
@@ -29,7 +29,7 @@ namespace Logic_blodtryksmåler
                 range = range.Take(lenght);
             }
         }
-
+        */
         public void FindPulse()
         {
             throw new System.NotImplementedException();
