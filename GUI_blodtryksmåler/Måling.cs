@@ -80,7 +80,7 @@ namespace GUI_blodtryksmåler
                 Thread.Sleep(100);
             }
         }
-
+       
         private void UpdateCpuChart()
         {
             DataChart.Series["Series1"].Points.Clear();
@@ -90,15 +90,31 @@ namespace GUI_blodtryksmåler
                 DataChart.Series["Series1"].Points.AddY(cpuArray[i]);
             }
         }
-
+        bool bln = true; //Får knappen til at skifte mellem start og stop måling
         private void MålingBt_Click(object sender, EventArgs e)
         {
-            cpuThread = new Thread(new ThreadStart(this.getPerformanceCounters));
-            cpuThread.IsBackground = true;
-            cpuThread.Start();
+            if (bln == true)
+            {
+             
+                cpuThread = new Thread(new ThreadStart(this.getPerformanceCounters));
+                cpuThread.IsBackground = true;
+                cpuThread.Start();
 
-            log.ReadData();
+                log.ReadData();
+                MålingBt.Text = "Stop måling";
+                bln = false;
+                nulBt.Enabled = false;
+                SaveBt.Enabled = false;
+                LogoutBt.Enabled = false;
 
+            }
+
+            else
+            {
+                cpuThread.Abort();
+                MålingBt.Text = "Start måling";
+                bln = true;
+            }
         }
 
         private void SaveBt_Click(object sender, EventArgs e)
@@ -124,6 +140,21 @@ namespace GUI_blodtryksmåler
         private void DataChart_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void LogoutBt_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nulpunktBt_Click(object sender, EventArgs e)
+        {
+            nulBt.Enabled = true;
+            SaveBt.Enabled = true;
+            MålingBt.Enabled = true;
+            AlarmBt.Enabled = true; 
+           
+            
         }
     }
 }

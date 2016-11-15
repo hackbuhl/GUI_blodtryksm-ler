@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.nulpunktBt = new System.Windows.Forms.Button();
             this.MålingBt = new System.Windows.Forms.Button();
             this.AlarmBt = new System.Windows.Forms.Button();
@@ -59,9 +59,11 @@
             this.nulpunktBt.TabIndex = 0;
             this.nulpunktBt.Text = "Foretag nulpunktsjustering";
             this.nulpunktBt.UseVisualStyleBackColor = true;
+            this.nulpunktBt.Click += new System.EventHandler(this.nulpunktBt_Click);
             // 
             // MålingBt
             // 
+            this.MålingBt.Enabled = false;
             this.MålingBt.Location = new System.Drawing.Point(312, 796);
             this.MålingBt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MålingBt.Name = "MålingBt";
@@ -73,6 +75,7 @@
             // 
             // AlarmBt
             // 
+            this.AlarmBt.Enabled = false;
             this.AlarmBt.Location = new System.Drawing.Point(646, 796);
             this.AlarmBt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.AlarmBt.Name = "AlarmBt";
@@ -83,6 +86,7 @@
             // 
             // SaveBt
             // 
+            this.SaveBt.Enabled = false;
             this.SaveBt.Location = new System.Drawing.Point(1750, 796);
             this.SaveBt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SaveBt.Name = "SaveBt";
@@ -94,6 +98,7 @@
             // 
             // nulBt
             // 
+            this.nulBt.Enabled = false;
             this.nulBt.Location = new System.Drawing.Point(1517, 796);
             this.nulBt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.nulBt.Name = "nulBt";
@@ -111,6 +116,7 @@
             this.LogoutBt.TabIndex = 5;
             this.LogoutBt.Text = "Log af";
             this.LogoutBt.UseVisualStyleBackColor = true;
+            this.LogoutBt.Click += new System.EventHandler(this.LogoutBt_Click);
             // 
             // SysLb
             // 
@@ -197,34 +203,34 @@
             // 
             this.DataChart.BorderlineWidth = 2;
             this.DataChart.BorderSkin.BackColor = System.Drawing.Color.LightGray;
-            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.DimGray;
-            chartArea1.AxisX.MinorGrid.Enabled = true;
-            chartArea1.AxisX.MinorGrid.LineColor = System.Drawing.Color.LightGray;
-            chartArea1.AxisX.ScaleView.Size = 100D;
-            chartArea1.AxisX.ScrollBar.LineColor = System.Drawing.Color.DarkRed;
-            chartArea1.AxisX.Title = "ms";
-            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.DimGray;
-            chartArea1.AxisY.MinorGrid.Enabled = true;
-            chartArea1.AxisY.MinorGrid.LineColor = System.Drawing.Color.LightGray;
-            chartArea1.AxisY.Title = "mmHg";
-            chartArea1.Name = "ChartArea1";
-            this.DataChart.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.DataChart.Legends.Add(legend1);
+            chartArea3.AxisX.MajorGrid.LineColor = System.Drawing.Color.DimGray;
+            chartArea3.AxisX.MinorGrid.Enabled = true;
+            chartArea3.AxisX.MinorGrid.LineColor = System.Drawing.Color.LightGray;
+            chartArea3.AxisX.ScaleView.Size = 100D;
+            chartArea3.AxisX.ScrollBar.LineColor = System.Drawing.Color.DarkRed;
+            chartArea3.AxisX.Title = "ms";
+            chartArea3.AxisY.MajorGrid.LineColor = System.Drawing.Color.DimGray;
+            chartArea3.AxisY.MinorGrid.Enabled = true;
+            chartArea3.AxisY.MinorGrid.LineColor = System.Drawing.Color.LightGray;
+            chartArea3.AxisY.Title = "mmHg";
+            chartArea3.Name = "ChartArea1";
+            this.DataChart.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.DataChart.Legends.Add(legend3);
             this.DataChart.Location = new System.Drawing.Point(273, 101);
             this.DataChart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DataChart.Name = "DataChart";
             this.DataChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.DataChart.Series.Add(series1);
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.DataChart.Series.Add(series3);
             this.DataChart.Size = new System.Drawing.Size(1560, 653);
             this.DataChart.TabIndex = 0;
             this.DataChart.Text = "chart1";
-            title1.Name = "Blodtryk";
-            this.DataChart.Titles.Add(title1);
+            title3.Name = "Blodtryk";
+            this.DataChart.Titles.Add(title3);
             this.DataChart.Click += new System.EventHandler(this.DataChart_Click);
             // 
             // Måling
