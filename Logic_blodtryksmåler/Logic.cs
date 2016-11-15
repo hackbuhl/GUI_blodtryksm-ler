@@ -26,8 +26,8 @@ namespace Logic_blodtryksmåler
         }
         public void ReadData()
         {
-            DAL = new Dataaccess_blodtryksmåler.GetData();
-            raaDatalist = new GetAsyncDatalist(DAL.daQmx);
+            //DAL = new Dataaccess_blodtryksmåler.GetData();
+            //raaDatalist = new GetAsyncDatalist(DAL.daQmx);
         }
         public void start(DTO_data dat)
         {
