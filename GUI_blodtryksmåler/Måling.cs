@@ -67,7 +67,7 @@ namespace GUI_blodtryksmåler
             while (true)
             {
 
-                double[] dataArray = dto.datalist.ToArray();
+                double[] dataArray=new double[20];
 
                 Array.Copy(dataArray, 1, dataArray, 0, dataArray.Length - 1);
 
@@ -86,20 +86,24 @@ namespace GUI_blodtryksmåler
        
         private void UpdateCpuChart()
         {
+            double[] dataArray = new double[20];
+            for (int i = 0; i < 20; i++)
+            {
+                dataArray[i] = DTO_Data.datalist[DTO_Data.datalist.Count - 20 + i];
+            }
             DataChart.Series["Series1"].Points.Clear();
 
             for (int i = 0; i < cpuArray.Length - 1; ++i)
             {
-                DataChart.Series["Series1"].Points.AddY(cpuArray[i]);
+                DataChart.Series["Series1"].Points.AddY(dataArray[i]);
             }
         }
         bool bln = true; //Får knappen til at skifte mellem start og stop måling
         private void MålingBt_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
             if (bln == true)
             {
-             
+
                 cpuThread = new Thread(new ThreadStart(this.getPerformanceCounters));
                 cpuThread.IsBackground = true;
                 cpuThread.Start();
@@ -112,13 +116,6 @@ namespace GUI_blodtryksmåler
                 LogoutBt.Enabled = false;
                 nulpunktBt.Enabled = false;
             }
-=======
-            cpuThread = new Thread(new ThreadStart(this.Update));
-            cpuThread.IsBackground = true;
-            cpuThread.Start();
-
-            log.ReadData();
->>>>>>> origin/master
 
             else
             {
@@ -153,7 +150,6 @@ namespace GUI_blodtryksmåler
 
         }
 
-<<<<<<< HEAD
         private void LogoutBt_Click(object sender, EventArgs e)
         {
 
@@ -168,8 +164,6 @@ namespace GUI_blodtryksmåler
            
             
         }
-=======
->>>>>>> origin/master
     }
 }
 
