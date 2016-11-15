@@ -115,15 +115,23 @@
             // 
             this.SysLb.AutoSize = true;
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.SysLb.Location = new System.Drawing.Point(76, 77);
             this.SysLb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 =======
 <<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
             this.SysLb.Location = new System.Drawing.Point(44, 79);
             this.SysLb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-=======
+
             this.SysLb.Location = new System.Drawing.Point(51, 50);
+<<<<<<< HEAD
 >>>>>>> origin/master
+>>>>>>> origin/master
+=======
+
 >>>>>>> origin/master
             this.SysLb.Name = "SysLb";
             this.SysLb.Size = new System.Drawing.Size(53, 20);
@@ -204,8 +212,12 @@
             // DataChart
             // 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
             chartArea2.Name = "ChartArea1";
             this.DataChart.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
@@ -220,7 +232,7 @@
             this.DataChart.Series.Add(series2);
             this.DataChart.Size = new System.Drawing.Size(811, 439);
             this.DataChart.TabIndex = 0;
-=======
+
             chartArea1.Name = "ChartArea1";
             this.DataChart.ChartAreas.Add(chartArea1); //
             legend1.Name = "Legend1";
@@ -234,7 +246,7 @@
             this.DataChart.Series.Add(series1);
             this.DataChart.Size = new System.Drawing.Size(1560, 653);
             this.DataChart.TabIndex = 0; //10?
->>>>>>> origin/master
+
             this.DataChart.Text = "chart1";
 
 >>>>>>> origin/master
