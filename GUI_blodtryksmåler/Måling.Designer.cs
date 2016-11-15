@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.nulpunktBt = new System.Windows.Forms.Button();
             this.MålingBt = new System.Windows.Forms.Button();
             this.AlarmBt = new System.Windows.Forms.Button();
@@ -54,29 +54,21 @@
             // 
             this.nulpunktBt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.nulpunktBt.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.nulpunktBt.Location = new System.Drawing.Point(76, 580);
+            this.nulpunktBt.Location = new System.Drawing.Point(312, 596);
             this.nulpunktBt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.nulpunktBt.Name = "nulpunktBt";
             this.nulpunktBt.Size = new System.Drawing.Size(278, 71);
             this.nulpunktBt.TabIndex = 0;
             this.nulpunktBt.Text = "Foretag nulpunktsjustering";
-<<<<<<< HEAD
-            this.nulpunktBt.UseVisualStyleBackColor = false;
-            // 
-            // MålingBt
-            // 
-            this.MålingBt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.MålingBt.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.MålingBt.Location = new System.Drawing.Point(76, 661);
-=======
             this.nulpunktBt.UseVisualStyleBackColor = true;
             this.nulpunktBt.Click += new System.EventHandler(this.nulpunktBt_Click);
             // 
             // MålingBt
             // 
+            this.MålingBt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.MålingBt.Enabled = false;
-            this.MålingBt.Location = new System.Drawing.Point(312, 796);
->>>>>>> origin/master
+            this.MålingBt.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.MålingBt.Location = new System.Drawing.Point(312, 693);
             this.MålingBt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MålingBt.Name = "MålingBt";
             this.MålingBt.Size = new System.Drawing.Size(278, 109);
@@ -87,14 +79,10 @@
             // 
             // AlarmBt
             // 
-<<<<<<< HEAD
             this.AlarmBt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.AlarmBt.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.AlarmBt.Location = new System.Drawing.Point(653, 580);
-=======
             this.AlarmBt.Enabled = false;
-            this.AlarmBt.Location = new System.Drawing.Point(646, 796);
->>>>>>> origin/master
+            this.AlarmBt.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.AlarmBt.Location = new System.Drawing.Point(801, 647);
             this.AlarmBt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.AlarmBt.Name = "AlarmBt";
             this.AlarmBt.Size = new System.Drawing.Size(237, 71);
@@ -104,14 +92,10 @@
             // 
             // SaveBt
             // 
-<<<<<<< HEAD
             this.SaveBt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.SaveBt.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.SaveBt.Location = new System.Drawing.Point(1459, 661);
-=======
             this.SaveBt.Enabled = false;
-            this.SaveBt.Location = new System.Drawing.Point(1750, 796);
->>>>>>> origin/master
+            this.SaveBt.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.SaveBt.Location = new System.Drawing.Point(1227, 693);
             this.SaveBt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SaveBt.Name = "SaveBt";
             this.SaveBt.Size = new System.Drawing.Size(257, 109);
@@ -122,14 +106,10 @@
             // 
             // nulBt
             // 
-<<<<<<< HEAD
             this.nulBt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.nulBt.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.nulBt.Location = new System.Drawing.Point(1459, 580);
-=======
             this.nulBt.Enabled = false;
-            this.nulBt.Location = new System.Drawing.Point(1517, 796);
->>>>>>> origin/master
+            this.nulBt.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.nulBt.Location = new System.Drawing.Point(1227, 596);
             this.nulBt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.nulBt.Name = "nulBt";
             this.nulBt.Size = new System.Drawing.Size(257, 71);
@@ -141,18 +121,14 @@
             // 
             this.LogoutBt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.LogoutBt.ForeColor = System.Drawing.Color.White;
-            this.LogoutBt.Location = new System.Drawing.Point(1604, 30);
+            this.LogoutBt.Location = new System.Drawing.Point(1372, 43);
             this.LogoutBt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.LogoutBt.Name = "LogoutBt";
             this.LogoutBt.Size = new System.Drawing.Size(112, 48);
             this.LogoutBt.TabIndex = 5;
             this.LogoutBt.Text = "Log af";
-<<<<<<< HEAD
-            this.LogoutBt.UseVisualStyleBackColor = false;
-=======
             this.LogoutBt.UseVisualStyleBackColor = true;
             this.LogoutBt.Click += new System.EventHandler(this.LogoutBt_Click);
->>>>>>> origin/master
             // 
             // SysLb
             // 
@@ -228,7 +204,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(694, 749);
+            this.label4.Location = new System.Drawing.Point(849, 600);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(111, 20);
@@ -238,7 +214,7 @@
             // DigitalfilterChB
             // 
             this.DigitalfilterChB.AutoSize = true;
-            this.DigitalfilterChB.Location = new System.Drawing.Point(814, 749);
+            this.DigitalfilterChB.Location = new System.Drawing.Point(969, 600);
             this.DigitalfilterChB.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DigitalfilterChB.Name = "DigitalfilterChB";
             this.DigitalfilterChB.Size = new System.Drawing.Size(22, 21);
@@ -251,41 +227,41 @@
             this.DataChart.BackColor = System.Drawing.Color.Transparent;
             this.DataChart.BorderlineWidth = 2;
             this.DataChart.BorderSkin.BackColor = System.Drawing.Color.LightGray;
-            chartArea3.AxisX.MajorGrid.LineColor = System.Drawing.Color.DimGray;
-            chartArea3.AxisX.MinorGrid.Enabled = true;
-            chartArea3.AxisX.MinorGrid.LineColor = System.Drawing.Color.LightGray;
-            chartArea3.AxisX.ScaleView.Size = 100D;
-            chartArea3.AxisX.ScrollBar.LineColor = System.Drawing.Color.DarkRed;
-            chartArea3.AxisX.Title = "ms";
-            chartArea3.AxisY.MajorGrid.LineColor = System.Drawing.Color.DimGray;
-            chartArea3.AxisY.MinorGrid.Enabled = true;
-            chartArea3.AxisY.MinorGrid.LineColor = System.Drawing.Color.LightGray;
-            chartArea3.AxisY.Title = "mmHg";
-            chartArea3.Name = "ChartArea1";
-            this.DataChart.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.DataChart.Legends.Add(legend3);
+            chartArea2.AxisX.MajorGrid.LineColor = System.Drawing.Color.DimGray;
+            chartArea2.AxisX.MinorGrid.Enabled = true;
+            chartArea2.AxisX.MinorGrid.LineColor = System.Drawing.Color.LightGray;
+            chartArea2.AxisX.ScaleView.Size = 100D;
+            chartArea2.AxisX.ScrollBar.LineColor = System.Drawing.Color.DarkRed;
+            chartArea2.AxisX.Title = "ms";
+            chartArea2.AxisY.MajorGrid.LineColor = System.Drawing.Color.DimGray;
+            chartArea2.AxisY.MinorGrid.Enabled = true;
+            chartArea2.AxisY.MinorGrid.LineColor = System.Drawing.Color.LightGray;
+            chartArea2.AxisY.Title = "mmHg";
+            chartArea2.Name = "ChartArea1";
+            this.DataChart.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.DataChart.Legends.Add(legend2);
             this.DataChart.Location = new System.Drawing.Point(273, 101);
             this.DataChart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DataChart.Name = "DataChart";
             this.DataChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series3.Legend = "Legend1";
-            series3.Name = "series1";
-            this.DataChart.Series.Add(series3);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series2.Legend = "Legend1";
+            series2.Name = "series1";
+            this.DataChart.Series.Add(series2);
             this.DataChart.Size = new System.Drawing.Size(1443, 432);
             this.DataChart.TabIndex = 0;
             this.DataChart.Text = "chart1";
-            title3.Name = "Blodtryk";
-            this.DataChart.Titles.Add(title3);
+            title2.Name = "Blodtryk";
+            this.DataChart.Titles.Add(title2);
             // 
             // Måling
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1811, 844);
+            this.ClientSize = new System.Drawing.Size(1711, 841);
             this.Controls.Add(this.DataChart);
             this.Controls.Add(this.DigitalfilterChB);
             this.Controls.Add(this.label4);
