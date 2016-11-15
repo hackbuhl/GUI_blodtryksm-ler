@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.Design;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -22,12 +23,13 @@ namespace Logic_blodtryksmåler
 
         public Logic()
         {
-            
+            dtoData.datalist = new List<double>(1);
         }
+
         public void ReadData()
         {
-            //DAL = new Dataaccess_blodtryksmåler.GetData();
-            //raaDatalist = new GetAsyncDatalist(DAL.daQmx);
+            DAL = new Dataaccess_blodtryksmåler.GetData();
+           
         }
         public void start(DTO_data dat)
         {
@@ -36,6 +38,8 @@ namespace Logic_blodtryksmåler
                 dtoData.datalist.Add(VARIABLE);
             }
         }
+
+
         public DTO_data DatatoPresentation(int i)
         {
             return dtoData;
@@ -90,7 +94,7 @@ namespace Logic_blodtryksmåler
             {
                 //dtoData = DAL.OpsamlData();
                             DAL = new Dataaccess_blodtryksmåler.GetData();
-            raaDatalist = new GetAsyncDatalist(DAL.daQmx);
+            raaDatalist = new GetAsyncDatalist(DAL.daQmx,this);
                 ZeroA = dtoData.datalist.Average();
                 return true;
             }

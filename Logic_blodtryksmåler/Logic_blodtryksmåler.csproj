@@ -52,7 +52,6 @@
     <Compile Include="Filter.cs" />
     <Compile Include="Gem.cs" />
     <Compile Include="Kalibrer.cs" />
-    <Compile Include="iStrategy.cs" />
     <Compile Include="Logic.cs" />
     <Compile Include="Login.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

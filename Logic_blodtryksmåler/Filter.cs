@@ -6,24 +6,27 @@ using DTO_blodtryksmåler;
 
 namespace Logic_blodtryksmåler
 {
-    public class Filter: iStrategy
+    public class Filter
     {
-        Logic log = new Logic();
-        public DTO_data DatatoPresentation(int i)
+        public DTO_data FilterData(DTO_data data)
         {
-            return FiltrerData(log.fromVtommHg());
-            // denne metode skal sende data fra filtret og op i præsentationslaget
-        }
+            double beat = 0;
+            int count = 0;
+            double valuePre = 0;
 
-        public DTO_data FiltrerData(DTO_data dto)
-        {
-            return dto;
-        }
 
-        public DTO_data DatatoCal()
-        {
-            return FiltrerData(log.dataToKalibrate());
-            //Denne metode skal kunne hente spændinger direkte fra logic, sende disse spændinger igennem filteret gemme dem i en dto som kan hentes fra kalibrer klassen.
+            for (int i = 0; i < data.datalist.Count; i++)
+            {
+                IEnumerable<double> range = data.datalist;
+
+                if (count > 5)
+                    range = range.Skip(count - 5);
+
+                range = range.Take(11);
+
+                data.datalist[i] = range.Average();
+            }
+            return data;
         }
     }
 }
