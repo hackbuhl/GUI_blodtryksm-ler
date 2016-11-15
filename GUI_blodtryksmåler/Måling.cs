@@ -124,11 +124,6 @@ namespace GUI_blodtryksmåler
             }
         }
 
-        private void DataChart_Click(object sender, EventArgs e)
-        {
-
-        }
-
     }
 }
 

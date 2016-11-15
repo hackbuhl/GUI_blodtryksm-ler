@@ -19,7 +19,7 @@ namespace Logic_blodtryksmåler
 
         public double data()
         {
-            return filt.DatatoCal().datalist.Average();
+            return filt.FilterData(dtoData).datalist.Average(); //filt.DatatoCal().datalist.Average()
         }
 
         public void Calibrate(DTO_kalibrer kalibrer, DTO_login login)
