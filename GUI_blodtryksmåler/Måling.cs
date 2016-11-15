@@ -26,9 +26,10 @@ namespace GUI_blodtryksmåler
         private Logic_blodtryksmåler.Logic log = new Logic_blodtryksmåler.Logic();
 
         // test
+
         private Thread cpuThread;
-        private double[] cpuArray = new double[30];
-        
+        private double[] cpuArray = new double[60];
+
         public Måling()
         {
             InitializeComponent();
@@ -90,12 +91,15 @@ namespace GUI_blodtryksmåler
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void MålingBt_Click(object sender, EventArgs e)
         {
             cpuThread = new Thread(new ThreadStart(this.getPerformanceCounters));
             cpuThread.IsBackground = true;
             cpuThread.Start();
-        } // test slut
+
+            log.ReadData();
+
+        }
 
         private void SaveBt_Click(object sender, EventArgs e)
         {
@@ -116,12 +120,7 @@ namespace GUI_blodtryksmåler
 
             }
         }
-        
-        private void MålingBt_Click(object sender, EventArgs e)
-        {
-            
-            log.ReadData();
 
-        }
     }
 }
+
