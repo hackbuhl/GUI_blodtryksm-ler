@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DTO_blodtryksmåler;
 using Logic_blodtryksmåler;
 
 namespace GUI_blodtryksmåler
@@ -20,6 +21,7 @@ namespace GUI_blodtryksmåler
         {
             InitializeComponent();
             alarm = new Logic_blodtryksmåler.Alarm();
+            dtoAlarm = new DTO_alarm();
         }
 
         private void grænseBt_Click(object sender, EventArgs e)
@@ -33,7 +35,6 @@ namespace GUI_blodtryksmåler
             }
             catch (Exception)
             {
-
                 MessageBox.Show("Udflyd alle felter med positive heltal.");
             }
             alarm.SetAlarm(dtoAlarm);

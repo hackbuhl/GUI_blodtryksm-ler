@@ -8,29 +8,21 @@ namespace Logic_blodtryksmåler
 {
     public class Filter: iStrategy
     {
-        public DTO_data ActivateFilter()
+        Logic log = new Logic();
+        public DTO_data DatatoPresentation(int i)
         {
-            throw new System.NotImplementedException();
+            return FiltrerData(log.fromVtommHg());
+            // denne metode skal sende data fra filtret og op i præsentationslaget
         }
 
-        public void Execute()
+        public DTO_data FiltrerData(DTO_data dto)
         {
-            
+            return dto;
         }
 
-        public DTO_data formVtommHg()
+        public DTO_data DatatoCal()
         {
-            throw new NotImplementedException();
-        }
-
-        public bool ZeroAdjust()
-        {
-            throw new NotImplementedException();
-        }
-
-        public DTO_data CalData()
-        {
-            throw new NotImplementedException();
+            return FiltrerData(log.dataToKalibrate());
             //Denne metode skal kunne hente spændinger direkte fra logic, sende disse spændinger igennem filteret gemme dem i en dto som kan hentes fra kalibrer klassen.
         }
     }

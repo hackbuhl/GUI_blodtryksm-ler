@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,11 +12,15 @@ namespace Logic_blodtryksmåler
     {
         private double CalVarialbel;
 
-        private DTO_data dtoData;
+        private DTO_data dtoData= new DTO_data();
+        private Filter filt= new Filter();
         private Dataaccess_blodtryksmåler.Kalibrer dataKalibrer = new Dataaccess_blodtryksmåler.Kalibrer();
 
-        
 
+        public double data()
+        {
+            return filt.DatatoCal().datalist.Average();
+        }
 
         public void Calibrate(DTO_kalibrer kalibrer, DTO_login login)
         {
@@ -29,12 +34,6 @@ namespace Logic_blodtryksmåler
             }
             kalibrer.Factor = CalVarialbel;
             dataKalibrer.saveFactor(kalibrer,login);
-        }
-
-        public void Update()
-        {
-            //filter.CalData();
-
         }
     }
 }

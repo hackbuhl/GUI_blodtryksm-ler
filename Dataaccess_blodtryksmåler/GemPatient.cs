@@ -9,8 +9,6 @@ namespace Dataaccess_blodtryksmåler
 {
     public class GemPatient
     {
-        private SqlDataReader myReader;
-        private SqlCommand myCommand;
         private SqlConnection myConnection;
         private const string DB = "F16ST2ITS2201505227";
         private GetData _getData = new GetData();
@@ -21,17 +19,6 @@ namespace Dataaccess_blodtryksmåler
                                 ";password=" + DB + ";server=i4dab.ase.au.dk;" +
                                 "Trusted_Connection=false;" +
                                 "connection timeout=5");
-        }
-        private Login Login
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-
-            set
-            {
-            }
         }
 
         public int SaveBT(DTO_data BTdata, DTO_login login)

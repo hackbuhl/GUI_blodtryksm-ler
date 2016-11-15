@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using DTO_blodtryksmåler;
 
 
 namespace Logic_blodtryksmåler
 {
     public class Analyse : AbAnalyse
     {
-        private int dataDTO;
+        private DTO_blodtryksmåler.DTO_data dataDTO=new DTO_data();
 
         public void FindDiaSys()
         {

@@ -85,6 +85,27 @@ namespace Dataaccess_blodtryksmåler
             seqTimeOut = -1; 
 
         }
+
+        public Task getTask()
+        {
+
+            // Create a new task
+            readerTask = new Task(); //The background task reading 
+
+            // Create a channel
+            readerTask.AIChannels.CreateVoltageChannel(deviceName, "",
+                (AITerminalConfiguration)(-1), rangeMinimumVolt, rangeMaximumVolt, AIVoltageUnits.Volts);
+
+            // Configure timing specs    
+            readerTask.Timing.ConfigureSampleClock("", sampleRateInHz, SampleClockActiveEdge.Rising,
+                SampleQuantityMode.FiniteSamples, samplesPerChannel);
+            readerTask.Stream.Timeout = seqTimeOut;
+
+            // Verify the task
+            readerTask.Control(TaskAction.Verify);
+
+            return readerTask;
+        }
         /// <summary>
         /// Calling this metod will start a blocking sequnce of voltage meassurement at the NI USB-6009 DAQ.
         /// Before calling this metod you must have set the following properties 
@@ -99,58 +120,60 @@ namespace Dataaccess_blodtryksmåler
         ///     currentVoltageSeq that returns a copy List<double> 
         ///     currentVoltageSeqArray that returns a copy in an double[]  array
         /// </summary>
-        public void getVoltageSeqBlocking()
-        {
-            try
-            {
-                // Create a new task
-                readerTask = new Task(); //The background task reading 
+        /* public void getVoltageSeqBlocking()
+         {
+             try
+             {
+                 // Create a new task
+                 readerTask = new Task(); //The background task reading 
 
-                // Create a channel
-                readerTask.AIChannels.CreateVoltageChannel(deviceName, "",
-                    (AITerminalConfiguration)(-1), rangeMinimumVolt, rangeMaximumVolt, AIVoltageUnits.Volts);
+                 // Create a channel
+                 readerTask.AIChannels.CreateVoltageChannel(deviceName, "",
+                     (AITerminalConfiguration)(-1), rangeMinimumVolt, rangeMaximumVolt, AIVoltageUnits.Volts);
 
-                // Configure timing specs    
-                readerTask.Timing.ConfigureSampleClock("", sampleRateInHz, SampleClockActiveEdge.Rising,
-                    SampleQuantityMode.FiniteSamples, samplesPerChannel);
-                readerTask.Stream.Timeout = seqTimeOut;
+                 // Configure timing specs    
+                 readerTask.Timing.ConfigureSampleClock("", sampleRateInHz, SampleClockActiveEdge.Rising,
+                     SampleQuantityMode.FiniteSamples, samplesPerChannel);
+                 readerTask.Stream.Timeout = seqTimeOut;
 
-                // Verify the task
-                readerTask.Control(TaskAction.Verify);
+                 // Verify the task
+                 readerTask.Control(TaskAction.Verify);
 
-                //Preppare NI DAQ reader and a myTask to reader
-                reader = new AnalogMultiChannelReader(readerTask.Stream);
+                 //Preppare NI DAQ reader and a myTask to reader
+                 reader = new AnalogMultiChannelReader(readerTask.Stream);
 
-                // Read the data 
-                data = reader.ReadWaveform(samplesPerChannel);//This call is a "Blocking call"
+                 // Read the data 
+                 data = reader.ReadWaveform(samplesPerChannel);//This call is a "Blocking call"
 
-                dataToDataTable(data);
-            }
-            catch (DaqException exception)
-            {
-                System.Diagnostics.Debug.WriteLine(exception);
-            }
-            finally
-            {
-                readerTask.Dispose();
+                 dataToDataTable(data);
+             }
+             catch (DaqException exception)
+             {
+                 System.Diagnostics.Debug.WriteLine(exception);
+             }
+             finally
+             {
+                 readerTask.Dispose();
 
-            }
-        }
+             }
+         }
 
 
-        private void dataToDataTable(NationalInstruments.AnalogWaveform<double>[] sourceArray)
-        {
-            // Iterate over channels in this case only one channel
-            int currentLineIndex = 0;
-            currentVoltageSeqPrivate = new List<double>(); //Previous version is deleted
-            foreach (NationalInstruments.AnalogWaveform<double> waveform in sourceArray)
-            {
-                for (int sample = 0; sample < waveform.Samples.Count; ++sample)
-                { 
-                    currentVoltageSeqPrivate.Add(waveform.Samples[sample].Value);
-                }
-                currentLineIndex++;
-            }
-        }
+         private void dataToDataTable(NationalInstruments.AnalogWaveform<double>[] sourceArray)
+         {
+             // Iterate over channels in this case only one channel
+             int currentLineIndex = 0;
+             currentVoltageSeqPrivate = new List<double>(); //Previous version is deleted
+             foreach (NationalInstruments.AnalogWaveform<double> waveform in sourceArray)
+             {
+                 for (int sample = 0; sample < waveform.Samples.Count; ++sample)
+                 { 
+                     currentVoltageSeqPrivate.Add(waveform.Samples[sample].Value);
+                 }
+                 currentLineIndex++;
+             }
+         }
+         */
+
     }
 }

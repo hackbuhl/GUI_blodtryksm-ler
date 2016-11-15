@@ -13,3 +13,8 @@ C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\DTO_blodtryksmåler\
 C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\DTO_blodtryksmåler\obj\Debug\DTO_blodtryksmåler.csprojResolveAssemblyReference.cache
 C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\DTO_blodtryksmåler\obj\Debug\DTO_blodtryksmåler.dll
 C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\DTO_blodtryksmåler\obj\Debug\DTO_blodtryksmåler.pdb
+C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\DTO_blodtryksmåler\bin\Debug\DTO_blodtryksmåler.dll
+C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\DTO_blodtryksmåler\bin\Debug\DTO_blodtryksmåler.pdb
+C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\DTO_blodtryksmåler\obj\Debug\DTO_blodtryksmåler.csprojResolveAssemblyReference.cache
+C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\DTO_blodtryksmåler\obj\Debug\DTO_blodtryksmåler.dll
+C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\DTO_blodtryksmåler\obj\Debug\DTO_blodtryksmåler.pdb

@@ -18,23 +18,24 @@ namespace GUI_blodtryksmåler
         private Logic_blodtryksmåler.Logic logic = new Logic();
         private Logic_blodtryksmåler.Kalibrer logKalibrer = new Logic_blodtryksmåler.Kalibrer();
         private DTO_kalibrer dtoKali;
-        private DTO_data dtoData;
+        private DTO_data dtoData=new DTO_data();
         private DTO_login dtoLogin;
 
         public Kalibrer()
         {
+            logic.ReadData();
+            dtoKali = new DTO_kalibrer();
             InitializeComponent();
             //logKalibrer.Update();
 
-            dtoKali=new DTO_kalibrer();
-            dtoKali.Måling1 = 4.5;
-            dtoKali.Måling2 = 2.3;
+
+           
         }
 
         public Kalibrer(DTO_login login)
         {
             InitializeComponent();
-            logKalibrer.Update();
+            
             dtoLogin = login;
         }
 
@@ -46,7 +47,7 @@ namespace GUI_blodtryksmåler
             {
 
                 dtoKali.Read1 = Convert.ToDouble(Tryk1TB.Text);
-
+                logKalibrer.data();
                 Tryk1Bt.Enabled = false;
                 Tryk2Bt.Enabled = true;
                 Tryk1TB.Enabled = false;
