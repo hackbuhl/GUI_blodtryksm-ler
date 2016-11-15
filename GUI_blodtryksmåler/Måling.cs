@@ -103,24 +103,25 @@ namespace GUI_blodtryksmåler
             gem.ShowDialog(); 
         }
 
-<<<<<<< HEAD
+
         private void DigitalfilterChB_CheckedChanged(object sender, EventArgs e)
         {
             if (DigitalfilterChB.Checked)
             {
                 Logic_blodtryksmåler.Filter on = new Logic_blodtryksmåler.Filter();
-                on.Execute();
+                
             }
             else
             {
 
             }
-=======
+        }
+
         private void MålingBt_Click(object sender, EventArgs e)
         {
             
             log.ReadData();
->>>>>>> origin/master
+
         }
     }
 }
