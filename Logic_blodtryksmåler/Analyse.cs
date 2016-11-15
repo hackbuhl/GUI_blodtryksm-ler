@@ -11,9 +11,23 @@ namespace Logic_blodtryksmåler
     {
         private DTO_blodtryksmåler.DTO_data dataDTO=new DTO_data();
 
-        public void FindDiaSys()
+        public void FindDiaSys(DTO_data)
         {
-            throw new System.NotImplementedException();
+            double beat = 0;
+            int count = 0;
+            double valuePre = 0;
+            int lenght = 0;
+
+
+            foreach (var value in DTO.raa_data)
+            {
+                IEnumerable<double> range = DTO.raa_data;
+
+                if (count > lenght/2)
+                    range = range.Skip(count - lenght/2);
+
+                range = range.Take(lenght);
+            }
         }
 
         public void FindPulse()

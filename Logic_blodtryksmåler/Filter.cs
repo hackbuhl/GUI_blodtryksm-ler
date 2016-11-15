@@ -10,19 +10,18 @@ namespace Logic_blodtryksmåler
     {
         public DTO_data FilterData(DTO_data data)
         {
-            double beat = 0;
-            int count = 0;
-            double valuePre = 0;
+
+            int rangelenght = 10;
 
 
             for (int i = 0; i < data.datalist.Count; i++)
             {
                 IEnumerable<double> range = data.datalist;
 
-                if (count > 5)
-                    range = range.Skip(count - 5);
+                if (i > rangelenght/2)
+                    range = range.Skip(i - rangelenght/2);
 
-                range = range.Take(11);
+                range = range.Take(rangelenght);
 
                 data.datalist[i] = range.Average();
             }
