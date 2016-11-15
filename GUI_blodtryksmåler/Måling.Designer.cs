@@ -180,7 +180,7 @@
             // DataChart
             // 
             chartArea1.Name = "ChartArea1";
-            this.DataChart.ChartAreas.Add(chartArea1);
+            this.DataChart.ChartAreas.Add(chartArea1); //
             legend1.Name = "Legend1";
             this.DataChart.Legends.Add(legend1);
             this.DataChart.Location = new System.Drawing.Point(205, 22);
@@ -190,38 +190,26 @@
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.DataChart.Series.Add(series1);
-            this.DataChart.Size = new System.Drawing.Size(541, 285);
-            this.DataChart.TabIndex = 0;
+            this.DataChart.Size = new System.Drawing.Size(1560, 653);
+            this.DataChart.TabIndex = 0; //10?
             this.DataChart.Text = "chart1";
-            //chartArea1.AxisX.MajorGrid.Interval = 200D;
-            //chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.DimGray;
-            //chartArea1.AxisX.MinorGrid.Enabled = true;
-            //chartArea1.AxisX.MinorGrid.Interval = 40D;
-            //chartArea1.AxisX.MinorGrid.LineColor = System.Drawing.Color.LightGray;
-            //chartArea1.AxisX.ScaleView.Size = 2000D;
-            //chartArea1.AxisX.ScrollBar.LineColor = System.Drawing.Color.DarkRed;
-            //chartArea1.AxisX.Title = "ms";
-            //chartArea1.AxisY.MajorGrid.Interval = 0.5D;
-            //chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.DimGray;
-            //chartArea1.AxisY.MinorGrid.Enabled = true;
-            //chartArea1.AxisY.MinorGrid.Interval = 0.1D;
-            //chartArea1.AxisY.MinorGrid.LineColor = System.Drawing.Color.LightGray;
-            //chartArea1.AxisY.Title = "mV";
-            //chartArea1.Name = "ChartArea1";
-            //this.DataChart.ChartAreas.Add(chartArea1);
-            //legend1.Name = "Legend1";
-            //this.DataChart.Legends.Add(legend1);
-            //this.DataChart.Location = new System.Drawing.Point(23, 197);
-            //this.DataChart.Name = "chart1";
-            //this.DataChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
-            //series1.ChartArea = "ChartArea1";
-            //series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            //series1.Legend = "Legend1";
-            //series1.Name = "EKG-signal";
-            //this.DataChart.Series.Add(series1);
-            //this.DataChart.Size = new System.Drawing.Size(1560, 653);
-            //this.DataChart.TabIndex = 10;
-            //this.DataChart.Text = "chart1";
+
+            chartArea1.AxisX.MajorGrid.Interval = 200D;
+            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.DimGray;
+            chartArea1.AxisX.MinorGrid.Enabled = true;
+            chartArea1.AxisX.MinorGrid.Interval = 40D;
+            chartArea1.AxisX.MinorGrid.LineColor = System.Drawing.Color.LightGray;
+            chartArea1.AxisX.ScaleView.Size = 2000D;
+            chartArea1.AxisX.ScrollBar.LineColor = System.Drawing.Color.DarkRed;
+            chartArea1.AxisX.Title = "ms";
+            chartArea1.AxisY.MajorGrid.Interval = 0.5D;
+            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.DimGray;
+            chartArea1.AxisY.MinorGrid.Enabled = true;
+            chartArea1.AxisY.MinorGrid.Interval = 0.1D;
+            chartArea1.AxisY.MinorGrid.LineColor = System.Drawing.Color.LightGray;
+            chartArea1.AxisY.Title = "mV";
+            this.DataChart.ChartAreas.Add(chartArea1);
+            this.DataChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
             // 
             // Måling
             // 
