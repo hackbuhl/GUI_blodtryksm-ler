@@ -46,5 +46,3 @@ C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\Logic_blodtryksmåle
 C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\Logic_blodtryksmåler\bin\Debug\DTO_blodtryksmåler.pdb
 C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\Logic_blodtryksmåler\bin\Debug\NationalInstruments.DAQmx.xml
 C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\Logic_blodtryksmåler\bin\Debug\NationalInstruments.Common.xml
-C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\Logic_blodtryksmåler\bin\Debug\ToggleSwitch.dll
-C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\Logic_blodtryksmåler\bin\Debug\ToggleSwitch.pdb
