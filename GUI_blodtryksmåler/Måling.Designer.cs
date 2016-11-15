@@ -269,30 +269,16 @@
             this.DataChart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DataChart.Name = "DataChart";
             this.DataChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
-<<<<<<< HEAD
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series1.Legend = "Legend1";
-            series1.Name = "series1";
-            this.DataChart.Series.Add(series1);
-            this.DataChart.Size = new System.Drawing.Size(1443, 432);
-            this.DataChart.TabIndex = 0;
-            this.DataChart.Text = "chart1";
-            title1.Name = "Blodtryk";
-            this.DataChart.Titles.Add(title1);
-=======
             series3.ChartArea = "ChartArea1";
             series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
             series3.Legend = "Legend1";
-            series3.Name = "Series1";
+            series3.Name = "series1";
             this.DataChart.Series.Add(series3);
-            this.DataChart.Size = new System.Drawing.Size(1560, 653);
+            this.DataChart.Size = new System.Drawing.Size(1443, 432);
             this.DataChart.TabIndex = 0;
             this.DataChart.Text = "chart1";
             title3.Name = "Blodtryk";
             this.DataChart.Titles.Add(title3);
-            this.DataChart.Click += new System.EventHandler(this.DataChart_Click);
->>>>>>> origin/master
             // 
             // Måling
             // 
