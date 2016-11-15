@@ -106,7 +106,7 @@ namespace GUI_blodtryksmåler
                 nulBt.Enabled = false;
                 SaveBt.Enabled = false;
                 LogoutBt.Enabled = false;
-
+                nulpunktBt.Enabled = false;
             }
 
             else
