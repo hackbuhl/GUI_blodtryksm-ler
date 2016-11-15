@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="NationalInstruments.DAQmx, Version=14.1.45.15, Culture=neutral, PublicKeyToken=4febd62461bf11a4, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dataaccess_blodtryksmåler\bin\Debug\NationalInstruments.DAQmx.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,17 +44,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbAnalyse.cs" />
     <Compile Include="Alarm.cs" />
     <Compile Include="Analyse.cs" />
-    <Compile Include="iDataObserver.cs" />
+    <Compile Include="GetAsyncDatalist.cs" />
+    <Compile Include="iAnalyseObserver.cs" />
     <Compile Include="Filter.cs" />
     <Compile Include="Gem.cs" />
-    <Compile Include="iAlarmObserver.cs" />
     <Compile Include="Kalibrer.cs" />
-    <Compile Include="SubLogic.cs" />
+    <Compile Include="iStrategy.cs" />
+    <Compile Include="Logic.cs" />
     <Compile Include="Login.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Logic.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagramLogic.cd" />

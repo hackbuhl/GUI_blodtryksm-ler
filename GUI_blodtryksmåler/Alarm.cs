@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DTO_blodtryksmåler;
 using Logic_blodtryksmåler;
 
 namespace GUI_blodtryksmåler
@@ -14,28 +15,29 @@ namespace GUI_blodtryksmåler
     public partial class Alarm : Form
     {
         private Logic_blodtryksmåler.Alarm alarm;
-        private Logic_blodtryksmåler.Analyse dataanalyse;
-        private Logic_blodtryksmåler.Login login;
+        private DTO_blodtryksmåler.DTO_alarm dtoAlarm;
+
         public Alarm()
         {
             InitializeComponent();
             alarm = new Logic_blodtryksmåler.Alarm();
+            dtoAlarm = new DTO_alarm();
         }
-        public void Filter(bool on)
-        {
 
-        }
-        public void UpdateChart()
+        private void grænseBt_Click(object sender, EventArgs e)
         {
-
-        }
-        public void UpdateAnalyse()
-        {
-        }
-        public bool ZeroAdjust()
-        {
-            bool adjusted = false;
-            return adjusted; 
+            try
+            {
+                dtoAlarm.NedDia = Convert.ToInt32(NedDiaTb);
+                dtoAlarm.NedSys = Convert.ToInt32(NedSysTb);
+                dtoAlarm.ØvDia = Convert.ToInt32(ØvDiaTb);
+                dtoAlarm.ØvSys = Convert.ToInt32(ØvSysTb);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Udflyd alle felter med positive heltal.");
+            }
+            alarm.SetAlarm(dtoAlarm);
         }
     }
 }

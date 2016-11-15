@@ -1,46 +1,105 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Linq;
 using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+using DTO_blodtryksmåler;
+
 
 namespace Logic_blodtryksmåler
 {
-    public abstract class Logic
+    public class Logic : iStrategy
     {
-        private List<iDataObserver> observers = new List<iDataObserver>();
-        private int CalVariabel;
+        private double ZeroA;
+        private Dataaccess_blodtryksmåler.GetData DAL;
+        private DTO_data dtoData = new DTO_data();
+        private Thread lT;
+        private Thread kalT;
+        private Dataaccess_blodtryksmåler.Kalibrer kalval; 
+        private GetAsyncDatalist raaDatalist;
 
-        public void Attach(iDataObserver observer)
+        public Logic()
         {
-            observers.Add(observer);
+            
         }
-
-        public void Detach(iDataObserver observer)
+        public void ReadData()
         {
-            observers.Remove(observer);
+            DAL = new Dataaccess_blodtryksmåler.GetData();
+            raaDatalist = new GetAsyncDatalist(DAL.daQmx);
         }
-
-        public void Notify(int val)
+        public void start(DTO_data dat)
         {
-            foreach (var observer in observers)
+            foreach (var VARIABLE in dat.datalist)
             {
-                observer.Update(val);
+                dtoData.datalist.Add(VARIABLE);
+            }
+        }
+        public DTO_data DatatoPresentation(int i)
+        {
+            return dtoData;
+            //Denne metode skal sende dataen fra fromVtommHg op i præsentationslaget 
+        }
+        public void Execute(bool cal)
+        {
+            if (cal == true)
+            {
+                lT = new Thread(() => fromVtommHg());
+                lT.Start();
+            }
+            else
+            {
+                kalT = new Thread(()=> dataToKalibrate());
+                kalT.Start();
             }
         }
 
-        public DTO_blodtryksmåler.DTO_data fromVtommHg()
+        public DTO_data fromVtommHg()
         {
-            throw new System.NotImplementedException();
+            DTO_data dat = new DTO_data();
+            dat = dataToKalibrate();
+            double kal = kalval.getFactor();
+            List<double> list = new List<double>();
+            foreach (var VARIABLE in dat.datalist)
+            {
+                list.Add(VARIABLE*kal);
+            }
+            dat.datalist = list;
+            return dat;
+
         }
 
-        public void ChangeCalibration()
+        public DTO_data dataToKalibrate()
         {
-            throw new System.NotImplementedException();
+            DTO_data dat = new DTO_data();
+            
+            List<double> list = new List<double>();
+            foreach (var VARIABLE in dat.datalist)
+            {
+                list.Add(VARIABLE -ZeroA);
+            }
+            dat.datalist = list;
+            return dat;
+
         }
 
         public bool ZeroAdjust()
         {
-            throw new System.NotImplementedException();
+            try
+            {
+                //dtoData = DAL.OpsamlData();
+                            DAL = new Dataaccess_blodtryksmåler.GetData();
+            raaDatalist = new GetAsyncDatalist(DAL.daQmx);
+                ZeroA = dtoData.datalist.Average();
+                return true;
+            }
+            catch (Exception)
+            {
+
+                return false;
+            }
+
         }
     }
 }

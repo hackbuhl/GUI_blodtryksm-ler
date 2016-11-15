@@ -1,17 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
   <Class Name="DTO_blodtryksmåler.DTO_login">
-    <Position X="3.75" Y="1.5" Width="1.5" />
+    <Position X="6" Y="1.5" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAABAAAAAAAAAAAAAgA=</HashCode>
       <FileName>DTO_login.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DTO_blodtryksmåler.DTO_data">
-    <Position X="1.75" Y="1.5" Width="1.5" />
+    <Position X="1" Y="1.5" Width="4.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAIAAAAAAAAACAEAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAAIAAAAAAAAgCAMAAABAIAAAAAAAAAAAAAAA=</HashCode>
       <FileName>DTO_data.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DTO_blodtryksmåler.DTO_alarm">
+    <Position X="6" Y="3.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAQAAAAAAAAAAAAAAAAAEAABAAIAAA=</HashCode>
+      <FileName>DTO_alarm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DTO_blodtryksmåler.DTO_kalibrer">
+    <Position X="8.75" Y="1.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABgAAAAAAAAAAAAAAAAAAAAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>DTO_kalibrer.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

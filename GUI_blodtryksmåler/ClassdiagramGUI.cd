@@ -1,31 +1,45 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
-  <Class Name="GUI_blodtryksmåler.Gem" Collapsed="true">
-    <Position X="2.25" Y="0.5" Width="1.5" />
+  <Class Name="GUI_blodtryksmåler.Gem">
+    <Position X="6" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAACAQABAAAACAAAACAAgAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Gem.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="GUI_blodtryksmåler.Kalibrer" Collapsed="true">
-    <Position X="4" Y="0.5" Width="1.5" />
+  <Class Name="GUI_blodtryksmåler.Kalibrer">
+    <Position X="4.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAACAAABAAAACACACCAAAAEAADAABACAgAAAA=</HashCode>
       <FileName>Kalibrer.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="GUI_blodtryksmåler.Login" Collapsed="true">
-    <Position X="0.5" Y="1.5" Width="1.5" />
+  <Class Name="GUI_blodtryksmåler.Login">
+    <Position X="0.75" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAgAAAAASCAAABAAAACAAAACAAAAAAEAQAAAAAAQEAA=</HashCode>
       <FileName>Login.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="GUI_blodtryksmåler.Alarm" Collapsed="true">
-    <Position X="0.5" Y="0.5" Width="1.5" />
+  <Class Name="GUI_blodtryksmåler.Alarm">
+    <Position X="2.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAgAAABCQAABAABACAAAACAAAAAEAAAAAAAAAgAQA=</HashCode>
       <FileName>Alarm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GUI_blodtryksmåler.Måling">
+    <Position X="8" Y="1.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAACAAxBAIgACBACBiABAAAAAAAIQAAAhAAAA=</HashCode>
+      <FileName>Måling.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GUI_blodtryksmåler.Program">
+    <Position X="0.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

@@ -9,46 +9,52 @@ namespace Dataaccess_blodtryksmåler
 {
     public class GemPatient
     {
-        private SqlDataReader myReader;
-        private SqlCommand myCommand;
-        private const string DB = "F16ST2PRJ2OffEKGDatabase";
-        private readonly Login _dataLogin = new Login();
+        private SqlConnection myConnection;
+        private const string DB = "F16ST2ITS2201505227";
         private GetData _getData = new GetData();
+
+        public GemPatient()
+        {
+            myConnection = new SqlConnection("user id=" + DB +
+                                ";password=" + DB + ";server=i4dab.ase.au.dk;" +
+                                "Trusted_Connection=false;" +
+                                "connection timeout=5");
+        }
 
         public int SaveBT(DTO_data BTdata, DTO_login login)
         {
-            int curId = 0;
 
-            string insertStringParam = @"INSERT INTO EKGDATA 
-            //(raa_data, ekgmaaleid, samplerate_hz, interval_sec, data_format, bin_eller_tekst, maaleformat_type, start_tid, kommentar)
+            string insertStringParam = @"INSERT INTO Data 
+            //(Dato, Blodtryk, PatientCPR, BrugerID, Noter)
             // OUTPUT INSERTED.ekgdataid
-            // VALUES(@data, @id, @samplerate_hz, @interval_sec, @data_format, @bin_eller_tekst, @maaleformat_type, @start_tid, @kommentar)";
+            // VALUES(@Dato, @Blodtryk, @PatientCPR, @BrugerID, @Noter)";
 
 
             List<double> data = BTdata.datalist;
-
-            using (SqlCommand cmd = new SqlCommand(insertStringParam, _dataLogin.OpenConnectionST ))
-
+            try
             {
+                using (SqlCommand cmd = new SqlCommand(insertStringParam, myConnection))
 
-                // Get your parameters ready                    
+                {
 
-                //cmd.Parameters.AddWithValue("@data", data.ToArray().SelectMany(value => BitConverter.GetBytes(value)).ToArray());
-                //cmd.Parameters.AddWithValue("@samplerate_hz", (float)BTdata.samplerate_hz);
-                //cmd.Parameters.AddWithValue("@data_format", EKGData.data_format);
-                //cmd.Parameters.AddWithValue("@bin_eller_tekst", EKGData.bin_eller_tekst);
-                //cmd.Parameters.AddWithValue("@maaleformat_type", EKGData.maaleformat_type);
-                //cmd.Parameters.AddWithValue("@interval_sec", EKGData.interval_sek);
-                //cmd.Parameters.AddWithValue("@start_tid", EKGData.start_tid);
-                //cmd.Parameters.AddWithValue("@id", EKGData.ekgmaaleid);
-                //cmd.Parameters.AddWithValue("@kommentar", EKGData.kommentar);
+                    // Get your parameters ready                    
 
+                    cmd.Parameters.AddWithValue("@Dato", DateTime.Now);
+                    cmd.Parameters.AddWithValue("@Blodtryk", data.ToArray().SelectMany(value => BitConverter.GetBytes(value)).ToArray());
+                    cmd.Parameters.AddWithValue("@PatientCPR", BTdata.CPR);
+                    cmd.Parameters.AddWithValue("@BrugerID", login.id);
+                    cmd.Parameters.AddWithValue("@Noter", BTdata.kommentar);
 
-                var id = cmd.ExecuteScalar(); //Returns the identity of the new tuple/record                
-                curId = Convert.ToInt32(id);
+                }
+                return 1;
+                
             }
+            catch (Exception)
+            {
+                return   2; }
 
-            return curId;
+
+
         }
     }
     }

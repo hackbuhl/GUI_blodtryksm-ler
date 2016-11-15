@@ -34,9 +34,9 @@
             this.nulpunktBt = new System.Windows.Forms.Button();
             this.MålingBt = new System.Windows.Forms.Button();
             this.AlarmBt = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.SaveBt = new System.Windows.Forms.Button();
+            this.nulBt = new System.Windows.Forms.Button();
+            this.LogoutBt = new System.Windows.Forms.Button();
             this.SysLb = new System.Windows.Forms.Label();
             this.DiaLb = new System.Windows.Forms.Label();
             this.PulsLb = new System.Windows.Forms.Label();
@@ -66,6 +66,7 @@
             this.MålingBt.TabIndex = 1;
             this.MålingBt.Text = "Start Måling";
             this.MålingBt.UseVisualStyleBackColor = true;
+            this.MålingBt.Click += new System.EventHandler(this.MålingBt_Click);
             // 
             // AlarmBt
             // 
@@ -76,37 +77,38 @@
             this.AlarmBt.Text = "Opsæt Alarm";
             this.AlarmBt.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // SaveBt
             // 
-            this.button1.Location = new System.Drawing.Point(886, 388);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(93, 71);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Gem Måling";
-            this.button1.UseVisualStyleBackColor = true;
+            this.SaveBt.Location = new System.Drawing.Point(886, 388);
+            this.SaveBt.Name = "SaveBt";
+            this.SaveBt.Size = new System.Drawing.Size(93, 71);
+            this.SaveBt.TabIndex = 3;
+            this.SaveBt.Text = "Gem Måling";
+            this.SaveBt.UseVisualStyleBackColor = true;
+            this.SaveBt.Click += new System.EventHandler(this.SaveBt_Click);
             // 
-            // button2
+            // nulBt
             // 
-            this.button2.Location = new System.Drawing.Point(760, 388);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(120, 71);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Nulstil";
-            this.button2.UseVisualStyleBackColor = true;
+            this.nulBt.Location = new System.Drawing.Point(760, 388);
+            this.nulBt.Name = "nulBt";
+            this.nulBt.Size = new System.Drawing.Size(120, 71);
+            this.nulBt.TabIndex = 4;
+            this.nulBt.Text = "Nulstil";
+            this.nulBt.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // LogoutBt
             // 
-            this.button3.Location = new System.Drawing.Point(914, 13);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 31);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Log af";
-            this.button3.UseVisualStyleBackColor = true;
+            this.LogoutBt.Location = new System.Drawing.Point(914, 13);
+            this.LogoutBt.Name = "LogoutBt";
+            this.LogoutBt.Size = new System.Drawing.Size(75, 31);
+            this.LogoutBt.TabIndex = 5;
+            this.LogoutBt.Text = "Log af";
+            this.LogoutBt.UseVisualStyleBackColor = true;
             // 
             // SysLb
             // 
             this.SysLb.AutoSize = true;
-            this.SysLb.Location = new System.Drawing.Point(29, 13);
+            this.SysLb.Location = new System.Drawing.Point(51, 50);
             this.SysLb.Name = "SysLb";
             this.SysLb.Size = new System.Drawing.Size(36, 13);
             this.SysLb.TabIndex = 6;
@@ -115,7 +117,7 @@
             // DiaLb
             // 
             this.DiaLb.AutoSize = true;
-            this.DiaLb.Location = new System.Drawing.Point(13, 48);
+            this.DiaLb.Location = new System.Drawing.Point(100, 114);
             this.DiaLb.Name = "DiaLb";
             this.DiaLb.Size = new System.Drawing.Size(35, 13);
             this.DiaLb.TabIndex = 7;
@@ -124,7 +126,7 @@
             // PulsLb
             // 
             this.PulsLb.AutoSize = true;
-            this.PulsLb.Location = new System.Drawing.Point(16, 100);
+            this.PulsLb.Location = new System.Drawing.Point(96, 187);
             this.PulsLb.Name = "PulsLb";
             this.PulsLb.Size = new System.Drawing.Size(35, 13);
             this.PulsLb.TabIndex = 8;
@@ -181,21 +183,51 @@
             this.DataChart.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.DataChart.Legends.Add(legend1);
-            this.DataChart.Location = new System.Drawing.Point(209, 50);
+            this.DataChart.Location = new System.Drawing.Point(205, 22);
             this.DataChart.Name = "DataChart";
             series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.DataChart.Series.Add(series1);
-            this.DataChart.Size = new System.Drawing.Size(770, 315);
-            this.DataChart.TabIndex = 14;
+            this.DataChart.Size = new System.Drawing.Size(541, 285);
+            this.DataChart.TabIndex = 0;
             this.DataChart.Text = "chart1";
+            //chartArea1.AxisX.MajorGrid.Interval = 200D;
+            //chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.DimGray;
+            //chartArea1.AxisX.MinorGrid.Enabled = true;
+            //chartArea1.AxisX.MinorGrid.Interval = 40D;
+            //chartArea1.AxisX.MinorGrid.LineColor = System.Drawing.Color.LightGray;
+            //chartArea1.AxisX.ScaleView.Size = 2000D;
+            //chartArea1.AxisX.ScrollBar.LineColor = System.Drawing.Color.DarkRed;
+            //chartArea1.AxisX.Title = "ms";
+            //chartArea1.AxisY.MajorGrid.Interval = 0.5D;
+            //chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.DimGray;
+            //chartArea1.AxisY.MinorGrid.Enabled = true;
+            //chartArea1.AxisY.MinorGrid.Interval = 0.1D;
+            //chartArea1.AxisY.MinorGrid.LineColor = System.Drawing.Color.LightGray;
+            //chartArea1.AxisY.Title = "mV";
+            //chartArea1.Name = "ChartArea1";
+            //this.DataChart.ChartAreas.Add(chartArea1);
+            //legend1.Name = "Legend1";
+            //this.DataChart.Legends.Add(legend1);
+            //this.DataChart.Location = new System.Drawing.Point(23, 197);
+            //this.DataChart.Name = "chart1";
+            //this.DataChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
+            //series1.ChartArea = "ChartArea1";
+            //series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            //series1.Legend = "Legend1";
+            //series1.Name = "EKG-signal";
+            //this.DataChart.Series.Add(series1);
+            //this.DataChart.Size = new System.Drawing.Size(1560, 653);
+            //this.DataChart.TabIndex = 10;
+            //this.DataChart.Text = "chart1";
             // 
             // Måling
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1023, 471);
+            this.ClientSize = new System.Drawing.Size(903, 471);
             this.Controls.Add(this.DataChart);
             this.Controls.Add(this.DigitalfilterChB);
             this.Controls.Add(this.label4);
@@ -205,9 +237,9 @@
             this.Controls.Add(this.PulsLb);
             this.Controls.Add(this.DiaLb);
             this.Controls.Add(this.SysLb);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.LogoutBt);
+            this.Controls.Add(this.nulBt);
+            this.Controls.Add(this.SaveBt);
             this.Controls.Add(this.AlarmBt);
             this.Controls.Add(this.MålingBt);
             this.Controls.Add(this.nulpunktBt);
@@ -224,9 +256,9 @@
         private System.Windows.Forms.Button nulpunktBt;
         private System.Windows.Forms.Button MålingBt;
         private System.Windows.Forms.Button AlarmBt;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button SaveBt;
+        private System.Windows.Forms.Button nulBt;
+        private System.Windows.Forms.Button LogoutBt;
         private System.Windows.Forms.Label SysLb;
         private System.Windows.Forms.Label DiaLb;
         private System.Windows.Forms.Label PulsLb;

@@ -13,43 +13,47 @@ namespace Dataaccess_blodtryksmåler
 {
     public class Login
     {
-        const string DB = "Lokaldatabasenavn";
-        private DTO_login login;
+        const string DB = "F16ST2ITS2201505227";
+        private DTO_login login = new DTO_login();
         private SqlCommand myCommand;
         private SqlDataReader myReader;
-        public DTO_login isUserinDB(DTO_login log)
+        private SqlConnection myConnection;
+        //ip
+
+        public Login()
         {
-
-
-            login = getType(log);
-            
-            return login;
-
-        }
-        public SqlConnection OpenConnectionST
-        {
-            get
-            {
-                
-                var con = new SqlConnection("user id=" + DB +
+            myConnection = new SqlConnection("user id=" + DB +
                                             ";password=" + DB + ";server=i4dab.ase.au.dk;" +
                                             "Trusted_Connection=false;" +
-                                            "connection timeout=5");
-                con.Open();
-                return con;
-            }
+                                            "connection timeout=30");
         }
 
-        public DTO_login getType(DTO_login log)
+        public DTO_login isUserinDB(DTO_login log)
         {
-          myCommand = new SqlCommand("SELECT Type FROM BtData where id='"+log.id+"'AND pass='"+log.pass+"'",OpenConnectionST);
+            //Ida indtaster anden metode
+
+            myCommand = new SqlCommand("select * from Logintabel where BrugerID='" + log.id + "'and Kode='" + log.pass + "'", myConnection);
+            myConnection.Open();
             myReader = myCommand.ExecuteReader();
-            while (myReader.Read())
+
+            if (myReader.Read())
             {
-                log.type = Convert.ToInt32(myReader["Type"]);
+                while (myReader.Read())
+                {
+                    log.type = Convert.ToString(myReader["BrugerType"]);
+                }
+                myConnection.Close();
             }
-            OpenConnectionST.Close();
+
+            else
+            {
+                log.type = "FalseId";
+                myConnection.Close();
+            }
             return log;
+
+
+
         }
     }
 }

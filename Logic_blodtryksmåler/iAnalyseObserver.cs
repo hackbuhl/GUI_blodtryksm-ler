@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Logic_blodtryksmåler
 {
-    interface iAlarmObserver
+    public interface iAnalyseObserver
     {
+        void Update(int val);
     }
 }

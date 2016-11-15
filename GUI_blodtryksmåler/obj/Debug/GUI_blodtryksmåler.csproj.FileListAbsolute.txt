@@ -4,3 +4,86 @@ C:\Users\Daniel\Dropbox\Semesterprojekt 3 - Gruppe 4\Program\GUI_blodtryksmåler
 C:\Users\Daniel\Dropbox\Semesterprojekt 3 - Gruppe 4\Program\GUI_blodtryksmåler\GUI_blodtryksmåler\obj\Debug\GUI_blodtryksmåler.csproj.GenerateResource.Cache
 C:\Users\Daniel\Desktop\GUI_blodtryksmåler\GUI_blodtryksmåler\bin\Debug\GUI_blodtryksmåler.exe.config
 C:\Users\Daniel\Desktop\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\GUI_blodtryksmåler.exe.config
+C:\Users\Ida Sofie Rasmusen\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\GUI_blodtryksmåler.exe.config
+C:\Users\Ida Sofie Rasmusen\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\GUI_blodtryksmåler.exe
+C:\Users\Ida Sofie Rasmusen\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\GUI_blodtryksmåler.pdb
+C:\Users\Ida Sofie Rasmusen\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\DTO_blodtryksmåler.dll
+C:\Users\Ida Sofie Rasmusen\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\Logic_blodtryksmåler.dll
+C:\Users\Ida Sofie Rasmusen\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\Dataaccess_blodtryksmåler.dll
+C:\Users\Ida Sofie Rasmusen\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\NationalInstruments.DAQmx.dll
+C:\Users\Ida Sofie Rasmusen\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\NationalInstruments.Common.dll
+C:\Users\Ida Sofie Rasmusen\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\NationalInstruments.NiLmClientDLL.dll
+C:\Users\Ida Sofie Rasmusen\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\NationalInstruments.Common.Native.dll
+C:\Users\Ida Sofie Rasmusen\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\NationalInstruments.MStudioCLM.dll
+C:\Users\Ida Sofie Rasmusen\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\DTO_blodtryksmåler.pdb
+C:\Users\Ida Sofie Rasmusen\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\Logic_blodtryksmåler.pdb
+C:\Users\Ida Sofie Rasmusen\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\Dataaccess_blodtryksmåler.pdb
+C:\Users\Ida Sofie Rasmusen\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\NationalInstruments.DAQmx.xml
+C:\Users\Ida Sofie Rasmusen\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\NationalInstruments.Common.xml
+C:\Users\Ida Sofie Rasmusen\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\obj\Debug\GUI_blodtryksmåler.csprojResolveAssemblyReference.cache
+C:\Users\Ida Sofie Rasmusen\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\obj\Debug\GUI_blodtryksmåler.Alarm.resources
+C:\Users\Ida Sofie Rasmusen\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\obj\Debug\GUI_blodtryksmåler.Gem.resources
+C:\Users\Ida Sofie Rasmusen\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\obj\Debug\GUI_blodtryksmåler.Kalibrer.resources
+C:\Users\Ida Sofie Rasmusen\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\obj\Debug\GUI_blodtryksmåler.Måling.resources
+C:\Users\Ida Sofie Rasmusen\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\obj\Debug\GUI_blodtryksmåler.Login.resources
+C:\Users\Ida Sofie Rasmusen\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\obj\Debug\GUI_blodtryksmåler.Properties.Resources.resources
+C:\Users\Ida Sofie Rasmusen\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\obj\Debug\GUI_blodtryksmåler.csproj.GenerateResource.Cache
+C:\Users\Ida Sofie Rasmusen\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\obj\Debug\GUI_blodtryksmåler.exe
+C:\Users\Ida Sofie Rasmusen\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\obj\Debug\GUI_blodtryksmåler.pdb
+C:\Users\Daniel\Desktop\GUI_blodtryksm-ler\GUI_blodtryksmåler\obj\Debug\GUI_blodtryksmåler.exe
+C:\Users\Daniel\Desktop\GUI_blodtryksm-ler\GUI_blodtryksmåler\obj\Debug\GUI_blodtryksmåler.pdb
+C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\GUI_blodtryksmåler.exe.config
+C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\obj\Debug\GUI_blodtryksmåler.exe
+C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\obj\Debug\GUI_blodtryksmåler.pdb
+C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\GUI_blodtryksmåler.exe.config
+C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\obj\Debug\GUI_blodtryksmåler.exe
+C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\obj\Debug\GUI_blodtryksmåler.pdb
+C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\obj\Debug\GUI_blodtryksmåler.csprojResolveAssemblyReference.cache
+C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\obj\Debug\GUI_blodtryksmåler.Alarm.resources
+C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\obj\Debug\GUI_blodtryksmåler.Gem.resources
+C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\obj\Debug\GUI_blodtryksmåler.Kalibrer.resources
+C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\obj\Debug\GUI_blodtryksmåler.Måling.resources
+C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\obj\Debug\GUI_blodtryksmåler.Login.resources
+C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\obj\Debug\GUI_blodtryksmåler.Properties.Resources.resources
+C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\obj\Debug\GUI_blodtryksmåler.csproj.GenerateResource.Cache
+C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\GUI_blodtryksmåler.exe
+C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\GUI_blodtryksmåler.pdb
+C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\DTO_blodtryksmåler.dll
+C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\Logic_blodtryksmåler.dll
+C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\Dataaccess_blodtryksmåler.dll
+C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\NationalInstruments.DAQmx.dll
+C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\NationalInstruments.Common.dll
+C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\NationalInstruments.NiLmClientDLL.dll
+C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\NationalInstruments.Common.Native.dll
+C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\NationalInstruments.MStudioCLM.dll
+C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\DTO_blodtryksmåler.pdb
+C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\Logic_blodtryksmåler.pdb
+C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\Dataaccess_blodtryksmåler.pdb
+C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\NationalInstruments.DAQmx.xml
+C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\NationalInstruments.Common.xml
+C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\obj\Debug\GUI_blodtryksmåler.csprojResolveAssemblyReference.cache
+C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\obj\Debug\GUI_blodtryksmåler.Alarm.resources
+C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\obj\Debug\GUI_blodtryksmåler.Gem.resources
+C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\obj\Debug\GUI_blodtryksmåler.Kalibrer.resources
+C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\obj\Debug\GUI_blodtryksmåler.Måling.resources
+C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\obj\Debug\GUI_blodtryksmåler.Login.resources
+C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\obj\Debug\GUI_blodtryksmåler.Properties.Resources.resources
+C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\obj\Debug\GUI_blodtryksmåler.csproj.GenerateResource.Cache
+C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\GUI_blodtryksmåler.exe
+C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\GUI_blodtryksmåler.pdb
+C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\DTO_blodtryksmåler.dll
+C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\Logic_blodtryksmåler.dll
+C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\Dataaccess_blodtryksmåler.dll
+C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\NationalInstruments.DAQmx.dll
+C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\NationalInstruments.Common.dll
+C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\NationalInstruments.NiLmClientDLL.dll
+C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\NationalInstruments.Common.Native.dll
+C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\NationalInstruments.MStudioCLM.dll
+C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\DTO_blodtryksmåler.pdb
+C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\Logic_blodtryksmåler.pdb
+C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\Dataaccess_blodtryksmåler.pdb
+C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\NationalInstruments.DAQmx.xml
+C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\NationalInstruments.Common.xml
+C:\Users\Mads\Desktop\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\GUI_blodtryksmåler.exe.config
+C:\Users\Mads\Desktop\GUI_blodtryksm-ler\GUI_blodtryksmåler\obj\Debug\GUI_blodtryksmåler.exe
+C:\Users\Mads\Desktop\GUI_blodtryksm-ler\GUI_blodtryksmåler\obj\Debug\GUI_blodtryksmåler.pdb

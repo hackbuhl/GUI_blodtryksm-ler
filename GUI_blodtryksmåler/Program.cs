@@ -16,7 +16,8 @@ namespace GUI_blodtryksmåler
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Alarm());
+            //Application.Run(new Alarm());
+            Application.Run(new Kalibrer());
         }
     }
 }
