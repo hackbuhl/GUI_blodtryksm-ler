@@ -62,28 +62,34 @@ namespace GUI_blodtryksmåler
         // test
         public void Update(DTO_data dto)
         {
-            var cpuPerfCounter = new PerformanceCounter("Processor Information", "% Processor Time", "_Total");
+            /* var cpuPerfCounter = new PerformanceCounter("Processor Information", "% Processor Time", "_Total");
 
-            while (true)
+             while (true)
+             {
+
+                 double[] dataArray=new double[20];
+
+                 Array.Copy(dataArray, 1, dataArray, 0, dataArray.Length - 1);
+
+                 if (DataChart.IsHandleCreated)
+                 {
+                     this.Invoke((MethodInvoker)delegate { UpdateCpuChart(); });
+                 }
+                 else
+                 {
+                     //......
+                 }
+
+                 Thread.Sleep(100);
+             }*/
+            double[] dataArray = new double[20];
+            for (int i = 0; i < 20; i++)
             {
-
-                double[] dataArray=new double[20];
-
-                Array.Copy(dataArray, 1, dataArray, 0, dataArray.Length - 1);
-
-                if (DataChart.IsHandleCreated)
-                {
-                    this.Invoke((MethodInvoker)delegate { UpdateCpuChart(); });
-                }
-                else
-                {
-                    //......
-                }
-
-                Thread.Sleep(100);
+                
+                DataChart.Series["Series1"].Points.AddY(DTO_Data.datalist[DTO_Data.datalist.Count - 20 + i]);
             }
         }
-       
+       /*
         private void UpdateCpuChart()
         {
             double[] dataArray = new double[20];
@@ -98,10 +104,10 @@ namespace GUI_blodtryksmåler
                 DataChart.Series["Series1"].Points.AddY(dataArray[i]);
             }
         }
-        bool bln = true; //Får knappen til at skifte mellem start og stop måling
+        bool bln = true; //Får knappen til at skifte mellem start og stop måling*/
         private void MålingBt_Click(object sender, EventArgs e)
         {
-            if (bln == true)
+           /* if (bln == true)
             {
 
                 cpuThread = new Thread(new ThreadStart(this.getPerformanceCounters));
@@ -122,7 +128,8 @@ namespace GUI_blodtryksmåler
                 cpuThread.Abort();
                 MålingBt.Text = "Start måling";
                 bln = true;
-            }
+            }*/
+          
         }
 
         private void SaveBt_Click(object sender, EventArgs e)
