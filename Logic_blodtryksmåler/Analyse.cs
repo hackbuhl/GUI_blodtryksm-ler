@@ -10,8 +10,10 @@ namespace Logic_blodtryksmåler
     public class Analyse : AbAnalyse
     {
         private DTO_blodtryksmåler.DTO_data dataDTO=new DTO_data();
+
         /*
-        public void FindDiaSys(DTO_data)
+        public void FindDiaSys(DTO_data DTO)
+
         {
             double beat = 0;
             int count = 0;
@@ -19,9 +21,9 @@ namespace Logic_blodtryksmåler
             int lenght = 0;
 
 
-            foreach (var value in DTO.raa_data)
+            foreach (var value in DTO.datalist)
             {
-                IEnumerable<double> range = DTO.raa_data;
+                IEnumerable<double> range = DTO.datalist;
 
                 if (count > lenght/2)
                     range = range.Skip(count - lenght/2);

@@ -28,16 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            this.nulpunktBt = new System.Windows.Forms.Button();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.MålingBt = new System.Windows.Forms.Button();
             this.AlarmBt = new System.Windows.Forms.Button();
             this.SaveBt = new System.Windows.Forms.Button();
             this.nulBt = new System.Windows.Forms.Button();
-            this.LogoutBt = new System.Windows.Forms.Button();
             this.SysLb = new System.Windows.Forms.Label();
             this.DiaLb = new System.Windows.Forms.Label();
             this.PulsLb = new System.Windows.Forms.Label();
@@ -47,121 +45,119 @@
             this.label4 = new System.Windows.Forms.Label();
             this.DigitalfilterChB = new System.Windows.Forms.CheckBox();
             this.DataChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.logOutBt = new System.Windows.Forms.Button();
+            this.nulpunktsBt = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DataChart)).BeginInit();
             this.SuspendLayout();
             // 
-            // nulpunktBt
-            // 
-            this.nulpunktBt.Location = new System.Drawing.Point(138, 796);
-            this.nulpunktBt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.nulpunktBt.Name = "nulpunktBt";
-            this.nulpunktBt.Size = new System.Drawing.Size(165, 109);
-            this.nulpunktBt.TabIndex = 0;
-            this.nulpunktBt.Text = "Foretag nulpunktsjustering";
-            this.nulpunktBt.UseVisualStyleBackColor = true;
-            this.nulpunktBt.Click += new System.EventHandler(this.nulpunktBt_Click);
-            // 
             // MålingBt
             // 
+            this.MålingBt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.MålingBt.Enabled = false;
-            this.MålingBt.Location = new System.Drawing.Point(312, 796);
+            this.MålingBt.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.MålingBt.Location = new System.Drawing.Point(312, 693);
             this.MålingBt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MålingBt.Name = "MålingBt";
-            this.MålingBt.Size = new System.Drawing.Size(164, 109);
+            this.MålingBt.Size = new System.Drawing.Size(278, 109);
             this.MålingBt.TabIndex = 1;
             this.MålingBt.Text = "Start Måling";
-            this.MålingBt.UseVisualStyleBackColor = true;
+            this.MålingBt.UseVisualStyleBackColor = false;
             this.MålingBt.Click += new System.EventHandler(this.MålingBt_Click);
             // 
             // AlarmBt
             // 
+            this.AlarmBt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.AlarmBt.Enabled = false;
-            this.AlarmBt.Location = new System.Drawing.Point(646, 796);
+            this.AlarmBt.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.AlarmBt.Location = new System.Drawing.Point(801, 647);
             this.AlarmBt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.AlarmBt.Name = "AlarmBt";
-            this.AlarmBt.Size = new System.Drawing.Size(230, 54);
+            this.AlarmBt.Size = new System.Drawing.Size(237, 71);
             this.AlarmBt.TabIndex = 2;
             this.AlarmBt.Text = "Opsæt Alarm";
-            this.AlarmBt.UseVisualStyleBackColor = true;
+            this.AlarmBt.UseVisualStyleBackColor = false;
+            this.AlarmBt.Click += new System.EventHandler(this.AlarmBt_Click);
             // 
             // SaveBt
             // 
+            this.SaveBt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.SaveBt.Enabled = false;
-            this.SaveBt.Location = new System.Drawing.Point(1750, 796);
+            this.SaveBt.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.SaveBt.Location = new System.Drawing.Point(1227, 693);
             this.SaveBt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SaveBt.Name = "SaveBt";
-            this.SaveBt.Size = new System.Drawing.Size(140, 109);
+            this.SaveBt.Size = new System.Drawing.Size(257, 109);
             this.SaveBt.TabIndex = 3;
             this.SaveBt.Text = "Gem Måling";
-            this.SaveBt.UseVisualStyleBackColor = true;
+            this.SaveBt.UseVisualStyleBackColor = false;
             this.SaveBt.Click += new System.EventHandler(this.SaveBt_Click);
             // 
             // nulBt
             // 
+            this.nulBt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.nulBt.Enabled = false;
-            this.nulBt.Location = new System.Drawing.Point(1517, 796);
+            this.nulBt.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.nulBt.Location = new System.Drawing.Point(1227, 596);
             this.nulBt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.nulBt.Name = "nulBt";
-            this.nulBt.Size = new System.Drawing.Size(180, 109);
+            this.nulBt.Size = new System.Drawing.Size(257, 71);
             this.nulBt.TabIndex = 4;
             this.nulBt.Text = "Nulstil";
-            this.nulBt.UseVisualStyleBackColor = true;
-            // 
-            // LogoutBt
-            // 
-            this.LogoutBt.Location = new System.Drawing.Point(1778, 14);
-            this.LogoutBt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.LogoutBt.Name = "LogoutBt";
-            this.LogoutBt.Size = new System.Drawing.Size(112, 48);
-            this.LogoutBt.TabIndex = 5;
-            this.LogoutBt.Text = "Log af";
-            this.LogoutBt.UseVisualStyleBackColor = true;
-            this.LogoutBt.Click += new System.EventHandler(this.LogoutBt_Click);
+            this.nulBt.UseVisualStyleBackColor = false;
             // 
             // SysLb
             // 
             this.SysLb.AutoSize = true;
-            this.SysLb.Location = new System.Drawing.Point(51, 50);
+            this.SysLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SysLb.ForeColor = System.Drawing.Color.Red;
+            this.SysLb.Location = new System.Drawing.Point(10, 85);
             this.SysLb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SysLb.Name = "SysLb";
-            this.SysLb.Size = new System.Drawing.Size(53, 20);
+            this.SysLb.Size = new System.Drawing.Size(207, 108);
             this.SysLb.TabIndex = 6;
-            this.SysLb.Text = "SysLb";
+            this.SysLb.Text = "130";
             // 
             // DiaLb
             // 
             this.DiaLb.AutoSize = true;
-            this.DiaLb.Location = new System.Drawing.Point(150, 175);
+            this.DiaLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DiaLb.ForeColor = System.Drawing.Color.Red;
+            this.DiaLb.Location = new System.Drawing.Point(82, 269);
             this.DiaLb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.DiaLb.Name = "DiaLb";
-            this.DiaLb.Size = new System.Drawing.Size(51, 20);
+            this.DiaLb.Size = new System.Drawing.Size(109, 64);
             this.DiaLb.TabIndex = 7;
-            this.DiaLb.Text = "label2";
+            this.DiaLb.Text = "/75";
             // 
             // PulsLb
             // 
             this.PulsLb.AutoSize = true;
-            this.PulsLb.Location = new System.Drawing.Point(144, 288);
+            this.PulsLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.PulsLb.ForeColor = System.Drawing.Color.Gray;
+            this.PulsLb.Location = new System.Drawing.Point(129, 489);
             this.PulsLb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PulsLb.Name = "PulsLb";
-            this.PulsLb.Size = new System.Drawing.Size(51, 20);
+            this.PulsLb.Size = new System.Drawing.Size(42, 20);
             this.PulsLb.TabIndex = 8;
-            this.PulsLb.Text = "label1";
+            this.PulsLb.Text = "Puls";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(44, 228);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(43, 407);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 20);
+            this.label1.Size = new System.Drawing.Size(158, 82);
             this.label1.TabIndex = 9;
-            this.label1.Text = "Puls";
+            this.label1.Text = "130";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(144, 228);
+            this.label2.ForeColor = System.Drawing.Color.Gray;
+            this.label2.Location = new System.Drawing.Point(105, 333);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(77, 20);
@@ -171,7 +167,8 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(150, 125);
+            this.label3.ForeColor = System.Drawing.Color.Gray;
+            this.label3.Location = new System.Drawing.Point(111, 183);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 20);
@@ -181,7 +178,8 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(684, 873);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(849, 600);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(111, 20);
@@ -191,7 +189,7 @@
             // DigitalfilterChB
             // 
             this.DigitalfilterChB.AutoSize = true;
-            this.DigitalfilterChB.Location = new System.Drawing.Point(804, 873);
+            this.DigitalfilterChB.Location = new System.Drawing.Point(969, 600);
             this.DigitalfilterChB.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DigitalfilterChB.Name = "DigitalfilterChB";
             this.DigitalfilterChB.Size = new System.Drawing.Size(22, 21);
@@ -201,43 +199,69 @@
             // 
             // DataChart
             // 
+            this.DataChart.BackColor = System.Drawing.Color.Transparent;
             this.DataChart.BorderlineWidth = 2;
             this.DataChart.BorderSkin.BackColor = System.Drawing.Color.LightGray;
-            chartArea3.AxisX.MajorGrid.LineColor = System.Drawing.Color.DimGray;
-            chartArea3.AxisX.MinorGrid.Enabled = true;
-            chartArea3.AxisX.MinorGrid.LineColor = System.Drawing.Color.LightGray;
-            chartArea3.AxisX.ScaleView.Size = 100D;
-            chartArea3.AxisX.ScrollBar.LineColor = System.Drawing.Color.DarkRed;
-            chartArea3.AxisX.Title = "ms";
-            chartArea3.AxisY.MajorGrid.LineColor = System.Drawing.Color.DimGray;
-            chartArea3.AxisY.MinorGrid.Enabled = true;
-            chartArea3.AxisY.MinorGrid.LineColor = System.Drawing.Color.LightGray;
-            chartArea3.AxisY.Title = "mmHg";
-            chartArea3.Name = "ChartArea1";
-            this.DataChart.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.DataChart.Legends.Add(legend3);
+            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.DimGray;
+            chartArea1.AxisX.MinorGrid.Enabled = true;
+            chartArea1.AxisX.MinorGrid.LineColor = System.Drawing.Color.LightGray;
+            chartArea1.AxisX.ScaleView.Size = 100D;
+            chartArea1.AxisX.ScrollBar.LineColor = System.Drawing.Color.DarkRed;
+            chartArea1.AxisX.Title = "ms";
+            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.DimGray;
+            chartArea1.AxisY.MinorGrid.Enabled = true;
+            chartArea1.AxisY.MinorGrid.LineColor = System.Drawing.Color.LightGray;
+            chartArea1.AxisY.Title = "mmHg";
+            chartArea1.Name = "ChartArea1";
+            this.DataChart.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.DataChart.Legends.Add(legend1);
             this.DataChart.Location = new System.Drawing.Point(273, 101);
             this.DataChart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DataChart.Name = "DataChart";
             this.DataChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.DataChart.Series.Add(series3);
-            this.DataChart.Size = new System.Drawing.Size(1560, 653);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.Legend = "Legend1";
+            series1.Name = "series1";
+            this.DataChart.Series.Add(series1);
+            this.DataChart.Size = new System.Drawing.Size(1443, 432);
             this.DataChart.TabIndex = 0;
             this.DataChart.Text = "chart1";
-            title3.Name = "Blodtryk";
-            this.DataChart.Titles.Add(title3);
-            this.DataChart.Click += new System.EventHandler(this.DataChart_Click);
+            title1.Name = "Blodtryk";
+            this.DataChart.Titles.Add(title1);
+            // 
+            // logOutBt
+            // 
+            this.logOutBt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.logOutBt.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.logOutBt.Location = new System.Drawing.Point(1337, 51);
+            this.logOutBt.Name = "logOutBt";
+            this.logOutBt.Size = new System.Drawing.Size(130, 42);
+            this.logOutBt.TabIndex = 15;
+            this.logOutBt.Text = "Log af";
+            this.logOutBt.UseVisualStyleBackColor = false;
+            // 
+            // nulpunktsBt
+            // 
+            this.nulpunktsBt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.nulpunktsBt.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.nulpunktsBt.Location = new System.Drawing.Point(312, 596);
+            this.nulpunktsBt.Name = "nulpunktsBt";
+            this.nulpunktsBt.Size = new System.Drawing.Size(278, 68);
+            this.nulpunktsBt.TabIndex = 16;
+            this.nulpunktsBt.Text = "Foretag nulpunktsjustering";
+            this.nulpunktsBt.UseVisualStyleBackColor = false;
+            this.nulpunktsBt.Click += new System.EventHandler(this.nulpunktsBt_Click);
             // 
             // Måling
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1953, 1016);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ClientSize = new System.Drawing.Size(1711, 841);
+            this.Controls.Add(this.nulpunktsBt);
+            this.Controls.Add(this.logOutBt);
             this.Controls.Add(this.DataChart);
             this.Controls.Add(this.DigitalfilterChB);
             this.Controls.Add(this.label4);
@@ -247,12 +271,10 @@
             this.Controls.Add(this.PulsLb);
             this.Controls.Add(this.DiaLb);
             this.Controls.Add(this.SysLb);
-            this.Controls.Add(this.LogoutBt);
             this.Controls.Add(this.nulBt);
             this.Controls.Add(this.SaveBt);
             this.Controls.Add(this.AlarmBt);
             this.Controls.Add(this.MålingBt);
-            this.Controls.Add(this.nulpunktBt);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Måling";
             this.Text = "Alarm";
@@ -264,12 +286,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Button nulpunktBt;
         private System.Windows.Forms.Button MålingBt;
         private System.Windows.Forms.Button AlarmBt;
         private System.Windows.Forms.Button SaveBt;
         private System.Windows.Forms.Button nulBt;
-        private System.Windows.Forms.Button LogoutBt;
         private System.Windows.Forms.Label SysLb;
         private System.Windows.Forms.Label DiaLb;
         private System.Windows.Forms.Label PulsLb;
@@ -279,5 +299,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckBox DigitalfilterChB;
         private System.Windows.Forms.DataVisualization.Charting.Chart DataChart;
+        private System.Windows.Forms.Button logOutBt;
+        private System.Windows.Forms.Button nulpunktsBt;
     }
 }

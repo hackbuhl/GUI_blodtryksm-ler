@@ -13,7 +13,7 @@ using Logic_blodtryksmåler;
 
 namespace GUI_blodtryksmåler
 {
-    public partial class Kalibrer : Form
+    public partial class Kalibrer : Form, IObserverLogic
     {
         private Logic_blodtryksmåler.Logic logic = new Logic();
         private Logic_blodtryksmåler.Kalibrer logKalibrer = new Logic_blodtryksmåler.Kalibrer();
@@ -37,6 +37,11 @@ namespace GUI_blodtryksmåler
             InitializeComponent();
             
             dtoLogin = login;
+        }
+
+        public void Update(DTO_data dtodata)
+        {
+
         }
 
         private void Tryk1Bt_Click(object sender, EventArgs e)

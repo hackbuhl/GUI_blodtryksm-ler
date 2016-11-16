@@ -104,6 +104,7 @@ namespace GUI_blodtryksmåler
                 DataChart.Series["Series1"].Points.AddY(dataArray[i]);
             }
         }
+<<<<<<< HEAD
         bool bln = true; //Får knappen til at skifte mellem start og stop måling*/
         private void MålingBt_Click(object sender, EventArgs e)
         {
@@ -111,6 +112,18 @@ namespace GUI_blodtryksmåler
             {
 
                 cpuThread = new Thread(new ThreadStart(this.getPerformanceCounters));
+=======
+
+        bool bln = true; //Får knappen til at skifte mellem start og stop måling
+
+        private void MålingBt_Click(object sender, EventArgs e)
+        {
+
+            if (bln == true)
+            {
+
+                //cpuThread = new Thread(new ThreadStart(this.getPerformanceCounters));
+>>>>>>> origin/master
                 cpuThread.IsBackground = true;
                 cpuThread.Start();
 
@@ -119,9 +132,17 @@ namespace GUI_blodtryksmåler
                 bln = false;
                 nulBt.Enabled = false;
                 SaveBt.Enabled = false;
-                LogoutBt.Enabled = false;
-                nulpunktBt.Enabled = false;
+                logOutBt.Enabled = false;
             }
+<<<<<<< HEAD
+=======
+
+            //cpuThread = new Thread(new ThreadStart(this.Update));
+            //cpuThread.IsBackground = true;
+            //cpuThread.Start();
+
+            //log.ReadData();  //Skal dette stå i if'en???? 
+>>>>>>> origin/master
 
             else
             {
@@ -152,6 +173,7 @@ namespace GUI_blodtryksmåler
             }
         }
 
+<<<<<<< HEAD
         private void DataChart_Click(object sender, EventArgs e)
         {
 
@@ -161,15 +183,22 @@ namespace GUI_blodtryksmåler
         {
 
         }
+=======
+      
+>>>>>>> origin/master
 
-        private void nulpunktBt_Click(object sender, EventArgs e)
+        private void nulpunktsBt_Click(object sender, EventArgs e)
         {
             nulBt.Enabled = true;
             SaveBt.Enabled = true;
             MålingBt.Enabled = true;
-            AlarmBt.Enabled = true; 
-           
-            
+            AlarmBt.Enabled = true;
+        }
+
+        private void AlarmBt_Click(object sender, EventArgs e)
+        {
+            Alarm alarm = new Alarm();
+            alarm.ShowDialog(); 
         }
     }
 }
