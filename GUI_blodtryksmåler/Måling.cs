@@ -172,8 +172,7 @@ namespace GUI_blodtryksmåler
 
             }
         }
-
-<<<<<<< HEAD
+        
         private void DataChart_Click(object sender, EventArgs e)
         {
 
@@ -183,9 +182,6 @@ namespace GUI_blodtryksmåler
         {
 
         }
-=======
-      
->>>>>>> origin/master
 
         private void nulpunktsBt_Click(object sender, EventArgs e)
         {
