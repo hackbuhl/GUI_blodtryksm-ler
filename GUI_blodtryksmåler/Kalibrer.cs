@@ -39,7 +39,7 @@ namespace GUI_blodtryksmåler
             dtoLogin = login;
         }
 
-        public void Update(DTO_data dtodata)
+        public void Update( ref DTO_data dtodata)
         {
 
         }

@@ -25,11 +25,11 @@ namespace Logic_blodtryksmåler
             observers.Remove(observer);
         }
 
-        public void Notify(DTO_blodtryksmåler.DTO_data dto)
+        public void Notify(ref DTO_blodtryksmåler.DTO_data dto)
         {
             foreach (var observer in observers)
             {
-                observer.Update(dto);
+                observer.Update(ref dto);
             }
         }
 

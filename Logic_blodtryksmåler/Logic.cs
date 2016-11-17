@@ -38,11 +38,11 @@ namespace Logic_blodtryksmåler
             {
                 dtoData.datalist.Add(VARIABLE);
             }
-            Notify(dtoData);
+            Notify(ref dtoData);
         }
         public void DatatoPresentation(DTO_data dto_data)
         {
-            Notify(dto_data);
+            Notify(ref dto_data);
             //Denne metode skal sende dataen fra fromVtommHg op i præsentationslaget 
         }
 

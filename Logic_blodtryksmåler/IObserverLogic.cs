@@ -8,6 +8,6 @@ namespace Logic_blodtryksmåler
 {
     public interface IObserverLogic
     {
-        void Update(DTO_blodtryksmåler.DTO_data dto);
+        void Update(ref DTO_blodtryksmåler.DTO_data dto);
     }
 }
