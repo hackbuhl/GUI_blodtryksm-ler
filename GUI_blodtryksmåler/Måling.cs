@@ -108,6 +108,10 @@ namespace GUI_blodtryksmåler
         bool bln = true; //Får knappen til at skifte mellem start og stop måling*/
         private void MålingBt_Click(object sender, EventArgs e)
         {
+            log = new Logic();
+            log.ReadData();
+            log.start();
+            log.Attach(this);
            /* if (bln == true)
             {
 

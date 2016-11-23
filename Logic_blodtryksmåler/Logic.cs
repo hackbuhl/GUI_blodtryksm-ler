@@ -19,6 +19,8 @@ namespace Logic_blodtryksmåler
         private Thread tråd; 
         private Dataaccess_blodtryksmåler.Kalibrer kalval; 
         private GetAsyncDatalist raaDatalist;
+        public SemaphoreSlim sema1;
+        private Thread t;
 
         public Logic()
         {
@@ -30,20 +32,21 @@ namespace Logic_blodtryksmåler
         public void ReadData()
         {
             DAL = new Dataaccess_blodtryksmåler.GetData();
-           
+            sema1 = new SemaphoreSlim(1,1);
+           t= new Thread(sendData);
         }
-        public void start(DTO_data dat)
+
+        public void start()
         {
-            foreach (var VARIABLE in dat.datalist)
+            t.Start();
+        }
+        void sendData()
+        {
+            while (true)
             {
-                dtoData.datalist.Add(VARIABLE);
+                sema1.Wait();
+                Notify(ref dtoData);
             }
-            Notify(ref dtoData);
-        }
-        public void DatatoPresentation(DTO_data dto_data)
-        {
-            Notify(ref dto_data);
-            //Denne metode skal sende dataen fra fromVtommHg op i præsentationslaget 
         }
 
         public DTO_data fromVtommHg()

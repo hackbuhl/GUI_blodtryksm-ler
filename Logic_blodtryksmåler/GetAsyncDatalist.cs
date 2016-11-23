@@ -35,7 +35,7 @@ namespace Logic_blodtryksmåler
                 
                 datadto.datalist.Add(av.Average());
             }
-            log.start(datadto);
+            log.sema1.Release();
         }
 
         public Logic GetLogic()
