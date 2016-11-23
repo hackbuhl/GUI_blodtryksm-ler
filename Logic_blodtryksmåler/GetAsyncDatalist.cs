@@ -12,7 +12,7 @@ namespace Logic_blodtryksmåler
     public class GetAsyncDatalist : Dataaccess_blodtryksmåler.iDataobs
     {
         List<double> daDoubles=new List<double>();
-        DTO_blodtryksmåler.DTO_data datadto = new DTO_data();
+
         private Logic log; // her skal findes det oprindelige logic objekt og putte det ind i?? 
 
         public GetAsyncDatalist(DAQmxAsyncRead daqRead, Logic logic)
@@ -22,7 +22,7 @@ namespace Logic_blodtryksmåler
         }
         public void Update(double[] data)
         {
-            datadto.datalist=new List<double>();
+            
             for (int i = 0; i < data.Length;i=i+20)
             {
                 
@@ -33,7 +33,7 @@ namespace Logic_blodtryksmåler
 
                 }
                 
-                datadto.datalist.Add(av.Average());
+                log.dtoData.datalist.Add(av.Average());
             }
             log.sema1.Release();
         }

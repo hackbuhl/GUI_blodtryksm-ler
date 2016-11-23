@@ -15,7 +15,7 @@ namespace Logic_blodtryksmåler
     {
         private double ZeroA;
         private Dataaccess_blodtryksmåler.GetData DAL;
-        private DTO_data dtoData = new DTO_data();
+        public DTO_data dtoData = new DTO_data();
 
         private Dataaccess_blodtryksmåler.Kalibrer kalval; 
         private GetAsyncDatalist raaDatalist;

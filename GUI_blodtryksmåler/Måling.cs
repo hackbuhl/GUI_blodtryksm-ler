@@ -37,10 +37,6 @@ namespace GUI_blodtryksmåler
         {
 
         }
-        public void UpdateChart()
-        {
-            
-        }
 
         public void DrawGraph()
         {
@@ -79,9 +75,10 @@ namespace GUI_blodtryksmåler
 
                  Thread.Sleep(100);
              }*/
+           //  DataChart.Series["series1"].Points.Clear();
             for (int i = 0; i < dto.datalist.Count; i++)
             {
-                DataChart.Series["Blodtryk"].Points.AddY(dto.datalist[i]);
+                DataChart.Series["series1"].Points.AddY(dto.datalist[i]);
             }
         }
         
