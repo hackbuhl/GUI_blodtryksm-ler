@@ -27,9 +27,6 @@ namespace GUI_blodtryksmåler
 
         // test
 
-        private Thread cpuThread;
-        private double[] cpuArray = new double[101];
-
         public Måling()
         {
             InitializeComponent();
@@ -60,7 +57,7 @@ namespace GUI_blodtryksmåler
        
 
         // test
-        public void Update(DTO_data dto)
+        public void UpdateChart(DTO_data dto)
         {
             /* var cpuPerfCounter = new PerformanceCounter("Processor Information", "% Processor Time", "_Total");
 
@@ -82,13 +79,12 @@ namespace GUI_blodtryksmåler
 
                  Thread.Sleep(100);
              }*/
-            double[] dataArray = new double[20];
-            for (int i = 0; i < 20; i++)
+            for (int i = 0; i < dto.datalist.Count; i++)
             {
-                
-                DataChart.Series["Series1"].Points.AddY(DTO_Data.datalist[DTO_Data.datalist.Count - 20 + i]);
+                DataChart.Series["Blodtryk"].Points.AddY(dto.datalist[i]);
             }
         }
+        
        /*
         private void UpdateCpuChart()
         {
@@ -199,6 +195,12 @@ namespace GUI_blodtryksmåler
         {
             Alarm alarm = new Alarm();
             alarm.ShowDialog(); 
+        }
+
+        public void Update(ref DTO_data dto)
+        {
+            DTO_Data = dto;
+            DataChart.BeginInvoke((Action) (() => UpdateChart(DTO_Data)));
         }
     }
 }
