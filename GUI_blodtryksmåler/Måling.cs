@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 using System.Threading; // 
 using System.Diagnostics;
+using System.Windows.Forms.DataVisualization.Charting;
 using DTO_blodtryksmåler;
 using Logic_blodtryksmåler;
 
@@ -24,6 +25,7 @@ namespace GUI_blodtryksmåler
         private DTO_blodtryksmåler.DTO_data DTO_Data=new DTO_data();
         private DTO_blodtryksmåler.DTO_login DTO_Login=new DTO_login();
         private Logic_blodtryksmåler.Logic log;
+        public int i = 0;
 
         // test
 
@@ -55,18 +57,33 @@ namespace GUI_blodtryksmåler
 
         // test
         public void UpdateChart(DTO_data dto)
-        {;
-            for (int i = 0; i < dto.datalist.Count; i++)
+        {
+
+            int i;
+                DataChart.Series["series1"].Points.Clear();
+            if (dto.datalist.Count < 500)
             {
-                DataChart.Series["series1"].Points.AddY(dto.datalist[i]);
+                i = 0;
             }
+            else
+            {
+                i = dto.datalist.Count - 500;
+            }
+                for (int ib=i; ib < dto.datalist.Count; ib++)
+                {
+                    
+                    DataChart.Series["series1"].Points.AddY(dto.datalist[ib]);
+
+            }
+            
+
         }
         
   
         private void MålingBt_Click(object sender, EventArgs e)
         {
   
-            //log.ReadData();
+            
             log.Attach(this);
             log.start();
  

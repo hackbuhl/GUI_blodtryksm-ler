@@ -21,13 +21,15 @@ namespace Logic_blodtryksmåler
         private GetAsyncDatalist raaDatalist;
         public SemaphoreSlim sema1;
         private Thread t;
+        private double kal=1000;
 
         public Logic()
         {
             dtoData = new DTO_data();
             dtoData.datalist = new List<double>(1);
             sema1 = new SemaphoreSlim(1, 1);
-
+            kalval = new Dataaccess_blodtryksmåler.Kalibrer();
+            //kal = kalval.getFactor();
             t = new Thread(sendData);
 
             
@@ -52,24 +54,31 @@ namespace Logic_blodtryksmåler
         {
             while (true)
             {
+                sema1.Wait();
+                fromVtommHg(ref dtoData);
                 
                 Notify(ref dtoData);
-                sema1.Wait();
+                
             }
         }
 
-        public DTO_data fromVtommHg()
+        public void fromVtommHg(ref DTO_data dat)
         {
-            DTO_data dat = new DTO_data();
-            dat = dataToKalibrate();
-            double kal = kalval.getFactor();
-            List<double> list = new List<double>();
-            foreach (var VARIABLE in dat.datalist)
+
+            int ic;
+            if (dat.datalist.Count>6)
+            ic = dat.datalist.Count - 5;
+            else
             {
-                list.Add(VARIABLE*kal);
+                ic = 0;
             }
-            dat.datalist = list;
-            return dat;
+
+            for (int i =ic; i < dat.datalist.Count; i++)
+            {
+                dat.datalist[i] = dat.datalist[i]*kal;
+            }
+           
+
 
         }
 

@@ -205,9 +205,9 @@
             chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.DimGray;
             chartArea1.AxisX.MinorGrid.Enabled = true;
             chartArea1.AxisX.MinorGrid.LineColor = System.Drawing.Color.LightGray;
-            chartArea1.AxisX.ScaleView.Size = 100D;
+            chartArea1.AxisX.ScaleView.Size = 500D;
             chartArea1.AxisX.ScrollBar.LineColor = System.Drawing.Color.DarkRed;
-            chartArea1.AxisX.Title = "ms";
+            chartArea1.AxisX.Title = "1/100 s";
             chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.DimGray;
             chartArea1.AxisY.MinorGrid.Enabled = true;
             chartArea1.AxisY.MinorGrid.LineColor = System.Drawing.Color.LightGray;
