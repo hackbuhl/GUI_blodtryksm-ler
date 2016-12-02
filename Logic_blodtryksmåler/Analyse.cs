@@ -67,19 +67,11 @@ namespace Logic_blodtryksmåler
         {
         }
 
-<<<<<<< HEAD
-        //public double showDia()
-        //{
-            
-            
-        //}
-=======
         public double showDia()
         {
             throw new NotImplementedException();
 
         }
->>>>>>> origin/master
 
     }
 }

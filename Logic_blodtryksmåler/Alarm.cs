@@ -17,14 +17,16 @@ namespace Logic_blodtryksmåler
         private int sys_nedre;
         private int sys_øvre;
 
-        SoundPlayer simpleSound = new SoundPlayer(@"C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\signal.wav");
+        SoundPlayer simpleSound =
+            new SoundPlayer(
+                @"C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\signal.wav");
 
         public Alarm()
         {
             sys_nedre = 100;
             sys_øvre = 190;
             dia_nedre = 60;
-            dia_øvre = 100;  
+            dia_øvre = 100;
         }
 
         public Alarm(DTO_alarm dto)
@@ -43,14 +45,8 @@ namespace Logic_blodtryksmåler
                 simpleSound.Play();
             }
         }
-        
 
-        //public void Update(int val)
-<<<<<<< HEAD
-        //{
-            
-        //}
-=======
 
->>>>>>> origin/master
+
     }
+}
