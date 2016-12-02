@@ -9,10 +9,10 @@ namespace Dataaccess_blodtryksmåler
         
         private int samplelenght = 100;
 
-        public DAQmxAsyncRead(NationalInstruments.DAQmx.Task t)
+        public DAQmxAsyncRead(AnalogSingleChannelReader ACR)
         {
             //Create the reader
-            reader = new AnalogSingleChannelReader(t.Stream);
+            reader = ACR;
             //Acquire 100 samples
             IAsyncResult handle = reader.BeginReadMultiSample(samplelenght, new AsyncCallback(OnDataReady), null);
         }

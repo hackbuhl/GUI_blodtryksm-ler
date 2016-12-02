@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
+using NationalInstruments.DAQmx;
 
 namespace Dataaccess_blodtryksmåler
 {
@@ -14,6 +15,7 @@ namespace Dataaccess_blodtryksmåler
         private List<double> dataliste;
         private NI_DAQVoltage datacollector;
         public DAQmxAsyncRead daQmx;
+        private AnalogSingleChannelReader reader;
 
         public GetData()
         {
@@ -23,6 +25,7 @@ namespace Dataaccess_blodtryksmåler
             datacollector.sampleRateInHz = 1000;
             datacollector.deviceName = "Dev1/ai0";
             //daQmx = new DAQmxAsyncRead(datacollector.getTask());
+            reader = new AnalogSingleChannelReader(datacollector.getTask().Stream);
         }
 
 
@@ -32,7 +35,7 @@ namespace Dataaccess_blodtryksmåler
 //Opsaml data metroden skal vi ikke bruge data 
         public void OpsamlData()
         {
-            daQmx = new DAQmxAsyncRead(datacollector.getTask());
+            daQmx = new DAQmxAsyncRead(reader);
         }
 
         public NI_DAQVoltage getDataCollector()
@@ -40,44 +43,14 @@ namespace Dataaccess_blodtryksmåler
             return datacollector;
         }
 
+        public double[] SampleforZero()
+        {
+           
+            return reader.ReadMultiSample(100);
 
-        //    private NI_DAQVoltage datacollector;
-
-        //    public int sampleFreq { get; set; }
-        //    public int samples { get; set; }
-
-        //    public GetData()
-        //    {
-        //    }
-        //    public DTO_blodtryksmåler.DTO_data OpsamlData()
-        //    {
-        //        datacollector = new NI_DAQVoltage();
-
-        //        sampleFreq = 500;
-        //        samples = 5000;
-
-        //        List<double> currentVoltageSeq;
-
-        //        datacollector.samplesPerChannel = samples;
-        //        datacollector.sampleRateInHz = sampleFreq;
-        //        datacollector.deviceName = "Dev1/ai0";
-        //        datacollector.getVoltageSeqBlocking();
-        //        currentVoltageSeq = datacollector.currentVoltageSeq;
-
-        //        int interval = samples / sampleFreq;
-
-        //        return new DTO_blodtryksmåler.DTO_data(currentVoltageSeq, sampleFreq, interval);
-        //    }
-
-        //    public NI_DAQVoltage GetCollector()
-        //    {
-        //        throw new System.NotImplementedException();
-        //    }
-
-        //    public DTO_blodtryksmåler.DTO_data DataToDTO()
-        //    {
-        //        throw new System.NotImplementedException();
-        //    }
-        //}
+        }
     }
-}
+
+
+    }
+

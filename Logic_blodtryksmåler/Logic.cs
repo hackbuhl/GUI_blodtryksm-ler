@@ -6,6 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using Dataaccess_blodtryksmåler;
 using DTO_blodtryksmåler;
 
 
@@ -32,7 +33,7 @@ namespace Logic_blodtryksmåler
             //kal = kalval.getFactor();
             t = new Thread(sendData);
 
-            
+            DAL = new GetData();
 
             //tråd = new Thread(fromVtommHg()); 
 
@@ -45,7 +46,6 @@ namespace Logic_blodtryksmåler
 
         public void start()
         {
-            DAL = new Dataaccess_blodtryksmåler.GetData();
             DAL.OpsamlData();
             raaDatalist = new GetAsyncDatalist(DAL.daQmx, this);
             t.Start();
@@ -75,7 +75,7 @@ namespace Logic_blodtryksmåler
 
             for (int i =ic; i < dat.datalist.Count; i++)
             {
-                dat.datalist[i] = dat.datalist[i]*kal;
+                dat.datalist[i] = (dat.datalist[i]*kal)-ZeroA;
             }
            
 
@@ -98,19 +98,15 @@ namespace Logic_blodtryksmåler
 
         public bool ZeroAdjust()
         {
-            try
-            {
-                
-                
-                ZeroA = dtoData.datalist.Average();
+
+
+
+                double[] zeroDoubles = new double[1];
+                zeroDoubles = DAL.SampleforZero();
+                ZeroA = zeroDoubles.Average();
                 
                 return true;
-            }
-            catch (Exception)
-            {
 
-                return false;
-            }
 
         }
     }
