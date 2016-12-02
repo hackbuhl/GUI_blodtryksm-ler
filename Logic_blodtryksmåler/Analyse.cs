@@ -69,8 +69,8 @@ namespace Logic_blodtryksmåler
 
         public double showDia()
         {
-            
-            
+            throw new NotImplementedException();
+
         }
 
     }
