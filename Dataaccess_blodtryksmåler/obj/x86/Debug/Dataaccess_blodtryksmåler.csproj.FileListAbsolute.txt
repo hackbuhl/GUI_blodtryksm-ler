@@ -1,1 +1,15 @@
 C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\Dataaccess_blodtryksmåler\obj\x86\Debug\Dataaccess_blodtryksmåler.csprojResolveAssemblyReference.cache
+C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\Dataaccess_blodtryksmåler\bin\x86\Debug\Dataaccess_blodtryksmåler.dll
+C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\Dataaccess_blodtryksmåler\bin\x86\Debug\Dataaccess_blodtryksmåler.pdb
+C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\Dataaccess_blodtryksmåler\bin\x86\Debug\DTO_blodtryksmåler.dll
+C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\Dataaccess_blodtryksmåler\bin\x86\Debug\NationalInstruments.Common.dll
+C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\Dataaccess_blodtryksmåler\bin\x86\Debug\NationalInstruments.Common.Native.dll
+C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\Dataaccess_blodtryksmåler\bin\x86\Debug\NationalInstruments.DAQmx.dll
+C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\Dataaccess_blodtryksmåler\bin\x86\Debug\NationalInstruments.NiLmClientDLL.dll
+C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\Dataaccess_blodtryksmåler\bin\x86\Debug\ST2Prj2LibNI-DAQ.dll
+C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\Dataaccess_blodtryksmåler\bin\x86\Debug\DTO_blodtryksmåler.pdb
+C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\Dataaccess_blodtryksmåler\bin\x86\Debug\NationalInstruments.Common.xml
+C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\Dataaccess_blodtryksmåler\bin\x86\Debug\NationalInstruments.DAQmx.xml
+C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\Dataaccess_blodtryksmåler\obj\x86\Debug\Dataaccess_blodtryksmåler.csprojResolveAssemblyReference.cache
+C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\Dataaccess_blodtryksmåler\obj\x86\Debug\Dataaccess_blodtryksmåler.dll
+C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\Dataaccess_blodtryksmåler\obj\x86\Debug\Dataaccess_blodtryksmåler.pdb
