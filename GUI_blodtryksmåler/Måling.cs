@@ -23,13 +23,14 @@ namespace GUI_blodtryksmåler
         private Logic_blodtryksmåler.Analyse dataanalyse=new Analyse();
         private DTO_blodtryksmåler.DTO_data DTO_Data=new DTO_data();
         private DTO_blodtryksmåler.DTO_login DTO_Login=new DTO_login();
-        private Logic_blodtryksmåler.Logic log = new Logic_blodtryksmåler.Logic();
+        private Logic_blodtryksmåler.Logic log;
 
         // test
 
         public Måling()
         {
             InitializeComponent();
+            log = new Logic();
         }
 
 
@@ -101,10 +102,11 @@ namespace GUI_blodtryksmåler
         bool bln = true; //Får knappen til at skifte mellem start og stop måling*/
         private void MålingBt_Click(object sender, EventArgs e)
         {
-            log = new Logic();
-            log.ReadData();
-            log.start();
+  
+            //log.ReadData();
             log.Attach(this);
+            log.start();
+        
            /* if (bln == true)
             {
 
@@ -186,6 +188,7 @@ namespace GUI_blodtryksmåler
             SaveBt.Enabled = true;
             MålingBt.Enabled = true;
             AlarmBt.Enabled = true;
+            log.ZeroAdjust();
         }
 
         private void AlarmBt_Click(object sender, EventArgs e)
