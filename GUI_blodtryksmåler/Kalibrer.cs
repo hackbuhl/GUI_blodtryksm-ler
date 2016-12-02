@@ -23,13 +23,14 @@ namespace GUI_blodtryksmåler
 
         public Kalibrer()
         {
-            logic.ReadData();
             dtoKali = new DTO_kalibrer();
             InitializeComponent();
             //logKalibrer.Update();
 
 
-           
+            logic.Attach(this);
+            logic.startkal();
+
         }
 
         public Kalibrer(DTO_login login)
@@ -108,7 +109,7 @@ namespace GUI_blodtryksmåler
         private void ZeroAdjust_Click(object sender, EventArgs e)
         {
             logic.ZeroAdjust();
-            ZeroAdjust.Enabled = false;
+            //ZeroAdjust.Enabled = false;
         }
     }
 }

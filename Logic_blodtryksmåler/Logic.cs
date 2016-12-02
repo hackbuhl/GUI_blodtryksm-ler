@@ -22,6 +22,7 @@ namespace Logic_blodtryksmåler
         private GetAsyncDatalist raaDatalist;
         public SemaphoreSlim sema1;
         private Thread t;
+        private Thread tk;
         private double kal=1000;
 
         public Logic()
@@ -32,6 +33,7 @@ namespace Logic_blodtryksmåler
             kalval = new Dataaccess_blodtryksmåler.Kalibrer();
             //kal = kalval.getFactor();
             t = new Thread(sendData);
+            //tk = new Thread(); 
 
             DAL = new GetData();
 
@@ -49,6 +51,13 @@ namespace Logic_blodtryksmåler
             DAL.OpsamlData();
             raaDatalist = new GetAsyncDatalist(DAL.daQmx, this);
             t.Start();
+        }
+
+        public void startkal()
+        {
+            DAL.OpsamlData();
+            raaDatalist = new GetAsyncDatalist(DAL.daQmx, this);
+            tk.Start();
         }
         void sendData()
         {
@@ -82,7 +91,7 @@ namespace Logic_blodtryksmåler
 
         }
 
-        public DTO_data dataToKalibrate()
+        public void dataToKalibrate()
         {
             DTO_data dat = new DTO_data();
             
@@ -92,7 +101,7 @@ namespace Logic_blodtryksmåler
                 list.Add(VARIABLE -ZeroA);
             }
             dat.datalist = list;
-            return dat;
+            //return dat;
 
         }
 
