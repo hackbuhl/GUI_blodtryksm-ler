@@ -67,11 +67,11 @@ namespace Logic_blodtryksmåler
         {
         }
 
-        public double showDia()
-        {
+        //public double showDia()
+        //{
             
             
-        }
+        //}
 
     }
 }

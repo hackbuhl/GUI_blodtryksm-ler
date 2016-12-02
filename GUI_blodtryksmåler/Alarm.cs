@@ -15,7 +15,7 @@ namespace GUI_blodtryksmåler
     public partial class Alarm : Form
     {
         private Logic_blodtryksmåler.Alarm alarm;
-        private DTO_blodtryksmåler.DTO_alarm dtoAlarm;
+        private DTO_alarm dtoAlarm;
 
         public Alarm()
         {
@@ -28,16 +28,16 @@ namespace GUI_blodtryksmåler
         {
             try
             {
-                dtoAlarm.NedDia = Convert.ToInt32(NedDiaTb);
-                dtoAlarm.NedSys = Convert.ToInt32(NedSysTb);
-                dtoAlarm.ØvDia = Convert.ToInt32(ØvDiaTb);
-                dtoAlarm.ØvSys = Convert.ToInt32(ØvSysTb);
+                dtoAlarm.NedDia = Convert.ToInt32(NedDiaTb.Text);
+                dtoAlarm.NedSys = Convert.ToInt32(NedSysTb.Text);
+                dtoAlarm.ØvDia = Convert.ToInt32(ØvDiaTb.Text);
+                dtoAlarm.ØvSys = Convert.ToInt32(ØvSysTb.Text);
             }
             catch (Exception)
             {
-                MessageBox.Show("Udflyd alle felter med positive heltal.");
+                MessageBox.Show("Udfyld alle felter med positive heltal.");
             }
-            alarm.SetAlarm(dtoAlarm);
+            alarm.alarmSound(dtoAlarm);
         }
     }
 }

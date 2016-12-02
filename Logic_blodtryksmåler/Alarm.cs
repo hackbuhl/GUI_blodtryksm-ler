@@ -11,45 +11,42 @@ namespace Logic_blodtryksmåler
     public class Alarm
     {
         private DTO_alarm dtoAlarm = new DTO_alarm();
-        int dia_;
-        int sys_;
-        SoundPlayer simpleSound = new SoundPlayer(@"c:\Users\Sofie Riisberg\Dropbox\Semesterprojekt 3 - Gruppe 4\alarma.wav");
+        private int dia_nedre;
+        private int dia_øvre;
+        private int sys_nedre;
+        private int sys_øvre;
 
-        private int alarmvalues; 
-        public int Alarmvalues
-        {
-            get
-            {
-                return alarmvalues; 
-            }
+        SoundPlayer simpleSound = new SoundPlayer(@"C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\signal.wav");
 
-            set
-            {
-            }
-        }
         public Alarm()
         {
-            sys_ = 190;
-            dia_ = 70; 
+            sys_nedre = 100;
+            sys_øvre = 190;
+            dia_nedre = 60;
+            dia_øvre = 100;  
         }
 
-        public void SetAlarm(DTO_alarm dto)
+        public Alarm(DTO_alarm dto)
         {
-            
+            dia_nedre = dto.NedDia;
+            dia_øvre = dto.ØvDia;
+            sys_nedre = dto.NedSys;
+            sys_øvre = dto.ØvSys;
         }
 
-        public void alarmSound(int dia, int sys)
+
+        public void alarmSound(DTO_alarm dto)
         {
-            if (dia < dia_ || sys > sys_)
+            if (dto.NedDia < dia_nedre || dto.ØvDia > dia_øvre || dto.NedSys < sys_nedre || dto.ØvSys > sys_øvre)
             {
                 simpleSound.Play();
             }
         }
-        }
+        
 
-        public void Update(int val)
-        {
+        //public void Update(int val)
+        //{
             
-        }
+        //}
     }
 }
