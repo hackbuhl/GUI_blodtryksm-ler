@@ -1,0 +1,9 @@
+C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\x86\Debug\GUI_blodtryksmåler.exe.config
+C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\obj\x86\Debug\GUI_blodtryksmåler.Alarm.resources
+C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\obj\x86\Debug\GUI_blodtryksmåler.Gem.resources
+C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\obj\x86\Debug\GUI_blodtryksmåler.Kalibrer.resources
+C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\obj\x86\Debug\GUI_blodtryksmåler.Måling.resources
+C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\obj\x86\Debug\GUI_blodtryksmåler.Login.resources
+C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\obj\x86\Debug\GUI_blodtryksmåler.Properties.Resources.resources
+C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\obj\x86\Debug\GUI_blodtryksmåler.csproj.GenerateResource.Cache
+C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\obj\x86\Debug\GUI_blodtryksmåler.csprojResolveAssemblyReference.cache

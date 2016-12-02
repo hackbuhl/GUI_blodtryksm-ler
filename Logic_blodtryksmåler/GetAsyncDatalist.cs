@@ -22,7 +22,6 @@ namespace Logic_blodtryksmåler
         }
         public void Update(double[] data)
         {
-            
             for (int i = 0; i < data.Length;i=i+20)
             {
                 
@@ -32,15 +31,12 @@ namespace Logic_blodtryksmåler
                     av.Add(data[j]);
 
                 }
+
                 
                 log.dtoData.datalist.Add(av.Average());
+               
             }
-           log.sema1.Release();
-        }
-
-        public Logic GetLogic()
-        {
-            return log;
+            log.sema1.Release();
         }
 
     }

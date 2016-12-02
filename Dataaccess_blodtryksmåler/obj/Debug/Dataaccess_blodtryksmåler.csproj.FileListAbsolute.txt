@@ -24,8 +24,6 @@ C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\Dataaccess_blodtryksmåler\b
 C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\Dataaccess_blodtryksmåler\bin\Debug\NationalInstruments.NiLmClientDLL.dll
 C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\Dataaccess_blodtryksmåler\bin\Debug\DTO_blodtryksmåler.pdb
 C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\Dataaccess_blodtryksmåler\bin\Debug\NationalInstruments.Common.xml
-C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\Dataaccess_blodtryksmåler\bin\Debug\NationalInstruments.DAQmx.xml
-C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\Dataaccess_blodtryksmåler\bin\Debug\ST2Prj2LibNI-DAQ.pdb
 C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\Dataaccess_blodtryksmåler\bin\Debug\Dataaccess_blodtryksmåler.dll
 C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\Dataaccess_blodtryksmåler\bin\Debug\Dataaccess_blodtryksmåler.pdb
 C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\Dataaccess_blodtryksmåler\bin\Debug\DTO_blodtryksmåler.dll

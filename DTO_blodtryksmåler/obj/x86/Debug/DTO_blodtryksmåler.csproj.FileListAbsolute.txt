@@ -1,0 +1,4 @@
+C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\DTO_blodtryksmåler\bin\x86\Debug\DTO_blodtryksmåler.dll
+C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\DTO_blodtryksmåler\bin\x86\Debug\DTO_blodtryksmåler.pdb
+C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\DTO_blodtryksmåler\obj\x86\Debug\DTO_blodtryksmåler.dll
+C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\DTO_blodtryksmåler\obj\x86\Debug\DTO_blodtryksmåler.pdb

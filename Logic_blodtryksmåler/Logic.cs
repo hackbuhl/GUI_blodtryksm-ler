@@ -29,7 +29,7 @@ namespace Logic_blodtryksmåler
             sema1 = new SemaphoreSlim(1, 1);
 
             t = new Thread(sendData);
-            DAL = new Dataaccess_blodtryksmåler.GetData();
+
             
 
             //tråd = new Thread(fromVtommHg()); 
@@ -43,14 +43,18 @@ namespace Logic_blodtryksmåler
 
         public void start()
         {
+            DAL = new Dataaccess_blodtryksmåler.GetData();
+            DAL.OpsamlData();
+            raaDatalist = new GetAsyncDatalist(DAL.daQmx, this);
             t.Start();
         }
         void sendData()
         {
             while (true)
             {
-                sema1.Wait();
+                
                 Notify(ref dtoData);
+                sema1.Wait();
             }
         }
 
@@ -87,9 +91,10 @@ namespace Logic_blodtryksmåler
         {
             try
             {
-                DAL.OpsamlData();
-                raaDatalist = new GetAsyncDatalist(DAL.daQmx, this);
+                
+                
                 ZeroA = dtoData.datalist.Average();
+                
                 return true;
             }
             catch (Exception)
