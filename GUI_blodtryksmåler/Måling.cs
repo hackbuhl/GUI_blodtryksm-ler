@@ -21,11 +21,12 @@ namespace GUI_blodtryksmåler
 {
     public partial class Måling : Form, Logic_blodtryksmåler.IObserverLogic
     {
-        private Logic_blodtryksmåler.Analyse dataanalyse=new Analyse();
-        private DTO_blodtryksmåler.DTO_data DTO_Data=new DTO_data();
-        private DTO_blodtryksmåler.DTO_login DTO_Login=new DTO_login();
+        private Logic_blodtryksmåler.Analyse dataanalyse = new Analyse();
+        private DTO_blodtryksmåler.DTO_data DTO_Data = new DTO_data();
+        private DTO_blodtryksmåler.DTO_login DTO_Login = new DTO_login();
         private Logic_blodtryksmåler.Logic log;
         public int i = 0;
+        int caseSwitch = 1;
 
         // test
 
@@ -53,14 +54,14 @@ namespace GUI_blodtryksmåler
             bool adjusted = false;
             return adjusted;
         }
-       
+
 
         // test
         public void UpdateChart(DTO_data dto)
         {
 
             int i;
-                DataChart.Series["series1"].Points.Clear();
+            DataChart.Series["series1"].Points.Clear();
             if (dto.datalist.Count < 500)
             {
                 i = 0;
@@ -69,30 +70,56 @@ namespace GUI_blodtryksmåler
             {
                 i = dto.datalist.Count - 500;
             }
-                for (int ib=i; ib < dto.datalist.Count; ib++)
-                {
-                    
-                    DataChart.Series["series1"].Points.AddY(dto.datalist[ib]);
+            for (int ib = i; ib < dto.datalist.Count; ib++)
+            {
+
+                DataChart.Series["series1"].Points.AddY(dto.datalist[ib]);
 
             }
-            
+
 
         }
-        
-  
+
+
         private void MålingBt_Click(object sender, EventArgs e)
         {
-  
+
             
-            log.Attach(this);
-            log.start();
- 
+            switch (caseSwitch)
+            {
+                case 1:
+                    log.Attach(this);
+                    log.start();
+                    MålingBt.Text = "Stop Måling";
+                    caseSwitch = 2;
+                    break;
+
+                case 2:
+                    log.Detach(this);
+                    log.stop();
+                    MålingBt.Text = "Start Måling";
+                    caseSwitch = 3;
+                    break;
+
+                case 3:
+                    log.Attach(this);
+                    log.Continu();
+                    MålingBt.Text = "Stop Måling";
+                    caseSwitch = 2;
+                    break;
+                    
+
+                default:
+                    Console.WriteLine("Default case");
+                    break;
+            }
+
         }
 
         private void SaveBt_Click(object sender, EventArgs e)
         {
             Gem gem = new Gem(DTO_Data, DTO_Login);
-            gem.ShowDialog(); 
+            gem.ShowDialog();
         }
 
 
@@ -101,14 +128,14 @@ namespace GUI_blodtryksmåler
             if (DigitalfilterChB.Checked)
             {
                 Logic_blodtryksmåler.Filter on = new Logic_blodtryksmåler.Filter();
-                
+
             }
             else
             {
 
             }
         }
-        
+
         private void DataChart_Click(object sender, EventArgs e)
         {
 
@@ -131,13 +158,13 @@ namespace GUI_blodtryksmåler
         private void AlarmBt_Click(object sender, EventArgs e)
         {
             Alarm alarm = new Alarm();
-            alarm.ShowDialog(); 
+            alarm.ShowDialog();
         }
 
         public void Update(ref DTO_data dto)
         {
             DTO_Data = dto;
-            DataChart.BeginInvoke((Action) (() => UpdateChart(DTO_Data)));
+            DataChart.BeginInvoke((Action)(() => UpdateChart(DTO_Data)));
         }
     }
 }

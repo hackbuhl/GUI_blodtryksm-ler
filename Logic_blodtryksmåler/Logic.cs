@@ -52,11 +52,27 @@ namespace Logic_blodtryksmåler
             t.Start();
         }
 
+        public void stop()
+        {
+           t.Interrupt();
+            sema1.Wait();
+        }
+
+        public void Continu()
+        {
+            t.Join();
+        }
+
         public void startkal()
         {
             DAL.OpsamlData();
             raaDatalist = new GetAsyncDatalist(DAL.daQmx, this);
             tk.Start();
+        }
+
+        public void stopkal()
+        {
+            tk.Interrupt();
         }
         void sendData()
         {
