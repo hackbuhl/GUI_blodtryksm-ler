@@ -15,15 +15,19 @@ namespace GUI_blodtryksmåler
 {
     public partial class Kalibrer : Form, IObserverLogic
     {
-        private Logic_blodtryksmåler.Logic logic = new Logic();
-        private Logic_blodtryksmåler.Kalibrer logKalibrer = new Logic_blodtryksmåler.Kalibrer();
+        private Logic_blodtryksmåler.Logic logic;
+        private Logic_blodtryksmåler.Kalibrer logKalibrer;
         private DTO_kalibrer dtoKali;
-        private DTO_data dtoData=new DTO_data();
+        private DTO_data dtoData;
         private DTO_login dtoLogin;
 
         public Kalibrer()
         {
+            logic = new Logic();
+            logKalibrer=  new Logic_blodtryksmåler.Kalibrer();
             dtoKali = new DTO_kalibrer();
+            dtoData = new DTO_data();
+            dtoLogin = new DTO_login();
             InitializeComponent();
             //logKalibrer.Update();
 
@@ -42,7 +46,7 @@ namespace GUI_blodtryksmåler
 
         public void Update( ref DTO_data dtodata)
         {
-
+            dtoData = dtodata;
         }
 
         private void Tryk1Bt_Click(object sender, EventArgs e)
@@ -51,9 +55,18 @@ namespace GUI_blodtryksmåler
 
             try
             {
-
                 dtoKali.Read1 = Convert.ToDouble(Tryk1TB.Text);
-                //logKalibrer.data();
+
+
+                List<double> avList = new List<double>();
+                for (int i = dtoData.datalist.Count - 100; i < dtoData.datalist.Count; i++)
+                {
+                    avList.Add(dtoData.datalist[i]);
+                }
+                dtoKali.Måling1 = avList.Average();
+
+
+                
                 Tryk1Bt.Enabled = false;
                 Tryk2Bt.Enabled = true;
                 Tryk1TB.Enabled = false;
@@ -65,6 +78,7 @@ namespace GUI_blodtryksmåler
                 MessageBox.Show("Den indtastede værdi skal være et tal.");
                 Tryk1TB.Text = null;
             }
+
         }
 
         private void Tryk2Bt_Click(object sender, EventArgs e)
@@ -72,7 +86,16 @@ namespace GUI_blodtryksmåler
             try
             {
                 dtoKali.Read2 = Convert.ToDouble(Tryk2TB.Text);
-                dtoKali.Måling2 = 5; //dtoData.datalist[0];//korrekt plads skal sættes ind når filteret er specificeret.
+
+                List<double> avList = new List<double>();
+                for (int i = dtoData.datalist.Count - 100; i < dtoData.datalist.Count; i++)
+                {
+                    avList.Add(dtoData.datalist[i]);
+                }
+                dtoKali.Måling2 = avList.Average();
+
+
+              
                 Tryk2Bt.Enabled = false;
                 Tryk2TB.Enabled = false;
                 KaliBt.Enabled = true;
@@ -106,10 +129,5 @@ namespace GUI_blodtryksmåler
             throw new NotImplementedException();
         }
 
-        private void ZeroAdjust_Click(object sender, EventArgs e)
-        {
-            logic.ZeroAdjust();
-            //ZeroAdjust.Enabled = false;
-        }
     }
 }

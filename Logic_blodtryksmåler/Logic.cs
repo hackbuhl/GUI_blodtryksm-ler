@@ -33,11 +33,10 @@ namespace Logic_blodtryksmåler
             kalval = new Dataaccess_blodtryksmåler.Kalibrer();
             //kal = kalval.getFactor();
             t = new Thread(sendData);
-            //tk = new Thread(); 
+            tk = new Thread(dataToKalibrate); 
 
             DAL = new GetData();
 
-            //tråd = new Thread(fromVtommHg()); 
 
         }
 
@@ -91,17 +90,15 @@ namespace Logic_blodtryksmåler
 
         }
 
-        public void dataToKalibrate()
+        void dataToKalibrate()
         {
-            DTO_data dat = new DTO_data();
-            
-            List<double> list = new List<double>();
-            foreach (var VARIABLE in dat.datalist)
+            while (true)
             {
-                list.Add(VARIABLE -ZeroA);
+                sema1.Wait();
+                Notify(ref dtoData);
+
             }
-            dat.datalist = list;
-            //return dat;
+
 
         }
 
