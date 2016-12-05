@@ -81,7 +81,6 @@ C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\
 C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\DTO_blodtryksmåler.pdb
 C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\Logic_blodtryksmåler.pdb
 C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\Dataaccess_blodtryksmåler.pdb
-C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\NationalInstruments.DAQmx.xml
 C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\NationalInstruments.Common.xml
 C:\Users\Mads\Desktop\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\GUI_blodtryksmåler.exe.config
 C:\Users\Mads\Desktop\GUI_blodtryksm-ler\GUI_blodtryksmåler\obj\Debug\GUI_blodtryksmåler.exe
