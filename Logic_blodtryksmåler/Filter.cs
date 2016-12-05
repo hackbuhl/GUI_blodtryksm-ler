@@ -17,20 +17,20 @@ namespace Logic_blodtryksmåler
 
         public void FilterData(ref DTO_data data, bool on)
         {
-            int rangelenght = 10;
-
-            for (int i = 0; i < data.datalist.Count; i++)
+            List<double> da;
+            if (data.datalist.Count > 11)
             {
-                IEnumerable<double> range = data.datalist;
-
-                if (i > rangelenght/2)
-                    range = range.Skip(i - rangelenght/2);
-
-                range = range.Take(rangelenght);
-
-                if (on == true)
+                for (int i = 0; i < 5; i++)
                 {
-                    data.datalist[i] = range.Average();
+                    da = new List<double>();
+                    for (int j = 0; j < 10; j++)
+                    {
+                        da.Add(data.datalist[data.datalist.Count-10+j]);
+                    }
+                    if (on == true)
+                    {
+                        data.datalist[data.datalist.Count-10+i] = da.Average();
+                    }
                 }
             }
             analyse_.findSysOrDia(ref data);

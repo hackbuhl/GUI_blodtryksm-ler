@@ -61,22 +61,26 @@ namespace GUI_blodtryksmåler
         {
 
             int i;
-            DataChart.Series["series1"].Points.Clear();
-            if (dto.datalist.Count < 500)
-            {
-                i = 0;
-            }
-            else
-            {
-                i = dto.datalist.Count - 500;
-            }
-            for (int ib = i; ib < dto.datalist.Count; ib++)
+            if (dto.datalist.Count > 11)
             {
 
-                DataChart.Series["series1"].Points.AddY(dto.datalist[ib]);
+                DataChart.Series["series1"].Points.Clear();
+                if (dto.datalist.Count < 500)
+                {
+                    i = 0;
+                }
+                else
+                {
+                    i = dto.datalist.Count - 500;
+                }
+                for (int ib = i+10; ib < dto.datalist.Count; ib++)
+                {
+
+                    DataChart.Series["series1"].Points.AddY(dto.datalist[ib - 10]);
+
+                }
 
             }
-
             DiaLb.Text = Convert.ToString(DTO_Data.Diastole);
             SysLb.Text = Convert.ToString(DTO_Data.Systole);
         }
