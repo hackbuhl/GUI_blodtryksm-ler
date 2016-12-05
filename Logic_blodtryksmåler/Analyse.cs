@@ -35,7 +35,7 @@ namespace Logic_blodtryksmåler
         }
         */
 
-        public void findMaxOrMin(DTO_data dto_data)
+        public void findSysOrDia(ref DTO_data dto_data)
         {
 
             if (dto_data.datalist != null)

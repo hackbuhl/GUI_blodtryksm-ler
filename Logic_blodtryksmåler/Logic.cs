@@ -24,6 +24,7 @@ namespace Logic_blodtryksmåler
         private Thread t;
         private Thread tk;
         private double kal=1000;
+        private Filter filter; 
 
         public Logic()
         {
@@ -80,6 +81,7 @@ namespace Logic_blodtryksmåler
             {
                 sema1.Wait();
                 fromVtommHg(ref dtoData);
+                filter.FilterData(ref dtoData);
                 
                 Notify(ref dtoData);
                 

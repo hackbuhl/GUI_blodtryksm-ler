@@ -8,11 +8,16 @@ namespace Logic_blodtryksmåler
 {
     public class Filter
     {
-        public DTO_data FilterData(DTO_data data)
+        private Analyse analyse_; 
+
+        public Filter(Analyse ana)
         {
+            analyse_ = ana; 
+        }
 
+        public void FilterData(ref DTO_data data)
+        {
             int rangelenght = 10;
-
 
             for (int i = 0; i < data.datalist.Count; i++)
             {
@@ -25,7 +30,7 @@ namespace Logic_blodtryksmåler
 
                 data.datalist[i] = range.Average();
             }
-            return data;
+            analyse_.findSysOrDia(ref data);
         }
     }
 }
