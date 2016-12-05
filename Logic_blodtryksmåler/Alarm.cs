@@ -19,7 +19,7 @@ namespace Logic_blodtryksmåler
 
         SoundPlayer simpleSound =
             new SoundPlayer(
-                @"C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\signal.wav");
+                @"C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\signal.wav");
 
         public Alarm()
         {
