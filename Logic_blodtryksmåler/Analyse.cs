@@ -24,7 +24,8 @@ namespace Logic_blodtryksmåler
                         {
                             if (dto_data.datalist[i] < dto_data.datalist[i - 1]) // sikre at vi er på vej ned
                             {
-                                dto_data.Systole = Convert.ToInt32((dto_data.datalist[i - 1])); 
+                                dto_data.Systole = Convert.ToInt32((dto_data.datalist[i - 1]));
+                                i += 40; 
                             }
                         }
                         if (i > 0 && dto_data.datalist[i] < 110)
@@ -32,6 +33,7 @@ namespace Logic_blodtryksmåler
                             if (dto_data.datalist[i] > dto_data.datalist[i - 1]) // sikre at vi er på vej op
                             {
                                 dto_data.Diastole = Convert.ToInt32((dto_data.datalist[i - 1]));
+                                i += 40; 
                             }
                         }
                     }
