@@ -10,30 +10,6 @@ namespace Logic_blodtryksmåler
     public class Analyse : AbAnalyse
     {
         private DTO_blodtryksmåler.DTO_data dataDTO=new DTO_data();
-        int dia_;
-        int sys_; 
-
-        /*
-        public void FindDiaSys(DTO_data DTO)
-
-        {
-            double beat = 0;
-            int count = 0;
-            double valuePre = 0;
-            int lenght = 0;
-
-
-            foreach (var value in DTO.datalist)
-            {
-                IEnumerable<double> range = DTO.datalist;
-
-                if (count > lenght/2)
-                    range = range.Skip(count - lenght/2);
-
-                range = range.Take(lenght);
-            }
-        }
-        */
 
         public void findSysOrDia(ref DTO_data dto_data)
         {
@@ -48,7 +24,8 @@ namespace Logic_blodtryksmåler
                         {
                             if (dto_data.datalist[i] < dto_data.datalist[i - 1]) // sikre at vi er på vej ned
                             {
-                                dto_data.Systole = Convert.ToInt32((dto_data.datalist[i - 1])); 
+                                dto_data.Systole = Convert.ToInt32((dto_data.datalist[i - 1]));
+                                i += 40; 
                             }
                         }
                         if (i > 0 && dto_data.datalist[i] < 110)
@@ -56,22 +33,12 @@ namespace Logic_blodtryksmåler
                             if (dto_data.datalist[i] > dto_data.datalist[i - 1]) // sikre at vi er på vej op
                             {
                                 dto_data.Diastole = Convert.ToInt32((dto_data.datalist[i - 1]));
+                                i += 40; 
                             }
                         }
                     }
                 }
             }
         }
-
-        public void FindPulse()
-        {
-        }
-
-        public double showDia()
-        {
-            throw new NotImplementedException();
-
-        }
-
     }
 }
