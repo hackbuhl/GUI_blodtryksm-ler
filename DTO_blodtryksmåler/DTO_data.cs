@@ -8,7 +8,7 @@ namespace DTO_blodtryksmåler
     [Serializable]
     public class DTO_data
     {
-        public List<double> datalist { get; set; }
+        public List<int> datalist { get; set; }
         public DateTime datoogtid { get; set; }
         public int Systole { get; set; }
         public int Diastole { get; set; }
@@ -19,7 +19,7 @@ namespace DTO_blodtryksmåler
         public string CPR { get; set; }
 
 
-        public DTO_data(List<double> currentVoltageSeq, int sampleFreq, int interval)
+        public DTO_data(List<int> currentVoltageSeq, int sampleFreq, int interval)
         {
             this.datalist = currentVoltageSeq;
             this.samplerate_hz= sampleFreq;
@@ -31,7 +31,7 @@ namespace DTO_blodtryksmåler
 
         }
 
-        public DTO_data(List<double> currentVoltageSeq)
+        public DTO_data(List<int> currentVoltageSeq)
         {
             this.datalist = currentVoltageSeq; 
         }
