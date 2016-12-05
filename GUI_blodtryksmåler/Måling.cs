@@ -77,7 +77,8 @@ namespace GUI_blodtryksmåler
 
             }
 
-
+            DiaLb.Text = Convert.ToString(DTO_Data.Diastole);
+            SysLb.Text = Convert.ToString(DTO_Data.Systole);
         }
 
 
