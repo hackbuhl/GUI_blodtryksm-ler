@@ -38,10 +38,10 @@ namespace Dataaccess_blodtryksmåler
 
             if (myReader.Read())
             {
-                while (myReader.Read())
-                {
+
+                
                     log.type = Convert.ToString(myReader["BrugerType"]);
-                }
+                
                 myConnection.Close();
             }
 
