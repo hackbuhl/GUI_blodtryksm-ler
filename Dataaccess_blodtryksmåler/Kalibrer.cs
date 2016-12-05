@@ -48,7 +48,7 @@ namespace Dataaccess_blodtryksmåler
         public double getFactor()
         {
             double factor=0;
-            myCommand = new SqlCommand("select max(dato) as newKal,Factor from Kalibrer", myConnection);
+            myCommand = new SqlCommand("SELECT MAX(dato),Factor from Kalibrer", myConnection);
             myConnection.Open();
             myReader = myCommand.ExecuteReader();
 
