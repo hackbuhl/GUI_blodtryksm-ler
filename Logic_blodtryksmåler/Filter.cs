@@ -10,9 +10,9 @@ namespace Logic_blodtryksmåler
     {
         private Analyse analyse_; 
 
-        public Filter(Analyse ana)
+        public Filter()
         {
-            analyse_ = ana; 
+            analyse_ = new Analyse();
         }
 
         public void FilterData(ref DTO_data data)
