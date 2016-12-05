@@ -33,6 +33,7 @@ namespace Logic_blodtryksmåler
             dtoData = new DTO_data();
             dtoData.datalist = new List<double>(1);
             sema1 = new SemaphoreSlim(1, 1);
+            filter = new Filter();
             kalval = new Dataaccess_blodtryksmåler.Kalibrer();
             //kal = kalval.getFactor();
             t = new Thread(sendData);
@@ -85,7 +86,7 @@ namespace Logic_blodtryksmåler
                 {
                     sema1.Wait();
                     fromVtommHg(ref dtoData);
-                   // filter.FilterData(ref dtoData);
+                    filter.FilterData(ref dtoData, filterON);
 
                     Notify(ref dtoData);
                 }
@@ -93,6 +94,7 @@ namespace Logic_blodtryksmåler
                 {
                     sema1.Wait();
                     fromVtommHg(ref dtoData);
+                    filter.FilterData(ref dtoData, filterON);
                     Notify(ref dtoData);
                 }
 

@@ -15,7 +15,7 @@ namespace Logic_blodtryksmåler
             analyse_ = new Analyse();
         }
 
-        public void FilterData(ref DTO_data data)
+        public void FilterData(ref DTO_data data, bool on)
         {
             int rangelenght = 10;
 
@@ -28,7 +28,10 @@ namespace Logic_blodtryksmåler
 
                 range = range.Take(rangelenght);
 
-                data.datalist[i] = range.Average();
+                if (on == true)
+                {
+                    data.datalist[i] = range.Average();
+                }
             }
             analyse_.findSysOrDia(ref data);
         }
