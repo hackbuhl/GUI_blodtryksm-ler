@@ -21,23 +21,46 @@ namespace Dataaccess_blodtryksmåler
             myConnection = new SqlConnection("user id=" + DB +
                                              ";password=" + DB + ";server=i4dab.ase.au.dk;" +
                                              "Trusted_Connection=false;" +
-                                             "connection timeout=5");
+                                             "connection timeout=30"); // ændret fra 5 til 
         }
 
-        public bool saveFactor(DTO_kalibrer kal, DTO_login log)
+
+        // test
+        public SqlConnection OpenConnection_
         {
-            // try
-            //{
-            SqlCommand cmd =
-                new SqlCommand("INSERT INTO Kalibrer (Dato,BrugerID,Factor) VALUES (@Dato,@BrugerID,@Factor)");
-            cmd.CommandType = CommandType.Text;
-            cmd.Connection = myConnection;
-            cmd.Parameters.AddWithValue("@Dato", DateTime.Today);
-            cmd.Parameters.AddWithValue("@BrugerId", log.id);
-            cmd.Parameters.AddWithValue("@Factor", kal.Factor);
-            myConnection.Open();
-            cmd.ExecuteNonQuery();
-            return true;
+            get
+            {
+                var con = new SqlConnection(@"Data Source=i4dab.ase.au.dk;Initial Catalog=" + DB + ";Integrated Security=False;User ID=" + DB + ";Password=" + DB + ";Connect Timeout=15;Encrypt=False;TrustServerCertificate=False");
+                con.Open();
+                return con;
+            }
+        }
+        // test slut
+
+
+        public void saveFactor(DTO_kalibrer kal, DTO_login log) // ændret fra void til bool
+        {
+            //
+            DTO_kalibrer kal_ = kal;
+            DTO_login log_ = log;
+            //
+
+
+            string insertStringKalibrer = @"INSERT INTO Kalibrer(Dato, BrugerID, Factor) VALUES(@Dato, @BrugerID, @Factor)";
+
+            using (SqlCommand cmd = new SqlCommand(insertStringKalibrer, OpenConnection_))
+            {
+                cmd.CommandType = CommandType.Text;
+                cmd.Connection = myConnection;
+                cmd.Parameters.AddWithValue("@Dato", DateTime.Today);
+                cmd.Parameters.AddWithValue("@BrugerId", log.id);
+                cmd.Parameters.AddWithValue("@Factor", kal.Factor);
+                myConnection.Open();
+                //cmd.ExecuteNonQuery();
+                //return true;
+                cmd.ExecuteScalar(); //
+            }
+
             //}
             //catch (Exception)
             //{
@@ -45,10 +68,25 @@ namespace Dataaccess_blodtryksmåler
             //}
         }
 
+
+
+
         public double getFactor()
         {
-            double factor=0;
-            myCommand = new SqlCommand("SELECT MAX(dato),Factor from Kalibrer", myConnection);
+            double factor = 0;
+
+
+            //myConnection.Open();
+
+            string getFactorSQL = "SELECT TOP 1 * FROM Kalibrer ORDER BY Dato Desc";
+
+            SqlCommand myCommand = new SqlCommand(getFactorSQL, myConnection); //  myConnection.Open();
+                                                                               //DateTime Dato = (DateTime)myCommand.ExecuteScalar();
+
+            //myCommand = new SqlCommand(
+            //string query = "SELECT * FROM Customer WHERE ID = (SELECT MAX(ID) FROM Customer)";
+
+
             myConnection.Open();
             myReader = myCommand.ExecuteReader();
 
