@@ -127,12 +127,12 @@ namespace GUI_blodtryksmåler
         {
             if (DigitalfilterChB.Checked)
             {
-                Logic_blodtryksmåler.Filter on = new Logic_blodtryksmåler.Filter();
+                log.filterON = true;
 
             }
             else
             {
-
+                log.filterON = false;
             }
         }
 
