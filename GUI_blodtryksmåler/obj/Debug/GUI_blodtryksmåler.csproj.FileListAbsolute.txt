@@ -109,4 +109,3 @@ C:\Users\Mads\Desktop\GUI_blodtryksm-ler\GUI_blodtryksmåler\obj\Debug\GUI_blodt
 C:\Users\Mads\Desktop\GUI_blodtryksm-ler\GUI_blodtryksmåler\obj\Debug\GUI_blodtryksmåler.Properties.Resources.resources
 C:\Users\Mads\Desktop\GUI_blodtryksm-ler\GUI_blodtryksmåler\obj\Debug\GUI_blodtryksmåler.csproj.GenerateResource.Cache
 C:\Users\Sofie Riisberg\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\NationalInstruments.DAQmx.xml
-C:\Users\Daniel\Documents\GitHub\GUI_blodtryksm-ler\GUI_blodtryksmåler\bin\Debug\NationalInstruments.DAQmx.xml

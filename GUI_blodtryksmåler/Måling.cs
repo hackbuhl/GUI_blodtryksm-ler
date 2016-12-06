@@ -30,10 +30,12 @@ namespace GUI_blodtryksmåler
 
         // test
 
-        public Måling()
+        public Måling(DTO_login login)
         {
             InitializeComponent();
             log = new Logic();
+            DTO_Login = login;
+
         }
 
 
@@ -94,14 +96,14 @@ namespace GUI_blodtryksmåler
             {
                 case 1:
                     log.Attach(this);
-                    log.start();
+                    log.Start();
                     MålingBt.Text = "Stop Måling";
                     caseSwitch = 2;
                     break;
 
                 case 2:
-                    log.Detach(this);
-                    log.stop();
+                    
+                    log.Stop();
                     MålingBt.Text = "Start Måling";
                     caseSwitch = 3;
                     break;
@@ -170,6 +172,13 @@ namespace GUI_blodtryksmåler
         {
             DTO_Data = dto;
             DataChart.BeginInvoke((Action)(() => UpdateChart(DTO_Data)));
+        }
+
+        private void logOutBt_Click_1(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            this.Hide();
+            login.ShowDialog(); 
         }
     }
 }

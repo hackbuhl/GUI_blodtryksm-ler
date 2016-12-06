@@ -21,8 +21,9 @@ namespace GUI_blodtryksmåler
         private DTO_data dtoData;
         private DTO_login dtoLogin;
 
-        public Kalibrer()
+        public Kalibrer(DTO_login log)
         {
+            dtoLogin = log;
             logic = new Logic();
             logKalibrer=  new Logic_blodtryksmåler.Kalibrer();
             dtoKali = new DTO_kalibrer();
@@ -37,13 +38,6 @@ namespace GUI_blodtryksmåler
 
         }
 
-        public Kalibrer(DTO_login login)
-        {
-            InitializeComponent();
-            
-            dtoLogin = login;
-        }
-
         public void Update( ref DTO_data dtodata)
         {
             dtoData = dtodata;
@@ -51,8 +45,6 @@ namespace GUI_blodtryksmåler
 
         private void Tryk1Bt_Click(object sender, EventArgs e)
         {
-            //logKalibrer.Update();
-
             try
             {
                 dtoKali.Read1 = Convert.ToDouble(Tryk1TB.Text);
@@ -64,7 +56,7 @@ namespace GUI_blodtryksmåler
                     avList.Add(dtoData.datalist[i]);
                 }
                 dtoKali.Måling1 = avList.Average();
-
+                
 
                 
                 Tryk1Bt.Enabled = false;
@@ -93,7 +85,7 @@ namespace GUI_blodtryksmåler
                     avList.Add(dtoData.datalist[i]);
                 }
                 dtoKali.Måling2 = avList.Average();
-
+                
 
               
                 Tryk2Bt.Enabled = false;
@@ -111,6 +103,7 @@ namespace GUI_blodtryksmåler
         private void KaliBt_Click(object sender, EventArgs e)
         {
             logKalibrer.Calibrate(dtoKali,dtoLogin);
+
         }
 
         private void nulBt_Click(object sender, EventArgs e)
@@ -126,7 +119,9 @@ namespace GUI_blodtryksmåler
 
         private void LogafBt_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            Login login = new Login();
+            this.Hide();
+            login.ShowDialog();
         }
 
     }
