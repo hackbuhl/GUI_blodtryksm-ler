@@ -18,7 +18,7 @@ namespace Logic_blodtryksmåler
         private Dataaccess_blodtryksmåler.GetData DAL;
         public DTO_data dtoData;
 
-        private Dataaccess_blodtryksmåler.Kalibrer kalval; 
+        private Dataaccess_blodtryksmåler.Kalibrer kalval;
         private GetAsyncDatalist raaDatalist;
         public SemaphoreSlim sema1;
         private Thread t;
@@ -26,6 +26,7 @@ namespace Logic_blodtryksmåler
         private double kal;
         private Filter filter;
         public bool filterON;
+        public int errorstate;
 
         public Logic()
         {
@@ -34,12 +35,30 @@ namespace Logic_blodtryksmåler
             dtoData.datalist = new List<double>(1);
             sema1 = new SemaphoreSlim(1, 1);
             filter = new Filter();
-            kalval = new Dataaccess_blodtryksmåler.Kalibrer();
-            kal = kalval.getFactor();
-            t = new Thread(sendData);
-            tk = new Thread(dataToKalibrate); 
 
-            DAL = new GetData();
+            try
+            {
+                kalval = new Dataaccess_blodtryksmåler.Kalibrer();
+                kal = kalval.getFactor();
+            }
+            catch (Exception)
+            {
+                errorstate = 1;
+            }
+
+            t = new Thread(sendData);
+            tk = new Thread(dataToKalibrate);
+
+            try
+            {
+                DAL = new GetData();
+
+            }
+            catch (Exception)
+            {
+                errorstate = 2;
+            }
+            
 
 
         }

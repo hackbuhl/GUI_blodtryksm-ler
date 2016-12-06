@@ -33,17 +33,33 @@ namespace GUI_blodtryksmåler
         public Måling(DTO_login login)
         {
             InitializeComponent();
-            log = new Logic();
+            try
+            {
+                log = new Logic();
+            }
+            catch
+            {
+                error();
+
+            }
             DTO_Login = login;
 
         }
 
-
-        public void Filter(bool on)
+        public void error()
         {
-
+            switch (log.errorstate)
+            {
+                case 1:
+                    MessageBox.Show(this,
+                        "Der er manglende forbindelse til databasen, opret forbindelse før du fortsætter",
+                        "Ingen forbindelse");
+                    break;
+                case 2:
+                    MessageBox.Show(this, "Der er manglende forbindelse til DAQ´en");
+                    break;     
+            }
         }
-
         public void DrawGraph()
         {
         }
@@ -99,20 +115,28 @@ namespace GUI_blodtryksmåler
                     log.Start();
                     MålingBt.Text = "Stop Måling";
                     caseSwitch = 2;
+                    nulpunktsBt.Enabled = false;
+                    nulBt.Enabled = false;
                     break;
 
                 case 2:
                     
                     log.Stop();
-                    MålingBt.Text = "Start Måling";
+                    MålingBt.Text = "Forsæt";
                     caseSwitch = 3;
+                    SaveBt.Enabled = true;
+                    nulBt.Enabled = true;
+                    nulpunktsBt.Enabled = true;
                     break;
 
                 case 3:
-                    log.Attach(this);
+                    //log.Attach(this);
                     log.Continu();
                     MålingBt.Text = "Stop Måling";
                     caseSwitch = 2;
+                    SaveBt.Enabled = false;
+                    nulBt.Enabled = false;
+                    nulpunktsBt.Enabled = false;
                     break;
                     
 
@@ -179,6 +203,22 @@ namespace GUI_blodtryksmåler
             Login login = new Login();
             this.Hide();
             login.ShowDialog(); 
+        }
+
+        private void nulBt_Click(object sender, EventArgs e)
+        {
+
+            System.Windows.Forms.DialogResult d = MessageBox.Show(this, "Nulstil Data?", "Nulstilling", MessageBoxButtons.OKCancel);
+
+            if (d == DialogResult.OK)
+            {
+                
+                DataChart.Series["series1"].Points.Clear();
+                log.dtoData = new DTO_data();
+                log.dtoData.datalist = new List<double>(1);
+                MålingBt.Text = "Start Måling";
+                caseSwitch = 3;
+            }
         }
     }
 }
