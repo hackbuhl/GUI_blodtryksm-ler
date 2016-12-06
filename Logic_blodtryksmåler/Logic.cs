@@ -35,7 +35,7 @@ namespace Logic_blodtryksmåler
             sema1 = new SemaphoreSlim(1, 1);
             filter = new Filter();
             kalval = new Dataaccess_blodtryksmåler.Kalibrer();
-            //kal = kalval.getFactor();
+            kal = kalval.getFactor();
             t = new Thread(sendData);
             tk = new Thread(dataToKalibrate); 
 
