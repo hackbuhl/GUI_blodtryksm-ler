@@ -67,7 +67,7 @@ namespace GUI_blodtryksmåler
             }
             catch (Exception)
             {
-                MessageBox.Show("Den indtastede værdi skal være et tal.");
+                MessageBox.Show("Der skal indtastes en talværdi");
                 Tryk1TB.Text = null;
             }
 
@@ -95,7 +95,7 @@ namespace GUI_blodtryksmåler
             }
             catch (Exception)
             {
-                MessageBox.Show("Den indtastede værdi skal være et tal.");
+                MessageBox.Show("Der skal indtastes en talværdi");
                 Tryk2TB.Text = null;
             }
         }

@@ -46,6 +46,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(33, 31);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
@@ -56,6 +57,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(33, 135);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
@@ -71,21 +73,25 @@
             this.NoteTb.Size = new System.Drawing.Size(368, 150);
             this.NoteTb.TabIndex = 3;
             this.NoteTb.Text = "";
+            this.NoteTb.TextChanged += new System.EventHandler(this.NoteTb_TextChanged);
             // 
             // saveButton
             // 
-            this.saveButton.Location = new System.Drawing.Point(109, 336);
+            this.saveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.saveButton.ForeColor = System.Drawing.Color.White;
+            this.saveButton.Location = new System.Drawing.Point(143, 327);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(151, 54);
             this.saveButton.TabIndex = 4;
             this.saveButton.Text = "Gem";
-            this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.UseVisualStyleBackColor = false;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // Gem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(426, 402);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.NoteTb);
