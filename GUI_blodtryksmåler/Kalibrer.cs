@@ -111,6 +111,7 @@ namespace GUI_blodtryksmåler
         private void KaliBt_Click(object sender, EventArgs e)
         {
             logKalibrer.Calibrate(dtoKali,dtoLogin);
+
         }
 
         private void nulBt_Click(object sender, EventArgs e)
@@ -126,7 +127,9 @@ namespace GUI_blodtryksmåler
 
         private void LogafBt_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            Login login = new Login();
+            this.Hide();
+            login.ShowDialog();
         }
 
     }

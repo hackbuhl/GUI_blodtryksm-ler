@@ -21,7 +21,7 @@ namespace Dataaccess_blodtryksmåler
             myConnection = new SqlConnection("user id=" + DB +
                                              ";password=" + DB + ";server=i4dab.ase.au.dk;" +
                                              "Trusted_Connection=false;" +
-                                             "connection timeout=30"); // ændret fra 5 til 
+                                             "connection timeout=5"); // ændret fra 5 til 
         }
 
 
@@ -50,15 +50,15 @@ namespace Dataaccess_blodtryksmåler
 
             using (SqlCommand cmd = new SqlCommand(insertStringKalibrer, OpenConnection_))
             {
-                cmd.CommandType = CommandType.Text;
-                cmd.Connection = myConnection;
+                //cmd.CommandType = CommandType.Text;
+                //cmd.Connection = myConnection;
                 cmd.Parameters.AddWithValue("@Dato", DateTime.Today);
                 cmd.Parameters.AddWithValue("@BrugerId", log.id);
                 cmd.Parameters.AddWithValue("@Factor", kal.Factor);
-                myConnection.Open();
+                //myConnection.Open();
                 //cmd.ExecuteNonQuery();
                 //return true;
-                cmd.ExecuteScalar(); //
+                //cmd.ExecuteScalar(); //
             }
 
             //}
@@ -80,11 +80,8 @@ namespace Dataaccess_blodtryksmåler
 
             string getFactorSQL = "SELECT TOP 1 * FROM Kalibrer ORDER BY Dato Desc";
 
-            SqlCommand myCommand = new SqlCommand(getFactorSQL, myConnection); //  myConnection.Open();
-                                                                               //DateTime Dato = (DateTime)myCommand.ExecuteScalar();
-
-            //myCommand = new SqlCommand(
-            //string query = "SELECT * FROM Customer WHERE ID = (SELECT MAX(ID) FROM Customer)";
+            myCommand = new SqlCommand(getFactorSQL, myConnection); 
+                                                                              
 
 
             myConnection.Open();

@@ -171,6 +171,13 @@ namespace GUI_blodtryksmåler
             DTO_Data = dto;
             DataChart.BeginInvoke((Action)(() => UpdateChart(DTO_Data)));
         }
+
+        private void logOutBt_Click_1(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            this.Hide();
+            login.ShowDialog(); 
+        }
     }
 }
 
