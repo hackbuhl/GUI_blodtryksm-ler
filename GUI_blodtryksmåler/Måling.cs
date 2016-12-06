@@ -30,10 +30,12 @@ namespace GUI_blodtryksmåler
 
         // test
 
-        public Måling()
+        public Måling(DTO_login login)
         {
             InitializeComponent();
             log = new Logic();
+            DTO_Login = login;
+
         }
 
 
