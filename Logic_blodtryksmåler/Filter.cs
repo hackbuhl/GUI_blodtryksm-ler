@@ -33,7 +33,7 @@ namespace Logic_blodtryksmåler
                     }
                 }
             }
-           //analyse_.findSysOrDia(ref data);
+           analyse_.findSysOrDia(ref data);
         }
     }
 }

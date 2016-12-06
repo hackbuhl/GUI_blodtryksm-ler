@@ -23,7 +23,7 @@ namespace Logic_blodtryksmåler
         public SemaphoreSlim sema1;
         private Thread t;
         private Thread tk;
-        private double kal;
+        private double kal  = 12;
         private Filter filter;
         public bool filterON;
         public int errorstate;
@@ -37,7 +37,7 @@ namespace Logic_blodtryksmåler
             filter = new Filter();
 
                 kalval = new Dataaccess_blodtryksmåler.Kalibrer();
-                kal = kalval.getFactor();
+                //kal = kalval.getFactor();
 
 
 
