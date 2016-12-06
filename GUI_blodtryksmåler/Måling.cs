@@ -100,6 +100,7 @@ namespace GUI_blodtryksmåler
                     caseSwitch = 2;
                     nulpunktsBt.Enabled = false;
                     nulBt.Enabled = false;
+                    SaveBt.Enabled = false; 
                     break;
 
                 case 2:
@@ -163,7 +164,6 @@ namespace GUI_blodtryksmåler
         private void nulpunktsBt_Click(object sender, EventArgs e)
         {
             nulBt.Enabled = true;
-            SaveBt.Enabled = true;
             MålingBt.Enabled = true;
             AlarmBt.Enabled = true;
             log.ZeroAdjust();
