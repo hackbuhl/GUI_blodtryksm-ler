@@ -25,6 +25,7 @@ namespace Logic_blodtryksmåler
         private Thread tk;
         private double kal  = 12;
         private Filter filter;
+        
         public bool filterON;
         public int errorstate;
 
@@ -87,22 +88,11 @@ namespace Logic_blodtryksmåler
         {
             while (true)
             {
-                if (filterON == true)
-                {
-                    sema1.Wait();
-                    fromVtommHg(ref dtoData);
-                    filter.FilterData(ref dtoData, filterON);
 
-                    Notify(ref dtoData);
-                }
-                else
-                {
                     sema1.Wait();
                     fromVtommHg(ref dtoData);
                     filter.FilterData(ref dtoData, filterON);
                     Notify(ref dtoData);
-                }
-
             }
         }
 
@@ -145,6 +135,11 @@ namespace Logic_blodtryksmåler
                 
                 ZeroA = zeroDoubles.Average()*kal;    
                 return true;
+        }
+
+        public Alarm GetAlarm()
+        {
+            return filter.GetAlarm();
         }
     }
 }

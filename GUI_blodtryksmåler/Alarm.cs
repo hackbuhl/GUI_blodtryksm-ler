@@ -17,10 +17,10 @@ namespace GUI_blodtryksmåler
         private Logic_blodtryksmåler.Alarm alarm;
         private DTO_alarm dtoAlarm;
 
-        public Alarm()
+        public Alarm(Logic_blodtryksmåler.Alarm alanAlarm)
         {
             InitializeComponent();
-            alarm = new Logic_blodtryksmåler.Alarm();
+            alarm = alanAlarm;
             dtoAlarm = new DTO_alarm();
         }
 
@@ -38,7 +38,7 @@ namespace GUI_blodtryksmåler
             {
                 MessageBox.Show("Udfyld alle felter med positive heltal.");
             }
-            alarm.alarmSound(dtoAlarm);
+            alarm.setAlarm(dtoAlarm);
         }
     }
 }

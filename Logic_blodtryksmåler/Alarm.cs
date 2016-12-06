@@ -26,10 +26,10 @@ namespace Logic_blodtryksmåler
             sys_nedre = 100;
             sys_øvre = 190;
             dia_nedre = 60;
-            dia_øvre = 100;
+            dia_øvre = 130;
         }
 
-        public Alarm(DTO_alarm dto)
+        public void setAlarm(DTO_alarm dto)
         {
             dia_nedre = dto.NedDia;
             dia_øvre = dto.ØvDia;
@@ -38,12 +38,21 @@ namespace Logic_blodtryksmåler
         }
 
 
-        public void alarmSound(DTO_alarm dto)
+        public void alarmSound(ref  DTO_data dto)
         {
-            if (dto.NedDia < dia_nedre || dto.ØvDia > dia_øvre || dto.NedSys < sys_nedre || dto.ØvSys > sys_øvre)
+            if (dto.Diastole< dia_nedre || dto.Diastole > dia_øvre || dto.Systole < sys_nedre || dto.Systole > sys_øvre)
             {
-                simpleSound.Play();
+                simpleSound.PlayLooping();
             }
+            else if (dto.Diastole > dia_nedre & dto.Diastole < dia_øvre & dto.Systole > sys_nedre & dto.Systole < sys_øvre)
+            {
+                stopAlarm();
+            }
+        }
+
+        public void stopAlarm()
+        {
+            simpleSound.Stop();
         }
 
 

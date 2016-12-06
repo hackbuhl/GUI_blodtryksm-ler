@@ -23,7 +23,7 @@ namespace Dataaccess_blodtryksmåler
             datacollector = new NI_DAQVoltage();
             datacollector.samplesPerChannel = 500;
             datacollector.sampleRateInHz = 1000;
-            datacollector.deviceName = "Dev2/ai0";
+            datacollector.deviceName = "Dev1/ai0";
             //daQmx = new DAQmxAsyncRead(datacollector.getTask());
             reader = new AnalogSingleChannelReader(datacollector.getTask().Stream);
         }

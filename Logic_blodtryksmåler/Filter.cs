@@ -8,11 +8,15 @@ namespace Logic_blodtryksmåler
 {
     public class Filter
     {
-        private Analyse analyse_; 
+        private Analyse analyse_;
+        private DTO_data dtoData;
 
         public Filter()
         {
             analyse_ = new Analyse();
+            dtoData = new DTO_data();
+            dtoData.FilterList = new List<double>(1);
+     
         }
 
         public void FilterData(ref DTO_data data, bool on)
@@ -29,11 +33,20 @@ namespace Logic_blodtryksmåler
                     }
                     if (on == true)
                     {
-                        data.datalist[data.datalist.Count-10+i] = da.Average();
+                        data.datalist[data.datalist.Count - 10 + i] = da.Average();
                     }
+
+                    data.FilterList.Add(da.Average());
                 }
+                dtoData = data;
+                analyse_.findSysOrDia(ref dtoData);
             }
-           analyse_.findSysOrDia(ref data);
+
+        }
+
+        public Alarm GetAlarm()
+        {
+            return analyse_.GetAlarm();
         }
     }
 }

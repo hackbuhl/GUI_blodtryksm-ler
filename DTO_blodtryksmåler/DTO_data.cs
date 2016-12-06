@@ -9,6 +9,7 @@ namespace DTO_blodtryksmåler
     public class DTO_data
     {
         public List<double> datalist { get; set; }
+        public List<double> FilterList { get; set; }
         public DateTime datoogtid { get; set; }
         public int Systole { get; set; }
         public int Diastole { get; set; }
