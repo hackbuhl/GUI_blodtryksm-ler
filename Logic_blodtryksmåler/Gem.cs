@@ -34,12 +34,13 @@ namespace Logic_blodtryksmåler
         {
             if (ValidateCPR(data.CPR) == true)
             {
-                return GemPatient.SaveBT(data, login);
+                return
+                    GemPatient.SaveBT(data, login);
 
             }
             else
                 return 3;
-            
+
         }
     }
 }
