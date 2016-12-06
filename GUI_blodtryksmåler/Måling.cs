@@ -94,14 +94,14 @@ namespace GUI_blodtryksmåler
             {
                 case 1:
                     log.Attach(this);
-                    log.start();
+                    log.Start();
                     MålingBt.Text = "Stop Måling";
                     caseSwitch = 2;
                     break;
 
                 case 2:
-                    log.Detach(this);
-                    log.stop();
+                    
+                    log.Stop();
                     MålingBt.Text = "Start Måling";
                     caseSwitch = 3;
                     break;

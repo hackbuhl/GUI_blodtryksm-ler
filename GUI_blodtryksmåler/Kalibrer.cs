@@ -51,8 +51,6 @@ namespace GUI_blodtryksmåler
 
         private void Tryk1Bt_Click(object sender, EventArgs e)
         {
-            //logKalibrer.Update();
-
             try
             {
                 dtoKali.Read1 = Convert.ToDouble(Tryk1TB.Text);
@@ -64,7 +62,7 @@ namespace GUI_blodtryksmåler
                     avList.Add(dtoData.datalist[i]);
                 }
                 dtoKali.Måling1 = avList.Average();
-
+                
 
                 
                 Tryk1Bt.Enabled = false;
@@ -93,7 +91,7 @@ namespace GUI_blodtryksmåler
                     avList.Add(dtoData.datalist[i]);
                 }
                 dtoKali.Måling2 = avList.Average();
-
+                
 
               
                 Tryk2Bt.Enabled = false;
