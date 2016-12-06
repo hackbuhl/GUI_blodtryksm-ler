@@ -33,13 +33,13 @@ namespace GUI_blodtryksmåler
         public Måling(DTO_login login)
         {
             InitializeComponent();
-            try
+            //try
             {
                 log = new Logic();
             }
-            catch
+            //catch
             {
-                error();
+                //error();
 
             }
             DTO_Login = login;
