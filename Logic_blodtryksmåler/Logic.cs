@@ -36,32 +36,22 @@ namespace Logic_blodtryksmåler
             sema1 = new SemaphoreSlim(1, 1);
             filter = new Filter();
 
-            try
-            {
                 kalval = new Dataaccess_blodtryksmåler.Kalibrer();
                 kal = kalval.getFactor();
-            }
-            catch (Exception)
-            {
-                errorstate = 1;
-            }
+
+
 
             t = new Thread(sendData);
             tk = new Thread(dataToKalibrate);
 
-            try
-            {
                 DAL = new GetData();
 
-            }
-            catch (Exception)
-            {
-                errorstate = 2;
-            }
-            
+
+
 
 
         }
+
         public void Start()
         {
             DAL.OpsamlData();
@@ -71,13 +61,13 @@ namespace Logic_blodtryksmåler
 
         public void Stop()
         {
-           raaDatalist.stop(DAL.daQmx);
-          
+            raaDatalist.stop(DAL.daQmx);
+
         }
 
         public void Continu()
         {
-           raaDatalist.start(DAL.daQmx);
+            raaDatalist.start(DAL.daQmx);
         }
 
         public void startkal()
@@ -91,6 +81,7 @@ namespace Logic_blodtryksmåler
         {
             raaDatalist.stop(DAL.daQmx);
         }
+
         void sendData()
         {
             while (true)
@@ -117,14 +108,14 @@ namespace Logic_blodtryksmåler
         public void fromVtommHg(ref DTO_data dat)
         {
             int ic;
-            if (dat.datalist.Count>6)
-            ic = dat.datalist.Count - 5;
+            if (dat.datalist.Count > 6)
+                ic = dat.datalist.Count - 5;
             else
             {
                 ic = 0;
             }
 
-            for (int i =ic; i < dat.datalist.Count; i++)
+            for (int i = ic; i < dat.datalist.Count; i++)
             {
                 dat.datalist[i] = (dat.datalist[i]*kal)*ZeroA;
             }
@@ -144,8 +135,13 @@ namespace Logic_blodtryksmåler
 
         public bool ZeroAdjust()
         {
-                double[] zeroDoubles = new double[1];
+            double[] zeroDoubles = new double[1];
+
                 zeroDoubles = DAL.SampleforZero();
+
+            
+
+                
                 ZeroA = zeroDoubles.Average()*kal;    
                 return true;
         }

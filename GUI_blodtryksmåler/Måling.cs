@@ -33,33 +33,15 @@ namespace GUI_blodtryksmåler
         public Måling(DTO_login login)
         {
             InitializeComponent();
-            try
-            {
-                log = new Logic();
-            }
-            catch
-            {
-                error();
 
-            }
+                log = new Logic();
+
+
             DTO_Login = login;
 
         }
 
-        public void error()
-        {
-            switch (log.errorstate)
-            {
-                case 1:
-                    MessageBox.Show(this,
-                        "Der er manglende forbindelse til databasen, opret forbindelse før du fortsætter",
-                        "Ingen forbindelse");
-                    break;
-                case 2:
-                    MessageBox.Show(this, "Der er manglende forbindelse til DAQ´en");
-                    break;     
-            }
-        }
+
         public void DrawGraph()
         {
         }
@@ -220,6 +202,20 @@ namespace GUI_blodtryksmåler
                 caseSwitch = 3;
             }
         }
+        //public void error()
+        //{
+        //    switch (log.errorstate)
+        //    {
+        //        case 1:
+        //            MessageBox.Show(this,
+        //                "Der er manglende forbindelse til databasen, opret forbindelse før du fortsætter",
+        //                "Ingen forbindelse");
+        //            break;
+        //        case 2:
+        //            MessageBox.Show(this, "Der er manglende forbindelse til DAQ´en");
+        //            break;     
+        //    }
+        //}
     }
 }
 
