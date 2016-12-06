@@ -15,13 +15,14 @@ namespace Dataaccess_blodtryksmåler
         private SqlCommand myCommand;
         private SqlDataReader myReader;
         private SqlConnection myConnection;
+        private int id; 
 
         public Kalibrer()
         {
             myConnection = new SqlConnection("user id=" + DB +
                                              ";password=" + DB + ";server=i4dab.ase.au.dk;" +
                                              "Trusted_Connection=false;" +
-                                             "connection timeout=5"); // ændret fra 5 til 
+                                             "connection timeout=30"); // ændret fra 5 til 
         }
 
 
@@ -35,15 +36,12 @@ namespace Dataaccess_blodtryksmåler
                 return con;
             }
         }
-        // test slut
 
 
         public void saveFactor(DTO_kalibrer kal, DTO_login log) // ændret fra void til bool
         {
-            //
             DTO_kalibrer kal_ = kal;
             DTO_login log_ = log;
-            //
 
 
             string insertStringKalibrer = @"INSERT INTO Kalibrer(Dato, BrugerID, Factor) VALUES(@Dato, @BrugerID, @Factor)";
@@ -57,26 +55,14 @@ namespace Dataaccess_blodtryksmåler
                 cmd.Parameters.AddWithValue("@Factor", kal.Factor);
                 //myConnection.Open();
                 //cmd.ExecuteNonQuery();
-                //return true;
-                //cmd.ExecuteScalar(); //
+                id = Convert.ToInt32(cmd.ExecuteScalar()); 
             }
-
-            //}
-            //catch (Exception)
-            //{
-            //    return false;
-            //}
         }
-
-
-
 
         public double getFactor()
         {
             double factor = 0;
 
-
-            //myConnection.Open();
 
             string getFactorSQL = "SELECT TOP 1 * FROM Kalibrer ORDER BY Dato Desc";
 

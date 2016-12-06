@@ -106,8 +106,17 @@
             // 
             this.SysLb.AutoSize = true;
             this.SysLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
+            this.SysLb.ForeColor = System.Drawing.Color.DarkOrange;
+=======
             this.SysLb.ForeColor = System.Drawing.Color.Red;
+<<<<<<< HEAD
             this.SysLb.Location = new System.Drawing.Point(7, 55);
+=======
+>>>>>>> origin/master
+            this.SysLb.Location = new System.Drawing.Point(10, 85);
+            this.SysLb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+>>>>>>> origin/master
             this.SysLb.Name = "SysLb";
             this.SysLb.Size = new System.Drawing.Size(143, 73);
             this.SysLb.TabIndex = 6;
@@ -117,8 +126,17 @@
             // 
             this.DiaLb.AutoSize = true;
             this.DiaLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
+            this.DiaLb.ForeColor = System.Drawing.Color.LimeGreen;
+=======
             this.DiaLb.ForeColor = System.Drawing.Color.Red;
+<<<<<<< HEAD
             this.DiaLb.Location = new System.Drawing.Point(55, 175);
+=======
+>>>>>>> origin/master
+            this.DiaLb.Location = new System.Drawing.Point(82, 269);
+            this.DiaLb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+>>>>>>> origin/master
             this.DiaLb.Name = "DiaLb";
             this.DiaLb.Size = new System.Drawing.Size(76, 44);
             this.DiaLb.TabIndex = 7;
@@ -128,8 +146,17 @@
             // 
             this.PulsLb.AutoSize = true;
             this.PulsLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+<<<<<<< HEAD
+            this.PulsLb.ForeColor = System.Drawing.Color.Red;
+=======
             this.PulsLb.ForeColor = System.Drawing.Color.Gray;
+<<<<<<< HEAD
             this.PulsLb.Location = new System.Drawing.Point(86, 318);
+=======
+>>>>>>> origin/master
+            this.PulsLb.Location = new System.Drawing.Point(129, 489);
+            this.PulsLb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+>>>>>>> origin/master
             this.PulsLb.Name = "PulsLb";
             this.PulsLb.Size = new System.Drawing.Size(27, 13);
             this.PulsLb.TabIndex = 8;
@@ -149,8 +176,17 @@
             // label2
             // 
             this.label2.AutoSize = true;
+<<<<<<< HEAD
+            this.label2.ForeColor = System.Drawing.Color.LimeGreen;
+=======
             this.label2.ForeColor = System.Drawing.Color.Gray;
+<<<<<<< HEAD
             this.label2.Location = new System.Drawing.Point(70, 216);
+=======
+>>>>>>> origin/master
+            this.label2.Location = new System.Drawing.Point(105, 332);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+>>>>>>> origin/master
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 10;
@@ -159,8 +195,17 @@
             // label3
             // 
             this.label3.AutoSize = true;
+<<<<<<< HEAD
+            this.label3.ForeColor = System.Drawing.Color.DarkOrange;
+=======
             this.label3.ForeColor = System.Drawing.Color.Gray;
+<<<<<<< HEAD
             this.label3.Location = new System.Drawing.Point(74, 119);
+=======
+>>>>>>> origin/master
+            this.label3.Location = new System.Drawing.Point(111, 183);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+>>>>>>> origin/master
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 13);
             this.label3.TabIndex = 11;
@@ -193,16 +238,28 @@
             this.DataChart.BackColor = System.Drawing.Color.Transparent;
             this.DataChart.BorderlineWidth = 2;
             this.DataChart.BorderSkin.BackColor = System.Drawing.Color.LightGray;
+            chartArea1.AxisX.LabelStyle.ForeColor = System.Drawing.Color.WhiteSmoke;
+            chartArea1.AxisX.LineColor = System.Drawing.Color.DarkRed;
             chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.DimGray;
             chartArea1.AxisX.MinorGrid.Enabled = true;
             chartArea1.AxisX.MinorGrid.LineColor = System.Drawing.Color.LightGray;
             chartArea1.AxisX.ScaleView.Size = 500D;
             chartArea1.AxisX.ScrollBar.LineColor = System.Drawing.Color.DarkRed;
             chartArea1.AxisX.Title = "1/100 s";
+            chartArea1.AxisX.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.AxisX.TitleForeColor = System.Drawing.Color.WhiteSmoke;
+            chartArea1.AxisX2.LabelStyle.ForeColor = System.Drawing.Color.WhiteSmoke;
+            chartArea1.AxisX2.TitleForeColor = System.Drawing.Color.WhiteSmoke;
+            chartArea1.AxisY.LabelStyle.ForeColor = System.Drawing.Color.WhiteSmoke;
             chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.DimGray;
             chartArea1.AxisY.MinorGrid.Enabled = true;
             chartArea1.AxisY.MinorGrid.LineColor = System.Drawing.Color.LightGray;
             chartArea1.AxisY.Title = "mmHg";
+            chartArea1.AxisY.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.AxisY.TitleForeColor = System.Drawing.Color.WhiteSmoke;
+            chartArea1.AxisY2.TitleForeColor = System.Drawing.Color.WhiteSmoke;
+            chartArea1.BackColor = System.Drawing.Color.Gainsboro;
+            chartArea1.BorderColor = System.Drawing.Color.DarkRed;
             chartArea1.Name = "ChartArea1";
             this.DataChart.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
@@ -212,6 +269,8 @@
             this.DataChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.LabelBorderWidth = 3;
+            series1.LabelForeColor = System.Drawing.Color.DarkRed;
             series1.Legend = "Legend1";
             series1.Name = "series1";
             this.DataChart.Series.Add(series1);
