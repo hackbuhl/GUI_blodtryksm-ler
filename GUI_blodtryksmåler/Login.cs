@@ -46,15 +46,15 @@ namespace GUI_blodtryksmåler
             {
                 case "Bruger":
                     Måling målingform = new Måling();
+                    this.Hide();
                     målingform.ShowDialog();
-                    this.Close();
                     IdTb.Clear();
                     PassTb.Clear();
                     break;
                 case "Tekniker":
                     Kalibrer kalibrerform = new Kalibrer();
+                    this.Hide();
                     kalibrerform.ShowDialog();
-                    this.Close();
                     IdTb.Clear();
                     PassTb.Clear();
                     break;
