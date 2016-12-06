@@ -20,6 +20,16 @@ namespace Logic_blodtryksmåler
             log = logic;
             daqRead.Attach(this);
         }
+
+        public void start(DAQmxAsyncRead daQmxAsync)
+        {
+            daQmxAsync.Attach(this);
+        }
+
+        public void stop(DAQmxAsyncRead daQmxAsync)
+        {
+            daQmxAsync.Detach(this);
+        }
         public void Update(double[] data)
         {
             for (int i = 0; i < data.Length;i=i+20)

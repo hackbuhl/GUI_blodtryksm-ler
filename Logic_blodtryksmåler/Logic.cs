@@ -23,7 +23,7 @@ namespace Logic_blodtryksmåler
         public SemaphoreSlim sema1;
         private Thread t;
         private Thread tk;
-        private double kal=1000;
+        private double kal;
         private Filter filter;
         public bool filterON;
 
@@ -43,28 +43,22 @@ namespace Logic_blodtryksmåler
 
 
         }
-
-        public void ReadData()
-        {
-
-        }
-
-        public void start()
+        public void Start()
         {
             DAL.OpsamlData();
             raaDatalist = new GetAsyncDatalist(DAL.daQmx, this);
             t.Start();
         }
 
-        public void stop()
+        public void Stop()
         {
-           t.Interrupt();
+           raaDatalist.stop(DAL.daQmx);
           
         }
 
         public void Continu()
         {
-            t.Join();
+           raaDatalist.start(DAL.daQmx);
         }
 
         public void startkal()
@@ -76,7 +70,7 @@ namespace Logic_blodtryksmåler
 
         public void stopkal()
         {
-            tk.Interrupt();
+            raaDatalist.stop(DAL.daQmx);
         }
         void sendData()
         {
@@ -103,7 +97,6 @@ namespace Logic_blodtryksmåler
 
         public void fromVtommHg(ref DTO_data dat)
         {
-
             int ic;
             if (dat.datalist.Count>6)
             ic = dat.datalist.Count - 5;
@@ -114,11 +107,8 @@ namespace Logic_blodtryksmåler
 
             for (int i =ic; i < dat.datalist.Count; i++)
             {
-                dat.datalist[i] = (dat.datalist[i]-ZeroA)*kal;
+                dat.datalist[i] = (dat.datalist[i]*kal)*ZeroA;
             }
-           
-
-
         }
 
         void dataToKalibrate()
@@ -135,16 +125,10 @@ namespace Logic_blodtryksmåler
 
         public bool ZeroAdjust()
         {
-
-
-
                 double[] zeroDoubles = new double[1];
                 zeroDoubles = DAL.SampleforZero();
-                ZeroA = zeroDoubles.Average();
-                
+                ZeroA = zeroDoubles.Average()*kal;    
                 return true;
-
-
         }
     }
 }
