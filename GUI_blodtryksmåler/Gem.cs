@@ -47,11 +47,7 @@ namespace GUI_blodtryksmåler
                     // CPR ikke valideret
                     MessageBox.Show("CPR er ugyldigt");
                     break;
-              
-
-
-
-
+            }
         }
-        }
-    } }
+    }
+}
