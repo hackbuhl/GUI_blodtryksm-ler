@@ -106,17 +106,15 @@
             // 
             this.SysLb.AutoSize = true;
             this.SysLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
-            this.SysLb.ForeColor = System.Drawing.Color.DarkOrange;
-=======
+
+            
             this.SysLb.ForeColor = System.Drawing.Color.Red;
-<<<<<<< HEAD
-            this.SysLb.Location = new System.Drawing.Point(7, 55);
-=======
->>>>>>> origin/master
+
+
+
             this.SysLb.Location = new System.Drawing.Point(10, 85);
             this.SysLb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
->>>>>>> origin/master
+
             this.SysLb.Name = "SysLb";
             this.SysLb.Size = new System.Drawing.Size(143, 73);
             this.SysLb.TabIndex = 6;
@@ -126,17 +124,13 @@
             // 
             this.DiaLb.AutoSize = true;
             this.DiaLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
+
             this.DiaLb.ForeColor = System.Drawing.Color.LimeGreen;
-=======
-            this.DiaLb.ForeColor = System.Drawing.Color.Red;
-<<<<<<< HEAD
+
+
             this.DiaLb.Location = new System.Drawing.Point(55, 175);
-=======
->>>>>>> origin/master
-            this.DiaLb.Location = new System.Drawing.Point(82, 269);
+
             this.DiaLb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
->>>>>>> origin/master
             this.DiaLb.Name = "DiaLb";
             this.DiaLb.Size = new System.Drawing.Size(76, 44);
             this.DiaLb.TabIndex = 7;
@@ -146,17 +140,11 @@
             // 
             this.PulsLb.AutoSize = true;
             this.PulsLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-<<<<<<< HEAD
             this.PulsLb.ForeColor = System.Drawing.Color.Red;
-=======
-            this.PulsLb.ForeColor = System.Drawing.Color.Gray;
-<<<<<<< HEAD
+
             this.PulsLb.Location = new System.Drawing.Point(86, 318);
-=======
->>>>>>> origin/master
-            this.PulsLb.Location = new System.Drawing.Point(129, 489);
+
             this.PulsLb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
->>>>>>> origin/master
             this.PulsLb.Name = "PulsLb";
             this.PulsLb.Size = new System.Drawing.Size(27, 13);
             this.PulsLb.TabIndex = 8;
@@ -176,17 +164,12 @@
             // label2
             // 
             this.label2.AutoSize = true;
-<<<<<<< HEAD
             this.label2.ForeColor = System.Drawing.Color.LimeGreen;
-=======
-            this.label2.ForeColor = System.Drawing.Color.Gray;
-<<<<<<< HEAD
+
             this.label2.Location = new System.Drawing.Point(70, 216);
-=======
->>>>>>> origin/master
+
             this.label2.Location = new System.Drawing.Point(105, 332);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
->>>>>>> origin/master
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 10;
@@ -195,17 +178,13 @@
             // label3
             // 
             this.label3.AutoSize = true;
-<<<<<<< HEAD
+
             this.label3.ForeColor = System.Drawing.Color.DarkOrange;
-=======
             this.label3.ForeColor = System.Drawing.Color.Gray;
-<<<<<<< HEAD
+
             this.label3.Location = new System.Drawing.Point(74, 119);
-=======
->>>>>>> origin/master
             this.label3.Location = new System.Drawing.Point(111, 183);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
->>>>>>> origin/master
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 13);
             this.label3.TabIndex = 11;
