@@ -49,5 +49,10 @@ namespace GUI_blodtryksmåler
                     break;
             }
         }
+
+        private void NoteTb_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

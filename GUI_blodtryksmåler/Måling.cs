@@ -98,7 +98,7 @@ namespace GUI_blodtryksmåler
                 case 1:
                     log.Attach(this);
                     log.Start();
-                    MålingBt.Text = "Stop Måling";
+                    MålingBt.Text = "Stop Indlæsning";
                     caseSwitch = 2;
                     nulpunktsBt.Enabled = false;
                     nulBt.Enabled = false;
@@ -118,7 +118,7 @@ namespace GUI_blodtryksmåler
                 case 3:
                     //log.Attach(this);
                     log.Continu();
-                    MålingBt.Text = "Stop Måling";
+                    MålingBt.Text = "Stop Indlæsning";
                     caseSwitch = 2;
                     SaveBt.Enabled = false;
                     nulBt.Enabled = false;
