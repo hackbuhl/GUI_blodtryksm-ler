@@ -38,7 +38,7 @@ namespace Logic_blodtryksmåler
             filter = new Filter();
 
                 kalval = new Dataaccess_blodtryksmåler.Kalibrer();
-                //kal = kalval.getFactor();
+                kal = kalval.getFactor();
 
 
 
@@ -108,7 +108,7 @@ namespace Logic_blodtryksmåler
 
             for (int i = ic; i < dat.datalist.Count; i++)
             {
-                dat.datalist[i] = (dat.datalist[i]*kal)*ZeroA;
+                dat.datalist[i] = (dat.datalist[i]*kal)+ZeroA;
             }
         }
 

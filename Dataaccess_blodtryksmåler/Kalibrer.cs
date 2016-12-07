@@ -44,7 +44,7 @@ namespace Dataaccess_blodtryksmåler
             DTO_login log_ = log;
 
 
-            string insertStringKalibrer = @"INSERT INTO Kalibrer(Dato, BrugerID, Factor) VALUES(@Dato, @BrugerID, @Factor)";
+             string insertStringKalibrer = @"INSERT INTO Kalibrer(Dato, BrugerID, Factor) VALUES(@Dato, @BrugerID, @Factor)";
 
             using (SqlCommand cmd = new SqlCommand(insertStringKalibrer, OpenConnection_))
             {

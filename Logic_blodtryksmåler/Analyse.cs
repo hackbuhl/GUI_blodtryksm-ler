@@ -14,39 +14,47 @@ namespace Logic_blodtryksmåler
         private Alarm allan = new Alarm();
 
          
-        public void findSysOrDia(ref DTO_data dto_data)
+        public void findSysOrDia(ref DTO_data dto_data, List<double> anaList )
         {
             
-            if (dto_data.FilterList != null & dto_data.FilterList.Count > 100)
+            if (anaList != null & anaList.Count > 100)
             {
                 int counter = 0;
-                for (int i = dto_data.FilterList.Count - 100; i < dto_data.FilterList.Count; i++)
+                for (int i = anaList.Count - 100; i < anaList.Count; i++)
                 {
 
-                    if (i > 0  && dto_data.FilterList[i] > 110 & top == false & counter>30)
+                    if (i > 0  && anaList[i] > 110 & top == false & counter>20)
                     {
-                        double Rhældning = ((dto_data.FilterList[i] - dto_data.FilterList[i - 1]) +
-                                            (dto_data.FilterList[i - 1] - dto_data.FilterList[i - 2]) +
-                                            (dto_data.FilterList[i - 2] - dto_data.FilterList[i - 3]) +
-                                            (dto_data.FilterList[i - 3] - dto_data.FilterList[i - 4]))/4;
+                        double Rhældning = ((anaList[i] - anaList[i - 1]) +
+                                            (anaList[i - 1] - anaList[i - 2]) +
+                                            (anaList[i - 2] - anaList[i - 3]) +
+                                            (anaList[i - 3] - anaList[i - 4]) +
+                                            (anaList[i-4] - anaList[i - 5]) +
+                                            (anaList[i - 5] - anaList[i - 6]) +
+                                            (anaList[i - 6] - anaList[i - 7]) +
+                                            (anaList[i - 7] - anaList[i - 8]))/ 8;
                         if (Rhældning < 0) // sikre at vi er på vej ned
                         {
-                            dto_data.Systole = Convert.ToInt32((dto_data.FilterList[i - 4]));
+                            dto_data.Systole = Convert.ToInt32((anaList[i - 4]));
                             
                             top = true;
                             counter = 0;
                             allan.alarmSound(ref dto_data);
                         }
                     }
-                    if (i > 0 && dto_data.FilterList[i] < 110 & top == true & counter > 30)
+                    if (i > 0 && anaList[i] < 110 & top == true & counter > 20)
                     {
-                        double Rhældning = ((dto_data.FilterList[i] - dto_data.FilterList[i - 1]) +
-                                            (dto_data.FilterList[i - 1] - dto_data.FilterList[i - 2]) +
-                                            (dto_data.FilterList[i - 2] - dto_data.FilterList[i - 3]) +
-                                            (dto_data.FilterList[i - 3] - dto_data.FilterList[i - 4]))/4;
+                        double Rhældning = ((anaList[i] - anaList[i - 1]) +
+                                            (anaList[i - 1] - anaList[i - 2]) +
+                                            (anaList[i - 2] - anaList[i - 3]) +
+                                            (anaList[i - 3] - anaList[i - 4]) +
+                                            (anaList[i - 4] - anaList[i - 5]) +
+                                            (anaList[i - 5] - anaList[i - 6]) +
+                                            (anaList[i - 6] - anaList[i - 7]) +
+                                            (anaList[i - 7] - anaList[i - 8])) / 8;
                         if (Rhældning > 0) // sikre at vi er på vej op
                         {
-                            dto_data.Diastole = Convert.ToInt32((dto_data.FilterList[i - 4]));
+                            dto_data.Diastole = Convert.ToInt32((anaList[i - 4]));
                             
                             top = false;
                             counter = 0; 

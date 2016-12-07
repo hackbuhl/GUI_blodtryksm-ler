@@ -48,9 +48,16 @@ namespace GUI_blodtryksmåler
             try
             {
                 dtoKali.Read1 = Convert.ToDouble(Tryk1TB.Text);
+            }
+
+            catch (Exception)
+            {
+                MessageBox.Show("Der skal indtastes en talværdi");
+                Tryk1TB.Text = null;
+            }
 
 
-                List<double> avList = new List<double>();
+            List<double> avList = new List<double>();
                 for (int i = dtoData.datalist.Count - 100; i < dtoData.datalist.Count; i++)
                 {
                     avList.Add(dtoData.datalist[i]);
@@ -64,12 +71,6 @@ namespace GUI_blodtryksmåler
                 Tryk1TB.Enabled = false;
                 Tryk2TB.Enabled = true;
 
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Der skal indtastes en talværdi");
-                Tryk1TB.Text = null;
-            }
 
         }
 

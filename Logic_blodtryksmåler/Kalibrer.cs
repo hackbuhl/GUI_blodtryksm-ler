@@ -16,13 +16,6 @@ namespace Logic_blodtryksmåler
         private Filter filt= new Filter();
         private Dataaccess_blodtryksmåler.Kalibrer dataKalibrer = new Dataaccess_blodtryksmåler.Kalibrer();
 
-
-        public double data()
-        {
-           // return filt.FilterData(ref dtoData)//filt.DatatoCal().datalist.Average()
-            return 1;
-        }
-
         public void Calibrate(DTO_kalibrer kalibrer, DTO_login login)
         {
             if (kalibrer.Read1 < kalibrer.Read2)

@@ -78,8 +78,8 @@ namespace Dataaccess_blodtryksmåler
         {
             // Initialize local variables
             sampleRateInHz = 1000;
-            rangeMinimumVolt = -1;
-            rangeMaximumVolt = 1;
+            rangeMinimumVolt = 0;
+            rangeMaximumVolt = 5;
             samplesPerChannel = 3600;
             deviceName = "Dev1/ai0";
             seqTimeOut = -1; 
