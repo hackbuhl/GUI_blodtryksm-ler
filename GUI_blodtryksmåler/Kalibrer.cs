@@ -66,7 +66,7 @@ namespace GUI_blodtryksmåler
                 
 
                 
-                Tryk1Bt.Enabled = false;
+                        Tryk1Bt.Enabled = false;
                 Tryk2Bt.Enabled = true;
                 Tryk1TB.Enabled = false;
                 Tryk2TB.Enabled = true;

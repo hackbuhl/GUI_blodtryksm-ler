@@ -205,6 +205,11 @@ namespace GUI_blodtryksmåler
                 caseSwitch = 3;
             }
         }
+
+        private void DataChart_Click_1(object sender, EventArgs e)
+        {
+
+        }
         //public void error()
         //{
         //    switch (log.errorstate)

@@ -32,8 +32,9 @@ namespace GUI_blodtryksmåler
                 dtoAlarm.NedSys = Convert.ToInt32(NedSysTb.Text);
                 dtoAlarm.ØvDia = Convert.ToInt32(ØvDiaTb.Text);
                 dtoAlarm.ØvSys = Convert.ToInt32(ØvSysTb.Text);
-                MessageBox.Show("Alarm indstillet");
                 this.Hide();
+                MessageBox.Show("Alarm indstillet");
+                
             }
             catch (Exception)
             {
