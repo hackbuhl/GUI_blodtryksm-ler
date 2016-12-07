@@ -32,17 +32,20 @@ namespace GUI_blodtryksmåler
 
         private void Logon_Click(object sender, EventArgs e)
         {
-            try {
+            try
+            {
                 dtoLogin.id = Convert.ToInt32(IdTb.Text);
                 dtoLogin.pass = Convert.ToString(PassTb.Text);
-                dtoLogin = login.getLogin(dtoLogin);
-                // luk login vindue og åben enten kalibrer eller måling
-                CheckType(dtoLogin);
             }
             catch (Exception)
             {
                 MessageBox.Show("Det indtastede brugernavn skal bestå af tal");
             }
+            dtoLogin = login.getLogin(dtoLogin);
+            // luk login vindue og åben enten kalibrer eller måling
+            CheckType(dtoLogin);
+
+
         }
 
         private void CheckType (DTO_login log)
@@ -51,14 +54,14 @@ namespace GUI_blodtryksmåler
                 switch (log.type)
                 {
                     case "Bruger":
-                        Måling målingform = new Måling(log);
+                        Måling målingform = new Måling(log, this);
                         this.Hide();
                         målingform.ShowDialog();
                         IdTb.Clear();
                         PassTb.Clear();
                         break;
                     case "Tekniker":
-                        Kalibrer kalibrerform = new Kalibrer(log);
+                        Kalibrer kalibrerform = new Kalibrer(log, this);
                         this.Hide();
                         kalibrerform.ShowDialog();
                         IdTb.Clear();

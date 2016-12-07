@@ -26,12 +26,13 @@ namespace GUI_blodtryksmåler
         private DTO_blodtryksmåler.DTO_login DTO_Login = new DTO_login();
         private Logic_blodtryksmåler.Logic log;
         private Logic_blodtryksmåler.Alarm logalarm;
+        private Login GUIlogin;
         public int i = 0;
         int caseSwitch = 1;
 
         // test
 
-        public Måling(DTO_login login)
+        public Måling(DTO_login login, Login GUIlogin_)
         {
             InitializeComponent();
 
@@ -39,7 +40,7 @@ namespace GUI_blodtryksmåler
             logalarm = log.GetAlarm();
 
 
-
+            GUIlogin = GUIlogin_;
             DTO_Login = login;
 
         }
@@ -185,9 +186,9 @@ namespace GUI_blodtryksmåler
 
         private void logOutBt_Click_1(object sender, EventArgs e)
         {
-            Login login = new Login();
+            log.Detach(this);
             this.Hide();
-            login.ShowDialog(); 
+            GUIlogin.ShowDialog();
         }
 
         private void nulBt_Click(object sender, EventArgs e)
