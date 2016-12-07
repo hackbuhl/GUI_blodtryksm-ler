@@ -186,6 +186,7 @@ namespace GUI_blodtryksmåler
 
         private void logOutBt_Click_1(object sender, EventArgs e)
         {
+            log.Stop();
             log.Detach(this);
             this.Hide();
             GUIlogin.ShowDialog();

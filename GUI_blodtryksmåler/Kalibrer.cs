@@ -122,6 +122,7 @@ namespace GUI_blodtryksmåler
 
         private void LogafBt_Click(object sender, EventArgs e)
         {
+            logic.Stop();
             logic.Detach(this);
             this.Hide();
             GUIlogin.ShowDialog();

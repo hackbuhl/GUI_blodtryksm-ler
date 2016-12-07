@@ -47,8 +47,8 @@ namespace Dataaccess_blodtryksmåler
             {
                 //cmd.CommandType = CommandType.Text;
                 //cmd.Connection = myConnection;
-                cmd.Parameters.AddWithValue("@Dato", DateTime.Today);
-                cmd.Parameters.AddWithValue("@BrugerId", Convert.ToChar(log.id));
+                cmd.Parameters.AddWithValue("@Dato", DateTime.Now);
+                cmd.Parameters.AddWithValue("@BrugerId", log.id);
                 cmd.Parameters.AddWithValue("@Factor", kal.Factor);
                 //myConnection.Open();
                 //cmd.ExecuteNonQuery();
