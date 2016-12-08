@@ -1,4 +1,6 @@
-﻿namespace GUI_blodtryksmåler
+﻿using System;
+
+namespace GUI_blodtryksmåler
 {
     partial class Måling
     {
@@ -195,9 +197,10 @@
             chartArea1.AxisY.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             chartArea1.AxisY.TitleForeColor = System.Drawing.Color.WhiteSmoke;
             chartArea1.AxisY2.TitleForeColor = System.Drawing.Color.WhiteSmoke;
+            
             chartArea1.BackColor = System.Drawing.Color.Gainsboro;
             chartArea1.BorderColor = System.Drawing.Color.DarkRed;
-            chartArea1.Name = "ChartArea1";
+
             this.DataChart.ChartAreas.Add(chartArea1);
             legend1.ItemColumnSpacing = 20;
             legend1.Name = "Legend1";

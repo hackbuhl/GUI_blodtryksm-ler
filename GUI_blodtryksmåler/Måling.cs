@@ -87,6 +87,9 @@ namespace GUI_blodtryksmåler
             }
             DiaLb.Text = Convert.ToString(DTO_Data.Diastole);
             SysLb.Text = Convert.ToString(DTO_Data.Systole);
+
+
+
         }
 
 
@@ -109,6 +112,7 @@ namespace GUI_blodtryksmåler
                 case 2:
                     
                     log.Stop();
+                    logalarm.stopAlarm();
                     MålingBt.Text = "Forsæt";
                     caseSwitch = 3;
                     SaveBt.Enabled = true;
