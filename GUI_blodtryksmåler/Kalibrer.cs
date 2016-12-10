@@ -100,12 +100,20 @@ namespace GUI_blodtryksmåler
             {
                 MessageBox.Show("Der skal indtastes en talværdi");
                 Tryk2TB.Text = null;
+
+
             }
         }
 
         private void KaliBt_Click(object sender, EventArgs e)
         {
             logKalibrer.Calibrate(dtoKali,dtoLogin);
+            MessageBox.Show("System kalibreret");
+
+            Tryk1Bt.Enabled = true;
+            Tryk1TB.Enabled = true;
+            KaliBt.Enabled = false;
+            nulBt.Enabled = false;
 
         }
 

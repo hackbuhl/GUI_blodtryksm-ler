@@ -56,7 +56,8 @@ namespace Logic_blodtryksmåler
 
         public void Start()
         {
-            kal = kalval.getFactor();
+            //kal = kalval.getFactor();
+            kal = 50;
             DAL.OpsamlData();
             raaDatalist = new GetAsyncDatalist(DAL.daQmx, this);
             t.Start();
