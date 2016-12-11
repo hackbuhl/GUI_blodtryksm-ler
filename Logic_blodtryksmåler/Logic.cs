@@ -74,6 +74,11 @@ namespace Logic_blodtryksmåler
             raaDatalist.start(DAL.daQmx);
         }
 
+        public void end()
+        {
+            DAL.daQmx.Detach(raaDatalist);
+        }
+
         public void startkal()
         {
             DAL.OpsamlData();

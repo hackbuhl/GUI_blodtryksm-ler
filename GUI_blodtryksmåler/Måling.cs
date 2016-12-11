@@ -158,15 +158,6 @@ namespace GUI_blodtryksmåler
             }
         }
 
-        private void DataChart_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LogoutBt_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void nulpunktsBt_Click(object sender, EventArgs e)
         {
@@ -191,6 +182,7 @@ namespace GUI_blodtryksmåler
         private void logOutBt_Click_1(object sender, EventArgs e)
         {
             log.Stop();
+            log.end();
             log.Detach(this);
             this.Hide();
             GUIlogin.ShowDialog();
