@@ -203,25 +203,6 @@ namespace GUI_blodtryksmåler
                 caseSwitch = 3;
             }
         }
-
-        private void DataChart_Click_1(object sender, EventArgs e)
-        {
-
-        }
-        //public void error()
-        //{
-        //    switch (log.errorstate)
-        //    {
-        //        case 1:
-        //            MessageBox.Show(this,
-        //                "Der er manglende forbindelse til databasen, opret forbindelse før du fortsætter",
-        //                "Ingen forbindelse");
-        //            break;
-        //        case 2:
-        //            MessageBox.Show(this, "Der er manglende forbindelse til DAQ´en");
-        //            break;     
-        //    }
-        //}
     }
 }
 
