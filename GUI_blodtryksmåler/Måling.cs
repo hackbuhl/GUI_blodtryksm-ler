@@ -25,7 +25,7 @@ namespace GUI_blodtryksmåler
         private DTO_blodtryksmåler.DTO_data DTO_Data = new DTO_data();
         private DTO_blodtryksmåler.DTO_login DTO_Login = new DTO_login();
         private Logic_blodtryksmåler.Logic log;
-        private Logic_blodtryksmåler.Alarm logalarm;
+        private Logic_blodtryksmåler.Alarm z;
         private Login GUIlogin;
         public int i = 0;
         int caseSwitch = 1;
@@ -37,7 +37,7 @@ namespace GUI_blodtryksmåler
             InitializeComponent();
 
             log = logLogic;
-            logalarm = log.GetAlarm();
+            z = log.GetAlarm();
 
 
             GUIlogin = GUIlogin_;
@@ -112,7 +112,7 @@ namespace GUI_blodtryksmåler
                 case 2:
                     
                     log.Stop();
-                    logalarm.stopAlarm();
+                    z.stopAlarm();
                     MålingBt.Text = "Forsæt";
                     caseSwitch = 3;
                     SaveBt.Enabled = true;
@@ -169,7 +169,7 @@ namespace GUI_blodtryksmåler
 
         private void AlarmBt_Click(object sender, EventArgs e)
         {
-            Alarm alarm = new Alarm(logalarm);
+            Alarm alarm = new Alarm(z);
             alarm.ShowDialog();
         }
 
