@@ -62,11 +62,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbAnalyse.cs" />
     <Compile Include="Alarm.cs" />
     <Compile Include="Analyse.cs" />
     <Compile Include="GetAsyncDatalist.cs" />
-    <Compile Include="iAnalyseObserver.cs" />
     <Compile Include="Filter.cs" />
     <Compile Include="Gem.cs" />
     <Compile Include="IObserverLogic.cs" />

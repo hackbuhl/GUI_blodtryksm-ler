@@ -1,71 +1,136 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access" MembersFormat="FullSignature">
-  <Class Name="Logic_blodtryksmåler.Alarm" BaseTypeListCollapsed="true">
-    <Position X="8.5" Y="5" Width="1.5" />
+  <Class Name="Logic_blodtryksmåler.Alarm">
+    <Position X="12.25" Y="10.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAIAAAAAAAAhAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAABAAAABEQEAAAgQAAAgAAAAAAAAAAAAIA=</HashCode>
       <FileName>Alarm.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
+    <ShowAsAssociation>
+      <Field Name="dtoAlarm" />
+    </ShowAsAssociation>
   </Class>
-  <Class Name="Logic_blodtryksmåler.Analyse" BaseTypeListCollapsed="true">
-    <Position X="4.25" Y="5" Width="1.5" />
+  <Class Name="Logic_blodtryksmåler.Analyse">
+    <Position X="10" Y="11.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAhAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAgAgAAAAAAAAAAAAgAAAEABAAAAAAAAAAAAAA=</HashCode>
       <FileName>Analyse.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="allan" />
+      <Field Name="dataDTO" />
+    </ShowAsAssociation>
   </Class>
-  <Class Name="Logic_blodtryksmåler.Filter" BaseTypeListCollapsed="true">
-    <Position X="6" Y="2.5" Width="1.5" />
+  <Class Name="Logic_blodtryksmåler.Filter">
+    <Position X="10" Y="7.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAACBAAAAAAAAAQAAAAAAAAAAABAAAAAAAAAAAEAA=</HashCode>
       <FileName>Filter.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="dtoData" />
+      <Field Name="analyse_" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="Logic_blodtryksmåler.Gem">
-    <Position X="10.75" Y="2.75" Width="1.5" />
+    <Position X="5" Y="10.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAACA=</HashCode>
       <FileName>Gem.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="GemPatient" />
+    </ShowAsAssociation>
   </Class>
-  <Class Name="Logic_blodtryksmåler.Kalibrer" BaseTypeListCollapsed="true">
-    <Position X="1.5" Y="5" Width="2.25" />
+  <Class Name="Logic_blodtryksmåler.GetAsyncDatalist" BaseTypeListCollapsed="true">
+    <Position X="5" Y="8" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAIAAAAAAAAAAAAAAEAAAEAAAAAAAAAAAAYAAAAEAA=</HashCode>
+      <HashCode>AAQAAAAAAAAAAAAkAAAACAAAAAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GetAsyncDatalist.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="log" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Logic_blodtryksmåler.Kalibrer">
+    <Position X="12" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAEAAAEAAAAAAAAAAAAIAAAAEAA=</HashCode>
       <FileName>Kalibrer.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="filt" />
+      <Field Name="dataKalibrer" />
+      <Field Name="dtoData" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Logic_blodtryksmåler.Logic">
+    <Position X="7.5" Y="7.5" Width="1.5" />
+    <AssociationLine Name="DAL" Type="Dataaccess_blodtryksmåler.GetData" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.875" Y="7.5" />
+        <Point X="7.875" Y="6.847" />
+        <Point X="6.5" Y="6.847" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>ABAAgARIACgAAACAAAEAEAAEJgABBAAEIAQEAABCEAA=</HashCode>
+      <FileName>Logic.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="dtoData" />
+      <Field Name="DAL" />
+      <Field Name="filter" />
+      <Field Name="kalval" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="Logic_blodtryksmåler.Login">
-    <Position X="10.75" Y="4.75" Width="1.75" />
+    <Position X="7.5" Y="13.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
       <FileName>Login.cs</FileName>
     </TypeIdentifier>
-  </Class>
-  <Class Name="Logic_blodtryksmåler.Logic">
-    <Position X="1.5" Y="2.5" Width="2.25" />
-    <TypeIdentifier>
-      <HashCode>AAAAAARIAAABAAQgAAgAAAAAJgABAAAEAAAAAABAEAA=</HashCode>
-      <FileName>Logic.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Logic_blodtryksmåler.AbAnalyse">
-    <Position X="6.5" Y="5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAIAAAAAAAQAAIAAAAAAAAAAJAAAABQAAAAAAAAAAA=</HashCode>
-      <FileName>AbAnalyse.cs</FileName>
-    </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="Filter" />
-      <Property Name="iAnalyseObserver" />
+      <Field Name="login" />
     </ShowAsAssociation>
   </Class>
-  <Interface Name="Logic_blodtryksmåler.iAnalyseObserver">
-    <Position X="8" Y="2.75" Width="1.5" />
+  <Class Name="Logic_blodtryksmåler.SubjectLogic">
+    <Position X="7.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAIAAAAAAAAAAIAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>SubjectLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DTO_blodtryksmåler.DTO_data" Collapsed="true">
+    <Position X="10.5" Y="10" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Dataaccess_blodtryksmåler.GetData" Collapsed="true">
+    <Position X="5" Y="6.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Dataaccess_blodtryksmåler.Kalibrer" Collapsed="true">
+    <Position X="10" Y="6" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="DTO_blodtryksmåler.DTO_alarm" Collapsed="true">
+    <Position X="12" Y="14" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Dataaccess_blodtryksmåler.Login" Collapsed="true">
+    <Position X="5" Y="14" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Dataaccess_blodtryksmåler.GemPatient" Collapsed="true">
+    <Position X="5" Y="13" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Interface Name="Logic_blodtryksmåler.IObserverLogic">
+    <Position X="5" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>iAnalyseObserver.cs</FileName>
+      <FileName>IObserverLogic.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Segoe UI" Size="9" />
