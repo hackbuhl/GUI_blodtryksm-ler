@@ -25,6 +25,7 @@ namespace Logic_blodtryksmåler
         private Thread tk;
         private double kal  = 12;
         private Filter filter;
+        private bool first = true;
         
         public bool filterON;
         public int errorstate;
@@ -42,8 +43,7 @@ namespace Logic_blodtryksmåler
 
 
 
-            t = new Thread(sendData);
-            tk = new Thread(dataToKalibrate);
+
 
 
                 DAL = new GetData();
@@ -58,8 +58,13 @@ namespace Logic_blodtryksmåler
         {
             //kal = kalval.getFactor();
             kal = 50;
-            DAL.OpsamlData();
+            if (first == true)
+            {
+                DAL.OpsamlData();
+                first = false;
+            }
             raaDatalist = new GetAsyncDatalist(DAL.daQmx, this);
+            t = new Thread(sendData);
             t.Start();
         }
 
@@ -74,21 +79,18 @@ namespace Logic_blodtryksmåler
             raaDatalist.start(DAL.daQmx);
         }
 
-        public void end()
-        {
-            DAL.daQmx.Detach(raaDatalist);
-        }
 
         public void startkal()
         {
-            DAL.OpsamlData();
+            if (first == true)
+            {
+                DAL.OpsamlData();
+                first = false;
+            }
             raaDatalist = new GetAsyncDatalist(DAL.daQmx, this);
+    
+            tk = new Thread(dataToKalibrate);
             tk.Start();
-        }
-
-        public void stopkal()
-        {
-            raaDatalist.stop(DAL.daQmx);
         }
 
         void sendData()
@@ -101,6 +103,16 @@ namespace Logic_blodtryksmåler
                     filter.FilterData(ref dtoData, filterON);
                     Notify(ref dtoData);
             }
+        }
+
+        public void stopt()
+        {
+            t.Abort();
+        }
+
+        public void stoptk()
+        {
+            tk.Abort();
         }
 
         public void fromVtommHg(ref DTO_data dat)

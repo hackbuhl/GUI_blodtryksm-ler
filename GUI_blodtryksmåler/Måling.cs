@@ -32,11 +32,11 @@ namespace GUI_blodtryksmåler
 
         // test
 
-        public Måling(DTO_login login, Login GUIlogin_)
+        public Måling(Logic logLogic, DTO_login login, Login GUIlogin_)
         {
             InitializeComponent();
 
-                log = new Logic();
+            log = logLogic;
             logalarm = log.GetAlarm();
 
 
@@ -182,10 +182,10 @@ namespace GUI_blodtryksmåler
         private void logOutBt_Click_1(object sender, EventArgs e)
         {
             log.Stop();
-            log.end();
             log.Detach(this);
+            log.stopt();
             this.Hide();
-            GUIlogin.ShowDialog();
+            GUIlogin.Show();
         }
 
         private void nulBt_Click(object sender, EventArgs e)

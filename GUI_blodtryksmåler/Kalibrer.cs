@@ -22,11 +22,11 @@ namespace GUI_blodtryksmåler
         private DTO_login dtoLogin;
         private Login GUIlogin;
 
-        public Kalibrer(DTO_login log, Login GUIlogin_)
+        public Kalibrer(Logic loglogic,DTO_login log, Login GUIlogin_)
         {
             dtoLogin = new DTO_login();
             dtoLogin = log;
-            logic = new Logic();
+            logic = loglogic;
             logKalibrer=  new Logic_blodtryksmåler.Kalibrer();
             dtoKali = new DTO_kalibrer();
             dtoData = new DTO_data();
@@ -131,10 +131,12 @@ namespace GUI_blodtryksmåler
         private void LogafBt_Click(object sender, EventArgs e)
         {
             logic.Stop();
-            logic.end();
+            logic.stoptk();
             logic.Detach(this);
             this.Hide();
-            GUIlogin.ShowDialog();
+            //GUIlogin.ShowDialog();
+            GUIlogin.Show();
+            //logic.stoptk();
         }
 
     }

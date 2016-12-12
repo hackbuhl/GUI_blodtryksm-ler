@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO_blodtryksmåler;
+using Logic_blodtryksmåler;
 
 namespace GUI_blodtryksmåler
 {
@@ -15,6 +16,7 @@ namespace GUI_blodtryksmåler
     {
         private Logic_blodtryksmåler.Login login = new Logic_blodtryksmåler.Login();
         private DTO_login dtoLogin = new DTO_login();
+        private Logic_blodtryksmåler.Logic LOG;
 
 
         public Login()
@@ -22,6 +24,7 @@ namespace GUI_blodtryksmåler
             InitializeComponent();
             PassTb.PasswordChar = '*';
             PassTb.MaxLength = 4;
+            LOG = new Logic();
 
         }
 
@@ -54,14 +57,14 @@ namespace GUI_blodtryksmåler
                 switch (log.type)
                 {
                     case "Bruger":
-                        Måling målingform = new Måling(log, this);
+                        Måling målingform = new Måling(LOG, log, this);
                         this.Hide();
                         målingform.ShowDialog();
                         IdTb.Clear();
                         PassTb.Clear();
                         break;
                     case "Tekniker":
-                        Kalibrer kalibrerform = new Kalibrer(log, this);
+                        Kalibrer kalibrerform = new Kalibrer(LOG, log, this);
                         this.Hide();
                         kalibrerform.ShowDialog();
                         IdTb.Clear();
