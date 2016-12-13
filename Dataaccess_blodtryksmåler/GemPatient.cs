@@ -33,7 +33,7 @@ namespace Dataaccess_blodtryksmåler
         }
 
 
-        public int SaveBT(DTO_data BTdata, DTO_login login) //ændret til void for testning 
+        public int SaveBT(DTO_data BTdata, DTO_login login)
         {
 
             string insertStringParam = @"INSERT INTO Data(Dato, Blodtryk, PatientCPR, BrugerID, Noter) 
