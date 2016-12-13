@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="GUI_blodtryksmåler.Alarm" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAABCQAABAABACAAAACAAAAAEAAAAAAAAAgAQA=</HashCode>
+      <FileName>Alarm.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="alarm" />
+      <Field Name="dtoAlarm" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="GUI_blodtryksmåler.Gem" Collapsed="true">
+    <Position X="2" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAACAQABAAAACAAAACAAgIAQAAAAAEQAAAAAA=</HashCode>
+      <FileName>Gem.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="DTO_data" />
+      <Field Name="DTO_login" />
+      <Field Name="Save" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="GUI_blodtryksmåler.Kalibrer" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAIAAACAIADgAAACAAQCCAAAAEAADAAFCCBgwEAA=</HashCode>
+      <FileName>Kalibrer.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="dtoData" />
+      <Field Name="dtoKali" />
+      <Field Name="dtoLogin" />
+      <Field Name="GUIlogin" />
+      <Field Name="logic" />
+      <Field Name="logKalibrer" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GUI_blodtryksmåler.Login" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAhAAAAASCgAABAAAACAAAACAAAAAAEAQAAAAAAQEAA=</HashCode>
+      <FileName>Login.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="dtoLogin" />
+      <Field Name="LOG" />
+      <Field Name="login" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="GUI_blodtryksmåler.Måling" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgQCCAAKBCAAxBAIgACBCCAiAAAAAAAQIIUQIRhAAgA=</HashCode>
+      <FileName>Måling.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="dataanalyse" />
+      <Field Name="DTO_Data" />
+      <Field Name="DTO_Login" />
+      <Field Name="GUIlogin" />
+      <Field Name="log" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GUI_blodtryksmåler.Properties.Resources">
+    <Position X="7.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Logic_blodtryksmåler.Alarm">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="DTO_blodtryksmåler.DTO_alarm" Collapsed="true">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="DTO_blodtryksmåler.DTO_login" Collapsed="true">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Logic_blodtryksmåler.Logic" Collapsed="true">
+    <Position X="9.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier />
+    <ShowAsAssociation>
+      <Field Name="dtoData" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Logic_blodtryksmåler.Login">
+    <Position X="11.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Logic_blodtryksmåler.Analyse" Collapsed="true">
+    <Position X="11.5" Y="3" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="DTO_blodtryksmåler.DTO_data" Collapsed="true">
+    <Position X="2.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Logic_blodtryksmåler.Gem" Collapsed="true">
+    <Position X="5.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="DTO_blodtryksmåler.DTO_kalibrer" Collapsed="true">
+    <Position X="9.25" Y="5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Logic_blodtryksmåler.Kalibrer" Collapsed="true">
+    <Position X="11.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Logic_blodtryksmåler.Filter" Collapsed="true">
+    <Position X="5.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Logic_blodtryksmåler.GetAsyncDatalist" BaseTypeListCollapsed="true">
+    <Position X="7" Y="7.25" Width="3" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Logic_blodtryksmåler.SubjectLogic" Collapsed="true">
+    <Position X="2.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Interface Name="Logic_blodtryksmåler.IObserverLogic">
+    <Position X="5.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

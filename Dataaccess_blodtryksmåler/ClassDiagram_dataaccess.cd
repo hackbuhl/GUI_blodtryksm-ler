@@ -1,38 +1,74 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
-  <Class Name="Dataaccess_blodtryksmåler.GemPatient">
-    <Position X="5" Y="4.25" Width="3.25" />
+  <Class Name="Dataaccess_blodtryksmåler.DAQmxAsyncRead">
+    <Position X="1.75" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAIAAACAAAAAAAAAAAAAAAAAAAAAAAAoAQAAAAABA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAQEAA=</HashCode>
+      <FileName>DAQAsyncrom.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Dataaccess_blodtryksmåler.GemPatient">
+    <Position X="4.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAYAAAAAAAIAAAAAAAhA=</HashCode>
       <FileName>GemPatient.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Login" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="Dataaccess_blodtryksmåler.GetData">
-    <Position X="5.5" Y="1.25" Width="2.75" />
+    <Position X="3.75" Y="0.5" Width="1.5" />
+    <AssociationLine Name="daQmx" Type="Dataaccess_blodtryksmåler.DAQmxAsyncRead" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.5" Y="2.824" />
+        <Point X="4.5" Y="3.812" />
+        <Point X="3.25" Y="3.812" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAgAAAAAACAAAAAAAEAAAAAgAAE=</HashCode>
+      <HashCode>AAAAAAAAAIEAAAAAAAgAAAAAAIAAAAAAAAAAEAAQAAE=</HashCode>
       <FileName>GetData.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="daQmx" />
+      <Field Name="datacollector" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Dataaccess_blodtryksmåler.Kalibrer">
+    <Position X="6.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAABAAAAAYAABAAAAgAAAAAAAhA=</HashCode>
+      <FileName>Kalibrer.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Dataaccess_blodtryksmåler.Login">
-    <Position X="8.5" Y="1.5" Width="3.25" />
+    <Position X="1.75" Y="5.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAACAAAAAAAEAAAACAAAQAAAAAAAgAAAAAAEBA=</HashCode>
+      <HashCode>AAAAAAAACAAAAAAAAAAAACAAAIAAAAAAAgAAAAAAEBA=</HashCode>
       <FileName>Login.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="login" />
+    </ShowAsAssociation>
   </Class>
-  <Class Name="DataLag.NI_DAQVoltage">
-    <Position X="0.5" Y="1.25" Width="4.25" />
+  <Class Name="Dataaccess_blodtryksmåler.NI_DAQVoltage">
+    <Position X="6.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>IAAQAAgAEAAAAAAEAQAIAAAgAAABAAAAADAQgACQAAA=</HashCode>
+      <HashCode>IAAAAAgAEAAAAAAEAQAIAAAgAAABAAAAACAQgACQAEA=</HashCode>
       <FileName>NI-DAQVoltage.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="GetData" />
     </ShowAsAssociation>
+  </Class>
+  <Class Name="Dataaccess_blodtryksmåler.SubjectData">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAIAAAAAAAAAAIAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>SubjectData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DTO_blodtryksmåler.DTO_login">
+    <Position X="4" Y="6" Width="1.5" />
+    <TypeIdentifier />
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

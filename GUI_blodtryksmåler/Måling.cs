@@ -25,21 +25,22 @@ namespace GUI_blodtryksmåler
         private DTO_blodtryksmåler.DTO_data DTO_Data = new DTO_data();
         private DTO_blodtryksmåler.DTO_login DTO_Login = new DTO_login();
         private Logic_blodtryksmåler.Logic log;
-        private Logic_blodtryksmåler.Alarm logalarm;
+        private Logic_blodtryksmåler.Alarm z;
+        private Login GUIlogin;
         public int i = 0;
         int caseSwitch = 1;
 
         // test
 
-        public Måling(DTO_login login)
+        public Måling(Logic logLogic, DTO_login login, Login GUIlogin_)
         {
             InitializeComponent();
 
-                log = new Logic();
-            logalarm = log.GetAlarm();
+            log = logLogic;
+            z = log.GetAlarm();
 
 
-
+            GUIlogin = GUIlogin_;
             DTO_Login = login;
 
         }
@@ -86,6 +87,9 @@ namespace GUI_blodtryksmåler
             }
             DiaLb.Text = Convert.ToString(DTO_Data.Diastole);
             SysLb.Text = Convert.ToString(DTO_Data.Systole);
+
+
+
         }
 
 
@@ -108,6 +112,7 @@ namespace GUI_blodtryksmåler
                 case 2:
                     
                     log.Stop();
+                    z.stopAlarm();
                     MålingBt.Text = "Forsæt";
                     caseSwitch = 3;
                     SaveBt.Enabled = true;
@@ -153,15 +158,6 @@ namespace GUI_blodtryksmåler
             }
         }
 
-        private void DataChart_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LogoutBt_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void nulpunktsBt_Click(object sender, EventArgs e)
         {
@@ -173,7 +169,7 @@ namespace GUI_blodtryksmåler
 
         private void AlarmBt_Click(object sender, EventArgs e)
         {
-            Alarm alarm = new Alarm(logalarm);
+            Alarm alarm = new Alarm(z);
             alarm.ShowDialog();
         }
 
@@ -185,9 +181,11 @@ namespace GUI_blodtryksmåler
 
         private void logOutBt_Click_1(object sender, EventArgs e)
         {
-            Login login = new Login();
+            log.Stop();
+            log.Detach(this);
+            log.stopt();
             this.Hide();
-            login.ShowDialog(); 
+            GUIlogin.Show();
         }
 
         private void nulBt_Click(object sender, EventArgs e)
@@ -205,25 +203,6 @@ namespace GUI_blodtryksmåler
                 caseSwitch = 3;
             }
         }
-
-        private void DataChart_Click_1(object sender, EventArgs e)
-        {
-
-        }
-        //public void error()
-        //{
-        //    switch (log.errorstate)
-        //    {
-        //        case 1:
-        //            MessageBox.Show(this,
-        //                "Der er manglende forbindelse til databasen, opret forbindelse før du fortsætter",
-        //                "Ingen forbindelse");
-        //            break;
-        //        case 2:
-        //            MessageBox.Show(this, "Der er manglende forbindelse til DAQ´en");
-        //            break;     
-        //    }
-        //}
     }
 }
 

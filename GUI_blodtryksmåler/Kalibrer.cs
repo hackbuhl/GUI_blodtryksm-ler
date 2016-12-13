@@ -20,18 +20,20 @@ namespace GUI_blodtryksmåler
         private DTO_kalibrer dtoKali;
         private DTO_data dtoData;
         private DTO_login dtoLogin;
+        private Login GUIlogin;
 
-        public Kalibrer(DTO_login log)
+        public Kalibrer(Logic loglogic,DTO_login log, Login GUIlogin_)
         {
             dtoLogin = new DTO_login();
             dtoLogin = log;
-            logic = new Logic();
+            logic = loglogic;
             logKalibrer=  new Logic_blodtryksmåler.Kalibrer();
             dtoKali = new DTO_kalibrer();
             dtoData = new DTO_data();
             InitializeComponent();
             //logKalibrer.Update();
 
+            GUIlogin = GUIlogin_;
 
             logic.Attach(this);
             logic.startkal();
@@ -48,6 +50,19 @@ namespace GUI_blodtryksmåler
             try
             {
                 dtoKali.Read1 = Convert.ToDouble(Tryk1TB.Text);
+                List<double> avList = new List<double>();
+                for (int i = dtoData.datalist.Count - 100; i < dtoData.datalist.Count; i++)
+                {
+                    avList.Add(dtoData.datalist[i]);
+                }
+                dtoKali.Måling1 = avList.Average();
+
+
+
+                Tryk1Bt.Enabled = false;
+                Tryk2Bt.Enabled = true;
+                Tryk1TB.Enabled = false;
+                Tryk2TB.Enabled = true;
             }
 
             catch (Exception)
@@ -57,19 +72,7 @@ namespace GUI_blodtryksmåler
             }
 
 
-            List<double> avList = new List<double>();
-                for (int i = dtoData.datalist.Count - 100; i < dtoData.datalist.Count; i++)
-                {
-                    avList.Add(dtoData.datalist[i]);
-                }
-                dtoKali.Måling1 = avList.Average();
-                
 
-                
-                        Tryk1Bt.Enabled = false;
-                Tryk2Bt.Enabled = true;
-                Tryk1TB.Enabled = false;
-                Tryk2TB.Enabled = true;
 
 
         }
@@ -86,9 +89,9 @@ namespace GUI_blodtryksmåler
                     avList.Add(dtoData.datalist[i]);
                 }
                 dtoKali.Måling2 = avList.Average();
-                
 
-              
+
+
                 Tryk2Bt.Enabled = false;
                 Tryk2TB.Enabled = false;
                 KaliBt.Enabled = true;
@@ -99,11 +102,20 @@ namespace GUI_blodtryksmåler
                 MessageBox.Show("Der skal indtastes en talværdi");
                 Tryk2TB.Text = null;
             }
+
+
+
         }
 
         private void KaliBt_Click(object sender, EventArgs e)
         {
             logKalibrer.Calibrate(dtoKali,dtoLogin);
+            MessageBox.Show("System kalibreret");
+
+            Tryk1Bt.Enabled = true;
+            Tryk1TB.Enabled = true;
+            KaliBt.Enabled = false;
+            nulBt.Enabled = false;
 
         }
 
@@ -120,9 +132,13 @@ namespace GUI_blodtryksmåler
 
         private void LogafBt_Click(object sender, EventArgs e)
         {
-            Login login = new Login();
+            logic.Stop();
+            logic.stoptk();
+            logic.Detach(this);
             this.Hide();
-            login.ShowDialog();
+            //GUIlogin.ShowDialog();
+            GUIlogin.Show();
+            //logic.stoptk();
         }
 
     }

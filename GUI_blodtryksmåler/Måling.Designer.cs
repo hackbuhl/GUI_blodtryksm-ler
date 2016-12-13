@@ -1,4 +1,6 @@
-﻿namespace GUI_blodtryksmåler
+﻿using System;
+
+namespace GUI_blodtryksmåler
 {
     partial class Måling
     {
@@ -115,12 +117,12 @@
             // DiaLb
             // 
             this.DiaLb.AutoSize = true;
-            this.DiaLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DiaLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DiaLb.ForeColor = System.Drawing.Color.LimeGreen;
-            this.DiaLb.Location = new System.Drawing.Point(55, 218);
+            this.DiaLb.Location = new System.Drawing.Point(26, 186);
             this.DiaLb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.DiaLb.Name = "DiaLb";
-            this.DiaLb.Size = new System.Drawing.Size(76, 44);
+            this.DiaLb.Size = new System.Drawing.Size(125, 73);
             this.DiaLb.TabIndex = 7;
             this.DiaLb.Text = "/75";
             // 
@@ -202,7 +204,7 @@
             legend1.ItemColumnSpacing = 20;
             legend1.Name = "Legend1";
             this.DataChart.Legends.Add(legend1);
-            this.DataChart.Location = new System.Drawing.Point(182, 66);
+            this.DataChart.Location = new System.Drawing.Point(182, 67);
             this.DataChart.Name = "DataChart";
             this.DataChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
             series1.ChartArea = "ChartArea1";
@@ -218,7 +220,6 @@
             this.DataChart.Text = "chart1";
             title1.Name = "Blodtryk";
             this.DataChart.Titles.Add(title1);
-            this.DataChart.Click += new System.EventHandler(this.DataChart_Click_1);
             // 
             // logOutBt
             // 
@@ -252,6 +253,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(993, 482);
+            this.Controls.Add(this.DiaLb);
             this.Controls.Add(this.nulpunktsBt);
             this.Controls.Add(this.logOutBt);
             this.Controls.Add(this.DataChart);
@@ -259,7 +261,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.DiaLb);
             this.Controls.Add(this.SysLb);
             this.Controls.Add(this.nulBt);
             this.Controls.Add(this.SaveBt);

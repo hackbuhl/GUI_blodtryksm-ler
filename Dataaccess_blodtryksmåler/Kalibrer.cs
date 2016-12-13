@@ -40,9 +40,6 @@ namespace Dataaccess_blodtryksmåler
 
         public void saveFactor(DTO_kalibrer kal, DTO_login log) // ændret fra void til bool
         {
-            DTO_kalibrer kal_ = kal;
-            DTO_login log_ = log;
-
 
              string insertStringKalibrer = @"INSERT INTO Kalibrer(Dato, BrugerID, Factor) VALUES(@Dato, @BrugerID, @Factor)";
 
@@ -50,7 +47,7 @@ namespace Dataaccess_blodtryksmåler
             {
                 //cmd.CommandType = CommandType.Text;
                 //cmd.Connection = myConnection;
-                cmd.Parameters.AddWithValue("@Dato", DateTime.Today);
+                cmd.Parameters.AddWithValue("@Dato", DateTime.Now);
                 cmd.Parameters.AddWithValue("@BrugerId", log.id);
                 cmd.Parameters.AddWithValue("@Factor", kal.Factor);
                 //myConnection.Open();

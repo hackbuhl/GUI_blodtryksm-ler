@@ -7,7 +7,7 @@ using DTO_blodtryksmåler;
 
 namespace Logic_blodtryksmåler
 {
-    public class Analyse : AbAnalyse
+    public class Analyse
     {
         private DTO_blodtryksmåler.DTO_data dataDTO = new DTO_data();
         private bool top = false;
