@@ -23,7 +23,7 @@ namespace Logic_blodtryksmåler
                 for (int i = anaList.Count - 100; i < anaList.Count; i++)
                 {
 
-                    if (i > 0  && anaList[i] > 110 & top == false & counter>20)
+                    if (i > 0  && anaList[i] > 95 & top == false & counter>20)
                     {
                         double Rhældning = ((anaList[i] - anaList[i - 1]) +
                                             (anaList[i - 1] - anaList[i - 2]) +
@@ -42,7 +42,7 @@ namespace Logic_blodtryksmåler
                             allan.alarmSound(ref dto_data);
                         }
                     }
-                    if (i > 0 && anaList[i] < 110 & top == true & counter > 20)
+                    if (i > 0 && anaList[i] < 95 & top == true & counter > 20)
                     {
                         double Rhældning = ((anaList[i] - anaList[i - 1]) +
                                             (anaList[i - 1] - anaList[i - 2]) +
