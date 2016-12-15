@@ -35,7 +35,7 @@ namespace Logic_blodtryksmåler
                                             (anaList[i - 7] - anaList[i - 8]))/ 8;
                         if (Rhældning < 0) // sikre at vi er på vej ned
                         {
-                            dto_data.Systole = Convert.ToInt32((anaList[i - 4]));
+                            dto_data.Systole = Convert.ToInt32((anaList[i - 4])); //
                             
                             top = true;
                             counter = 0;

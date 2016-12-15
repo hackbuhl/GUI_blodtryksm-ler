@@ -33,7 +33,7 @@ namespace Logic_blodtryksmåler
                     da = new List<double>();
                     for (int j = 0; j < 10; j++)
                     {
-                        da.Add(data.datalist[data.datalist.Count-10+j]);
+                        da.Add(data.datalist[data.datalist.Count-(10+i)+j]);
                     }
                     ana.Add(da.Average());
                     if (on == true)

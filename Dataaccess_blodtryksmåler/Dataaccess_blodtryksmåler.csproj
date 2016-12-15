@@ -76,7 +76,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAQAsyncrom.cs" />
+    <Compile Include="DAQmxAsyncRead.cs" />
     <Compile Include="GemPatient.cs" />
     <Compile Include="GetData.cs" />
     <Compile Include="iDataobs.cs" />
